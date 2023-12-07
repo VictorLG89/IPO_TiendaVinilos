@@ -1,0 +1,6 @@
+C:\Users\victo\Source\Repos\VictorLG89\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\TiendaVinilos.csproj.AssemblyReference.cache
+C:\Users\victo\Source\Repos\VictorLG89\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\TiendaVinilos.csproj.SuggestedBindingRedirects.cache
+C:\Users\victo\Source\Repos\VictorLG89\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\MainWindow.g.cs
+C:\Users\victo\Source\Repos\VictorLG89\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\App.g.cs
+C:\Users\victo\Source\Repos\VictorLG89\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\TiendaVinilos_MarkupCompile.cache
+C:\Users\victo\Source\Repos\VictorLG89\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\TiendaVinilos_MarkupCompile.lref
