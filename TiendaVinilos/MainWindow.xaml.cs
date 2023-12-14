@@ -32,7 +32,7 @@ namespace TiendaVinilos
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            TextAlignment.Center
+            TextAlignment center = TextAlignment.Center;
         }
     }
 }
