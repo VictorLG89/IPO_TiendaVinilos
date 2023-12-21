@@ -12,3 +12,6 @@ C:\Users\lopez\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Productos.
 C:\Users\lopez\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\App.g.cs
 C:\Users\lopez\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\TiendaVinilos_MarkupCompile.cache
 C:\Users\lopez\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\TiendaVinilos_MarkupCompile.lref
+C:\Users\victo\source\repos\VictorLG89\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\InicioDeSesion.g.cs
+C:\Users\victo\source\repos\VictorLG89\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\PerfilUser.g.cs
+C:\Users\victo\source\repos\VictorLG89\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Productos.g.cs

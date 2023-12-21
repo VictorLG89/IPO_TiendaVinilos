@@ -45,6 +45,7 @@
             <Label Grid.Column="6" Content="Contacto" Grid.Row="2" Grid.ColumnSpan="4" Width="121" Height="50" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" ScrollViewer.CanContentScroll="True" Background="#FFE9E9E9"/>
             <Label Content="" Grid.Row="2" Height="50" Background="#FFE9E9E9" Grid.ColumnSpan="3" Width="NaN" IsEnabled="False"/>
             <Label Grid.Column="10" Content="" Grid.Row="2" Background="#FFE9E9E9" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="4" Width="158" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True"/>
+            <Image Grid.Column="1" HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="76" Grid.Row="1" Source="/logoTienda.jpg"/>
 
             <!-- Contenido de la cuadrícula -->
         </Grid>
