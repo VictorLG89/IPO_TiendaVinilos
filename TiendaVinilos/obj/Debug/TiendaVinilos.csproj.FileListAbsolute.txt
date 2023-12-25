@@ -12,3 +12,4 @@ C:\Users\lopez\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Productos.
 C:\Users\lopez\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\App.g.cs
 C:\Users\lopez\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\TiendaVinilos_MarkupCompile.cache
 C:\Users\lopez\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\TiendaVinilos_MarkupCompile.lref
+C:\Users\lopez\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Registro.g.cs
