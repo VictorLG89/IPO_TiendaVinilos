@@ -126,13 +126,17 @@
     <Resource Include="Images\carrito.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\fotoperfil.png" />
+    <Resource Include="Images\fotoperfil.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\corazon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\logoTienda.jpg" />
+    <Resource Include="Images\logoTienda.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

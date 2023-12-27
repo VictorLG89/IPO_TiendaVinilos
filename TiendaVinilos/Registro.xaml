@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TiendaVinilos"
         mc:Ignorable="d"
-        Title="Registro" Height="450" Width="800">
+        Title="Registro" Height="600" Width="800" ScrollViewer.HorizontalScrollBarVisibility="Visible" HorizontalContentAlignment="Right">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="15"/>
@@ -16,7 +16,9 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="15"/>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
@@ -25,5 +27,22 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="15"/>
         </Grid.RowDefinitions>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2" HorizontalAlignment="Left" Height="534" Margin="0.2,0,0,0" Grid.Row="1" Grid.RowSpan="10" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2"/>
+
+        <Image x:Name="fotoPerfilRegistro" Grid.Column="2" Height="80" Margin="100,0" Grid.Row="1" Width="80" Source="/Images/fotoperfil.png">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/Images/fotoperfil.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <TextBox x:Name="txtNombreReg" Grid.Column="2" Height="25" Margin="14,0,22,25" Grid.Row="3" TextWrapping="Wrap" Text="Nombre" Width="264" Background="#FFABADB3"/>
+        <TextBox x:Name="txtApellidosReg" Grid.Column="2" Height="25" Margin="14,0,22,25" Grid.Row="4" TextWrapping="Wrap" Text="Apellidos" Width="264" Background="#FFABADB3"/>
+        <TextBox x:Name="txtNomUserReg" Grid.Column="2" Height="25" Margin="14,0,22,25" Grid.Row="5" TextWrapping="Wrap" Text="Nombre de usuario" Width="264" Background="#FFABADB3"/>
+        <TextBox x:Name="txtContraseniaReg" Grid.Column="2" Height="25" Margin="14,0,22,25" Grid.Row="6" TextWrapping="Wrap" Text="Contraseña" Width="264" Background="#FFABADB3"/>
+        <TextBox x:Name="txtCorreoReg" Grid.Column="2" Height="25" Margin="14,0,22,25" Grid.Row="7" TextWrapping="Wrap" Text="Correo electronico" Width="264" Background="#FFABADB3"/>
+        <TextBox x:Name="txtTelefonoReg" Grid.Column="2" Height="25" Margin="14,0,22,25" Grid.Row="8" TextWrapping="Wrap" Text="Telefono" Width="264" Background="#FFABADB3"/>
+        <ScrollBar x:Name="ScrollBarReg" Grid.Column="3" HorizontalAlignment="Left" Margin="212.2,0,0,-49.6" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="2.821,0.483" Width="17" Height="535" Grid.RowSpan="11"/>
+        <Button Content="Editar Foto de Perfil" Grid.Column="2" Height="25" Margin="76,130,76,25" Grid.Row="1" Width="142" Grid.RowSpan="2"/>
+        <Button Content="Registrarse" Grid.Column="2" Height="25" Margin="0,-2,0,25" Grid.Row="9" Width="142"/>
+
     </Grid>
 </Window>
