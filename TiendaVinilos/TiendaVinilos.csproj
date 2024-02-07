@@ -67,6 +67,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="InicioDeSesion.xaml.cs">
       <DependentUpon>InicioDeSesion.xaml</DependentUpon>
     </Compile>
@@ -128,7 +129,7 @@
     <Resource Include="Images\logoTienda.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="logoTienda.jpg" />
+    <Resource Include="Images\disco-de-vinilo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
