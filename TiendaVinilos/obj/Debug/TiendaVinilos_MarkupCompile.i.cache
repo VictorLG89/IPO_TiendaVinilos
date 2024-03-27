@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\App.xaml
-11-644643484
+15944496075
 
-17-331610563
+21429144878
 13-1310406943
-AnadirArtista.xaml;AnadirDisco.xaml;AnadirGrupo.xaml;AnadirPromocion.xaml;InicioDeSesion.xaml;ListaDeseados.xaml;MainWindow.xaml;PerfilUser.xaml;Preguntas.xaml;Productos.xaml;QuienSomos.xaml;
+AnadirArtista.xaml;AnadirDisco.xaml;AnadirGrupo.xaml;AnadirPromocion.xaml;AutoresAdmin.xaml;InicioDeSesion.xaml;ListaDeseados.xaml;MainWindow.xaml;MainWindowAdmin.xaml;PerfilUser.xaml;Preguntas.xaml;Productos.xaml;ProductosAdmin.xaml;PromocionesAdmin.xaml;QuienSomos.xaml;
 
 True
 
