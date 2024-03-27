@@ -28,15 +28,15 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="3" Height="NaN" Margin="0,0,0,10" Grid.RowSpan="3" Grid.Row="1" Width="NaN">
             <Label Content="Artista"/>
-            <ComboBox Width="120"/>
+            <ComboBox Width="120" HorizontalAlignment="Left"/>
             <Label Content="Disco" d:LayoutOverrides="Width, Height"/>
-            <ComboBox Width="120"/>
+            <ComboBox Width="120" HorizontalAlignment="Left"/>
             <Label Content="Fecha de inicio" d:LayoutOverrides="Width, Height"/>
             <DatePicker d:LayoutOverrides="Width, Height"/>
             <Label Content="Fecga de finalización" d:LayoutOverrides="Width, Height"/>
             <DatePicker d:LayoutOverrides="Width, Height"/>
             <Label Content="Descuento en porcentaje (%)" d:LayoutOverrides="Width, Height"/>
-            <TextBox TextWrapping="Wrap" Text="TextBox" Width="120"/>
+            <TextBox TextWrapping="Wrap" Text="TextBox" Width="120" HorizontalAlignment="Left"/>
             <CheckBox Content="Enviar notificación a clientes" d:LayoutOverrides="Width, Height"/>
             <CheckBox Content="Programar notificación" d:LayoutOverrides="Width, Height"/>
             <DatePicker d:LayoutOverrides="Width, Height"/>
