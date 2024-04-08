@@ -1,19 +1,100 @@
-﻿<Window x:Class="TiendaVinilos.Productos"
+﻿<Window x:Name="Productos1" x:Class="TiendaVinilos.Productos"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TiendaVinilos"
         mc:Ignorable="d"
-        Title="Productos" Height="350" Width="800">
+        Title="Productos" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="150"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="65"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="190"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="26"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="26"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="11" Grid.Column="1" HorizontalAlignment="Left" Height="349" Margin="38.6,9.8,0,0" Grid.Row="2" Grid.RowSpan="6" VerticalAlignment="Top" Width="667">
+            <ScrollBar Width="Auto" MinHeight="16" HorizontalAlignment="Right"/>
+        </Border>
+        <TextBlock x:Name="Precio4" Grid.Column="4" HorizontalAlignment="Center" Height="21" Margin="6,15,0,0" Grid.Row="6" TextWrapping="Wrap" Width="160" Grid.ColumnSpan="4"><Run Text="Precio articulo 4"/><LineBreak/></TextBlock>
+        <TextBlock x:Name="Precio3" Grid.Column="4" HorizontalAlignment="Center" Height="21" Margin="21,37.6,13.4,23.2" Grid.Row="5" TextWrapping="Wrap" Width="160" Grid.ColumnSpan="4"><Run Text="Precio articulo 3"/><LineBreak/></TextBlock>
+        <TextBlock x:Name="Precio2" Grid.Column="4" HorizontalAlignment="Center" Height="21" Margin="6,15,0,0" Grid.Row="4" TextWrapping="Wrap" Width="160" Grid.ColumnSpan="4"><Run Text="Precio articulo 2"/><LineBreak/></TextBlock>
+        <TextBlock x:Name="Articulo1" Grid.Column="3" HorizontalAlignment="Center" Height="21" Margin="8,15,0,0" Grid.Row="3" TextWrapping="Wrap" Width="107"><Run Text="Nombre articulo 1"/><LineBreak/></TextBlock>
+        <TextBlock x:Name="Precio1" Grid.Column="4" HorizontalAlignment="Center" Height="21" Margin="6,15,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Width="160" Grid.ColumnSpan="4"><Run Text="Precio articulo 1"/><LineBreak/></TextBlock>
+        <TextBlock x:Name="Articulo2" Grid.Column="3" HorizontalAlignment="Center" Height="21" Margin="8,15,0,0" Grid.Row="4" TextWrapping="Wrap" Width="107"><Run Text="Nombre articulo 2"/><LineBreak/></TextBlock>
+        <TextBlock x:Name="Articulo3" Grid.Column="3" HorizontalAlignment="Center" Height="21" Margin="8,13.4,0,0" Grid.Row="5" TextWrapping="Wrap" Width="107"><Run Text="Nombre articulo 3"/><LineBreak/></TextBlock>
+        <TextBlock x:Name="Articulo4" Grid.Column="3" HorizontalAlignment="Center" Height="21" Margin="8,15,0,0" Grid.Row="6" TextWrapping="Wrap" Width="107" Padding="0"><Run Text="Nombre articulo 4"/><LineBreak/></TextBlock>
+        <Image x:Name="carrito" Grid.Column="8" Grid.Row="1" Source="Images/carrito.png" Stretch="Fill" Margin="0"/>
+        <TextBox x:Name="interrogacion" Grid.Column="9" Grid.Row="1" TextWrapping="Wrap" TextChanged="TextBox_TextChanged" TextAlignment="Center" Width="NaN" FontSize="25" HorizontalContentAlignment="Center" RenderTransformOrigin="0.504,0.5" Height="NaN" AutomationProperties.Name="?" Text="?" BorderThickness="0,0,0,0" SelectionOpacity="0" Background="#FFF1F1F1" VerticalContentAlignment="Stretch" Margin="0"/>
+        <Image x:Name="corazon" Grid.Column="10" Height="NaN" Grid.Row="1" Source="Images/corazon.png" Stretch="Fill" Margin="7.8,8,6.2,8" Width="NaN"/>
+        <Image x:Name="fotoperfil" Grid.Column="11" Grid.Row="1" Source="Images/fotoperfil.png" Stretch="Fill" Margin="0"/>
+        <ComboBox x:Name="Idioma" Grid.Column="12" RenderTransformOrigin="0.043,-0.362" Width="NaN" Grid.Row="1" SelectionChanged="ComboBox_SelectionChanged" Margin="0.8,6,9.6,8" Height="NaN" Grid.ColumnSpan="2"/>
+        <Rectangle x:Name="barraBuscarArt" Grid.ColumnSpan="4" Grid.Column="3" Fill="#FFF4F4F5" Margin="5.7,7.3,5.7,7.7" Stroke="Black" Height="25" Width="347" Grid.Row="1"/>
+        <Image x:Name="imgBuscarArt" Grid.Column="3" Margin="0,10.5,137,12.5" Grid.Row="1" Source="Images/imgLupa.png" RenderTransformOrigin="0.5,0.5" Height="17" Width="15">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Images/imgLupa.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Label x:Name="BuscarArt" Content="Buscar" Grid.Column="3" Margin="36,6.5,0,10.5" Grid.Row="1" Height="24" Foreground="#FF625E5E" Grid.ColumnSpan="4" Width="309"/>
+        <Image x:Name="ImgArticulo1" Grid.Column="2" Margin="0" Grid.Row="3" Source="Images\imgIcono.png">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Images\imgIcono.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="ImgArticulo1_Copy" Grid.Column="2" Height="80" Margin="0" Grid.Row="6" Width="100" Source="Images/imgIcono.png">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Images/imgIcono.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="ImgArticulo1_Copy1" Grid.Column="2" Height="80" Margin="0" Grid.Row="5" Width="100" Source="Images/imgIcono.png">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Images/imgIcono.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="ImgArticulo1_Copy2" Grid.Column="2" Height="80" Margin="0" Grid.Row="4" Width="100" Source="Images/imgIcono.png">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Images/imgIcono.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="imgCorazonVacio" Grid.ColumnSpan="2" Grid.Column="9" Margin="17.8,12.2,17.8,22.6" Grid.Row="3" Source="Images\corazonVacio.png" Height="46" VerticalAlignment="Center" HorizontalAlignment="Center" Width="46">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Images\corazonVacio.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="imgCorazonVacio_Copy" Grid.ColumnSpan="2" Grid.Column="9" Margin="17.8,12.4,17.8,22.4" Grid.Row="4" Source="Images/corazon.png" Height="46" VerticalAlignment="Center" HorizontalAlignment="Center" Width="46">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Images/corazon.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="imgCorazonVacio_Copy1" Grid.ColumnSpan="2" Grid.Column="9" Margin="17.8,11.6,17.8,23.2" Grid.Row="5" Source="Images/corazon.png" Height="46" VerticalAlignment="Center" HorizontalAlignment="Center" Width="46">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Images/corazon.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="imgCorazonVacio_Copy2" Grid.ColumnSpan="2" Grid.Column="9" Margin="17.8,12.8,17.8,22" Grid.Row="6" Source="Images/corazonVacio.png" Height="46" VerticalAlignment="Center" HorizontalAlignment="Center" Width="46">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Images/corazonVacio.png"/>
+            </Image.OpacityMask>
+        </Image>
+
     </Grid>
 </Window>
