@@ -55,7 +55,51 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AnadirArtista.xaml.cs">
+      <DependentUpon>AnadirArtista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AnadirDisco.xaml.cs">
+      <DependentUpon>AnadirDisco.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AnadirGrupo.xaml.cs">
+      <DependentUpon>AnadirGrupo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AnadirPromocion.xaml.cs">
+      <DependentUpon>AnadirPromocion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindowAdmin.xaml.cs">
+      <DependentUpon>MainWindowAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Preguntas.xaml.cs">
+      <DependentUpon>Preguntas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProductosAdmin.xaml.cs">
+      <DependentUpon>ProductosAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuienSomos.xaml.cs">
+      <DependentUpon>QuienSomos.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AnadirArtista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AnadirDisco.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AnadirGrupo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AnadirPromocion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="InicioDeSesion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListaDeseados.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -67,18 +111,38 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="InicioDeSesion.xaml.cs">
       <DependentUpon>InicioDeSesion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListaDeseados.xaml.cs">
+      <DependentUpon>ListaDeseados.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MainWindowAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PerfilUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Preguntas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Productos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProductosAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuienSomos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -126,6 +190,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\logoTienda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\disco-de-vinilo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="disco-de-vinilo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

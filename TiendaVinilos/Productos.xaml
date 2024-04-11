@@ -15,5 +15,18 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>
+        <ListBox Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListBox_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding Portada}" Width="50" Height="50" Margin="5"/>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Nombre}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Autor}" />
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>

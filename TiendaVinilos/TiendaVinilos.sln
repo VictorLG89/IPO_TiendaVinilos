@@ -5,6 +5,11 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiendaVinilos", "TiendaVinilos.csproj", "{85E00544-8C79-41C4-8393-32DDD196B82D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{248EC716-FB34-4295-B70F-47A1C7C89474}"
+	ProjectSection(SolutionItems) = preProject
+		ListaDeDeseos.xaml = ListaDeDeseos.xaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

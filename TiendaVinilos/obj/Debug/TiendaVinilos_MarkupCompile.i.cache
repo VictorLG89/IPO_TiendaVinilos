@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\lopez\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\
+C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\
 TiendaVinilos
 none
 false
 DEBUG;TRACE
-C:\Users\lopez\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\App.xaml
-4-21498087
+C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\App.xaml
+15944496075
 
-9-88644572
-13-1505183044
-InicioDeSesion.xaml;MainWindow.xaml;PerfilUser.xaml;Productos.xaml;
+21429144878
+13-1310406943
+AnadirArtista.xaml;AnadirDisco.xaml;AnadirGrupo.xaml;AnadirPromocion.xaml;AutoresAdmin.xaml;InicioDeSesion.xaml;ListaDeseados.xaml;MainWindow.xaml;MainWindowAdmin.xaml;PerfilUser.xaml;Preguntas.xaml;Productos.xaml;ProductosAdmin.xaml;PromocionesAdmin.xaml;QuienSomos.xaml;
 
 True
 
