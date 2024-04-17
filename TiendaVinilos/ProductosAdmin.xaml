@@ -25,7 +25,10 @@
                             <TextBlock Text="{Binding Autor}" />
                             
                         </StackPanel>
-                        <Button Content="Editar" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="320,0,0,0"/>
+                        <StackPanel Width="100" Margin="10,0,0,0">
+                            <TextBlock Text="{Binding Precio}" TextWrapping="Wrap" d:LayoutOverrides="Width, Height"/>
+                        </StackPanel>
+                        <Button Content="Editar" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="199,0,0,0"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

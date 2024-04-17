@@ -17,15 +17,18 @@
         <ListBox Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListBox_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal" Width="466">
                         <Image Source="{Binding Portada}" Width="50" Height="50" Margin="5"/>
                         <StackPanel>
                             <TextBlock Text="{Binding Nombre}" FontWeight="Bold"/>
                             <TextBlock Text="{Binding Autor}" />
                         </StackPanel>
-                        <DockPanel LastChildFill="False">
-                            <Image Source="/Images/corazon.png" Width="20" Height="20" DockPanel.Dock="Right"/>
-                        </DockPanel>
+                        <StackPanel Width="100" Margin="10,0,0,0">
+                            <TextBlock Text="{Binding Precio}" TextWrapping="Wrap" d:LayoutOverrides="Width, Height"/>
+                        </StackPanel>
+                        <StackPanel Width="70" Margin="176,0,0,0" >
+                            <Image Source="/Images/corazon.png" HorizontalAlignment="Center" Height="53" Width="24"/>
+                        </StackPanel>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

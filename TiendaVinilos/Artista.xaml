@@ -1,0 +1,39 @@
+﻿<Window x:Name="Artista1" x:Class="TiendaVinilos.Artista"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TiendaVinilos"
+        mc:Ignorable="d"
+        Title="Artista" Height="350" Width="800">
+    <Grid Background="#FFF1F1F1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="121"/>
+            <ColumnDefinition Width="121"/>
+            <ColumnDefinition Width="121"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="90"/>
+
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <Image x:Name="imgRosaliaArtista" Grid.ColumnSpan="3" Grid.Column="2" Margin="0" Grid.Row="3" Grid.RowSpan="4" Source="Images/fotoRosalia.png.webp" VerticalAlignment="Top"/>
+        <Border x:Name="bordeImgRosalia" BorderBrush="Black" BorderThickness="3" Grid.Column="2" Margin="0,92,0,5" Grid.RowSpan="2" Height="NaN" Width="NaN"/>
+        <StackPanel Grid.Column="3" Grid.Row="1">
+            <TextBlock TextWrapping="Wrap" Text="TextBlock" d:LayoutOverrides="Width, Height"/>
+            <TextBlock TextWrapping="Wrap" Text="TextBlock" d:LayoutOverrides="Width, Height"/>
+            <TextBlock TextWrapping="Wrap" Text="TextBlock" d:LayoutOverrides="Width, Height"/>
+            <TextBlock TextWrapping="Wrap" Text="TextBlock" d:LayoutOverrides="Width, Height"/>
+        </StackPanel>
+        <Image Source="{Binding Galeria}" Grid.Column="4" HorizontalAlignment="Left" Height="100" Margin="117,24,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
