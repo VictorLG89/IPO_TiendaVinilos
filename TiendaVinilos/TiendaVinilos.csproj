@@ -67,6 +67,18 @@
     <Compile Include="AnadirPromocion.xaml.cs">
       <DependentUpon>AnadirPromocion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Articulo.xaml.cs">
+      <DependentUpon>Articulo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Artista.xaml.cs">
+      <DependentUpon>Artista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="cesta.xaml.cs">
+      <DependentUpon>cesta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HistorialdePedidos.xaml.cs">
+      <DependentUpon>HistorialdePedidos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindowAdmin.xaml.cs">
       <DependentUpon>MainWindowAdmin.xaml</DependentUpon>
     </Compile>
@@ -78,6 +90,12 @@
     </Compile>
     <Compile Include="QuienSomos.xaml.cs">
       <DependentUpon>QuienSomos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Registro.xaml.cs">
+      <DependentUpon>Registro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ResumenPerfil.xaml.cs">
+      <DependentUpon>ResumenPerfil.xaml</DependentUpon>
     </Compile>
     <Page Include="AnadirArtista.xaml">
       <SubType>Designer</SubType>
@@ -94,6 +112,22 @@
     <Page Include="AnadirPromocion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Articulo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Artista.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="cesta.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HistorialdePedidos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="InicioDeSesion.xaml">
       <SubType>Designer</SubType>
@@ -146,6 +180,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Registro.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ResumenPerfil.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PerfilUser.xaml.cs">
@@ -196,6 +238,17 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="disco-de-vinilo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\corazonVacio.png" />
+    <Resource Include="Images\fondovinilos.jpeg" />
+    <Resource Include="Images\imgDiscoRosalía.jpg" />
+    <Resource Include="Images\imgIcono.png" />
+    <Resource Include="Images\imgLupa.png" />
+    <Resource Include="Images\imgPlay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\eliminar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
