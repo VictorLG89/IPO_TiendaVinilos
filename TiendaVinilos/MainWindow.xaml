@@ -45,28 +45,29 @@
     <Grid>
         <Grid Background="#FFCBE3F3">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="10"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="108"/>
-                <ColumnDefinition Width="121"/>
-                <ColumnDefinition Width="121"/>
-                <ColumnDefinition Width="121"/>
-                <ColumnDefinition Width="26"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="15"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="68"/>
-                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="108*"/>
+                <ColumnDefinition Width="121*"/>
+                <ColumnDefinition Width="121*"/>
+                <ColumnDefinition Width="121*"/>
+                <ColumnDefinition Width="26*"/>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="68*"/>
+                <ColumnDefinition Width="10*"/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="10"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition/>
-                <RowDefinition Height="10"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="350*"/>
+
+
             </Grid.RowDefinitions>
 
             <ComboBox x:Name="Idioma" Grid.Column="12" RenderTransformOrigin="0.043,-0.362" Width="NaN" Grid.Row="1" SelectionChanged="ComboBox_SelectionChanged" Margin="0,6,0,8" Height="NaN"/>
@@ -80,11 +81,11 @@
             <Label Grid.Column="5" Content="Ofertas" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Height="NaN" Width="NaN" MouseLeftButtonDown="OpenPromociones" Style="{StaticResource InteractiveLabelStyle}"/>
             <Label Grid.Column="6" Content="Contacto" Grid.Row="2" Grid.ColumnSpan="4" Width="NaN" Height="NaN" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" ScrollViewer.CanContentScroll="True" MouseLeftButtonDown="OpenQuienSomos" Style="{StaticResource InteractiveLabelStyle}"/>
 
-            <Label Content="" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="3" Width="158" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" Height="NaN" Style="{StaticResource NonInteractiveLabelStyle}" HorizontalAlignment="Center"/>
+            <Label Grid.Column="0" Content="" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="3" Width="NaN" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" Height="NaN" Style="{StaticResource NonInteractiveLabelStyle}"/>
             <Label Grid.Column="10" Content="" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="4" Width="NaN" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" Height="NaN" Style="{StaticResource NonInteractiveLabelStyle}"/>
 
-            <Image Grid.Column="5" HorizontalAlignment="Left" Height="4" Margin="10,206,0,0" Grid.Row="3" VerticalAlignment="Top" Width="86"/>
-            <Image Grid.Column="1" Height="37" Width="36" Grid.Row="1" Source="/Images/disco-de-vinilo.png" Margin="0,0,0,3"/>
+            <Image Grid.Column="5" HorizontalAlignment="Left" Height="4" Margin="10,46,0,0" Grid.Row="4" VerticalAlignment="Top" Width="86"/>
+            <Image Grid.Column="1" Height="37" Width="36" Grid.Row="1" Source="/Images/disco-de-vinilo.png" Margin="2,0,2,3"/>
         </Grid>
         <Grid>
             <Grid.ColumnDefinitions>
