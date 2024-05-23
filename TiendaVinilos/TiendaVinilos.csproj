@@ -76,6 +76,7 @@
     <Compile Include="cesta.xaml.cs">
       <DependentUpon>cesta.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Class2.cs" />
     <Compile Include="HistorialdePedidos.xaml.cs">
       <DependentUpon>HistorialdePedidos.xaml</DependentUpon>
     </Compile>
@@ -235,9 +236,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\disco-de-vinilo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="disco-de-vinilo.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\corazonVacio.png" />

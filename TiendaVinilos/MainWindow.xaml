@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:TiendaVinilos"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    
     <Grid>
         <Grid Background="#FFCBE3F3">
             <Grid.ColumnDefinitions>

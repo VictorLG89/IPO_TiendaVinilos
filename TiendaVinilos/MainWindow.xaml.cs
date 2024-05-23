@@ -15,64 +15,98 @@ using System.Windows.Shapes;
 
 namespace TiendaVinilos
 {
-    /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
-    /// </summary>
     using System.Windows;
+    using System.Windows.Input;
+    using TiendaVinilos.Service;
+
     public partial class MainWindow : Window
     {
+        private readonly VinylService _vinylService;
+
         public MainWindow()
         {
             InitializeComponent();
+            _vinylService = new VinylService();
+            
         }
-
-        private void OpenProductos(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void OpenArtistas(object sender, RoutedEventArgs e)
         {
-            Productos Productos = new Productos();
-
-            Productos.Show();
+            // Aquí colocas la lógica para abrir la ventana de artistas
+            var artistasWindow = new Artista();
+            artistasWindow.Show();
         }
 
-        private void OpenQuienSomos(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void OpenPromociones(object sender, RoutedEventArgs e)
         {
-            QuienSomos QuienSomos = new QuienSomos();
-
-            QuienSomos.Show();
+            // Aquí colocas la lógica para abrir la ventana de promociones
+            var promocionesWindow = new AnadirPromocion();
+            promocionesWindow.Show();
         }
-
-        private void OpenListaDeseados(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void OpenProductos(object sender, MouseButtonEventArgs e)
         {
-            ListaDeseados ListaDeseados = new ListaDeseados();
-
-            ListaDeseados.Show();
+            OpenWindow(new Productos());
         }
 
-        private void OpenPerfilUser(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void OpenQuienSomos(object sender, MouseButtonEventArgs e)
         {
-            PerfilUser PerfilUser = new PerfilUser();
-
-            PerfilUser.Show();
+            OpenWindow(new QuienSomos());
         }
 
-        private void OpenPreguntas(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void OpenListaDeseados(object sender, MouseButtonEventArgs e)
         {
-            Preguntas Preguntas = new Preguntas();
-
-            Preguntas.Show();
+            OpenWindow(new ListaDeseados());
         }
+
+        private void OpenPerfilUser(object sender, MouseButtonEventArgs e)
+        {
+            OpenWindow(new PerfilUser());
+        }
+
+        private void OpenPreguntas(object sender, MouseButtonEventArgs e)
+        {
+            OpenWindow(new Preguntas());
+        }
+
+        private void OpenWindow(Window window)
+        {
+            window.Show();
+        }
+
+        private void AddVinilo(object sender, RoutedEventArgs e)
+        {
+            var newVinilo = new Vinilo
+            {
+                Nombre = "Nuevo Vinilo",
+                Autor = _vinylService.GetAllAutores()[0], // Asigna un autor existente
+                Portada = "Sin Portada"
+            };
+            _vinylService.AddVinilo(newVinilo);
+        }
+
+
+        private void AddAutor(object sender, RoutedEventArgs e)
+        {
+            var newAutor = new Autor
+            {
+                Nombre = "Nuevo Autor",
+                Tipo = "Solista"
+            };
+            _vinylService.AddAutor(newAutor);
+        }
+
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            // Manejo del evento ComboBox
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            TextAlignment center = TextAlignment.Center;
+            // Manejo del evento TextBox
         }
 
         private void Label_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            // Manejo del evento Label
         }
     }
 }

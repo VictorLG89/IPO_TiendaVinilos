@@ -8,10 +8,48 @@ namespace TiendaVinilos
 {
     using System.ComponentModel;
 
+    public class Autor : INotifyPropertyChanged
+    {
+        private string _nombre;
+        private string _tipo; // "Grupo" o "Solista"
+
+        public string Nombre
+        {
+            get { return _nombre; }
+            set
+            {
+                if (_nombre != value)
+                {
+                    _nombre = value;
+                    OnPropertyChanged(nameof(Nombre));
+                }
+            }
+        }
+
+        public string Tipo
+        {
+            get { return _tipo; }
+            set
+            {
+                if (_tipo != value)
+                {
+                    _tipo = value;
+                    OnPropertyChanged(nameof(Tipo));
+                }
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+    }
     public class Vinilo : INotifyPropertyChanged
     {
         private string _nombre;
-        private string _autor;
+        private Autor _autor;
         private string _portada;
 
         public string Nombre
@@ -27,7 +65,7 @@ namespace TiendaVinilos
             }
         }
 
-        public string Autor
+        public Autor Autor
         {
             get { return _autor; }
             set

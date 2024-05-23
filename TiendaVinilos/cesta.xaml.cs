@@ -28,5 +28,10 @@ namespace TiendaVinilos
         {
 
         }
+
+        private void ListBox_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            // Aquí colocas la lógica que deseas ejecutar cuando se cambia la selección en el ListBox
+        }
     }
 }

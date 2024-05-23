@@ -23,5 +23,9 @@ namespace TiendaVinilos
         {
             InitializeComponent();
         }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // Aquí colocas la lógica que deseas ejecutar cuando se hace clic en el botón
+        }
     }
 }

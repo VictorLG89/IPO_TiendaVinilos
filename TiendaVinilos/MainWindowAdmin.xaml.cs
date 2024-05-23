@@ -23,5 +23,9 @@ namespace TiendaVinilos
         {
             InitializeComponent();
         }
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Aquí colocas la lógica que deseas ejecutar cuando cambia la selección en el ComboBox
+        }
     }
 }
