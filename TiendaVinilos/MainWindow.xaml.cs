@@ -44,7 +44,7 @@ namespace TiendaVinilos
         }
         private void OpenProductos(object sender, MouseButtonEventArgs e)
         {
-            OpenWindow(new Productos());
+            MainContent.Content = new Productos();
         }
 
         private void OpenQuienSomos(object sender, MouseButtonEventArgs e)

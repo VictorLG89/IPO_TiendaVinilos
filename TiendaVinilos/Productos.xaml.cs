@@ -17,7 +17,7 @@ namespace TiendaVinilos
     /// <summary>
     /// Lógica de interacción para Productos.xaml
     /// </summary>
-    public partial class Productos : Window
+    public partial class Productos : UserControl
     {
         public Productos()
         {
