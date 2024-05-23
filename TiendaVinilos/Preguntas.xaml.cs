@@ -17,7 +17,7 @@ namespace TiendaVinilos
     /// <summary>
     /// Lógica de interacción para Preguntas.xaml
     /// </summary>
-    public partial class Preguntas : Window
+    public partial class Preguntas : UserControl
     {
         public Preguntas()
         {

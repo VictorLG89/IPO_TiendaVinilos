@@ -17,7 +17,7 @@ namespace TiendaVinilos
     /// <summary>
     /// Lógica de interacción para QuienSomos.xaml
     /// </summary>
-    public partial class QuienSomos : Window
+    public partial class QuienSomos : UserControl
     {
         public QuienSomos()
         {

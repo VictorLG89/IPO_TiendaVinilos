@@ -17,7 +17,7 @@ namespace TiendaVinilos
     /// <summary>
     /// Lógica de interacción para AnadirPromocion.xaml
     /// </summary>
-    public partial class AnadirPromocion : Window
+    public partial class AnadirPromocion : UserControl
     {
         public AnadirPromocion()
         {

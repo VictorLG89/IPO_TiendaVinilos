@@ -17,7 +17,7 @@ namespace TiendaVinilos
     /// <summary>
     /// Lógica de interacción para PerfilUser.xaml
     /// </summary>
-    public partial class PerfilUser : Window
+    public partial class PerfilUser : UserControl
     {
         public PerfilUser()
         {

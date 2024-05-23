@@ -94,7 +94,7 @@
                 <RowDefinition Height="100"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-                    <ContentControl x:Name="MainContent" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+            <ContentControl x:Name="MainContent" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
         </Grid>
     </Grid>
 </Window>

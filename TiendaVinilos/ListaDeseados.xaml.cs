@@ -17,7 +17,7 @@ namespace TiendaVinilos
     /// <summary>
     /// Lógica de interacción para ListaDeseados.xaml
     /// </summary>
-    public partial class ListaDeseados : Window
+    public partial class ListaDeseados : UserControl
     {
         public ListaDeseados()
         {

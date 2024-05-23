@@ -17,7 +17,7 @@ namespace TiendaVinilos
     /// <summary>
     /// Lógica de interacción para cesta.xaml
     /// </summary>
-    public partial class cesta : Window
+    public partial class cesta : UserControl
     {
         public cesta()
         {
