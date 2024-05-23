@@ -5,20 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TiendaVinilos"
         mc:Ignorable="d"
-        Height="350" Width="800">
+        MinHeight="800" MinWidth="800">
     <Grid Background="White">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="90"/>
-            <ColumnDefinition Width="300"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="300*"/>
+            <ColumnDefinition Width="300*"/>
+            <ColumnDefinition Width="90*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="45"/>
+            <RowDefinition Height="60"/>
             <RowDefinition Height="250"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Image Grid.Column="1" HorizontalAlignment="Left" Height="250" Grid.Row="1" VerticalAlignment="Top" Width="300" Source="Images/disco-de-vinilo.png"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="¿Quién somos?&#xD;&#xA;Somos una empresa amante de la música que quiere compartir esta pasión con todo el mundo, poniendo al alcance de cualquiera todos los discos de vinilo.&#xD;&#xA;" Width="400" TextChanged="TextBox_TextChanged" Height="250" FontSize="22"/>
+        <Image Grid.Column="1" HorizontalAlignment="Right" Height="250" Grid.Row="1" Width="300" Source="Images/disco-de-vinilo.png" Margin="0,0,30,0"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Width="400" Height="250" FontSize="22"><Run/><LineBreak/><Run Text="¿Quién somos?&#xA;Somos una empresa amante de la música que quiere compartir esta pasión con todo el mundo, poniendo al alcance de cualquiera todos los discos de vinilo.&#xA;"/></TextBlock>
     </Grid>
 </UserControl>

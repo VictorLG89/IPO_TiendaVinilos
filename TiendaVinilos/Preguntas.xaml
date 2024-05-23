@@ -5,14 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TiendaVinilos"
         mc:Ignorable="d"
-        Height="450" Width="800">
+        MinHeight="800" MinWidth="800">
     <Grid Background="White">
-        
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="90"/>
-            <ColumnDefinition Width="520"/>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="620*"/>
+            <ColumnDefinition Width="90*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -22,8 +21,10 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Haznos una pregunta" VerticalAlignment="Bottom" FontSize="18"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="Escribe aquí" VerticalAlignment="Center" Width="620" Height="250" TextChanged="TextBox_TextChanged" Grid.ColumnSpan="2"/>
-        <Button Grid.Column="2" Content="Enviar" Grid.Row="3" RenderTransformOrigin="0.545,0.079"/>
+        <StackPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center">
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Haznos una pregunta" VerticalAlignment="Bottom" FontSize="18"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="Escribe aquí" Width="618" Height="204" TextChanged="TextBox_TextChanged"/>
+            <Button Grid.Column="1" Content="Enviar" Grid.Row="3" RenderTransformOrigin="0.545,0.079" Margin="439,0,0,0"/>
+        </StackPanel>
     </Grid>
 </UserControl>
