@@ -31,11 +31,11 @@ namespace TiendaVinilos
         }
         private void OpenArtistas(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new AnadirArtista();
+            MainContentFrame.Navigate(new AnadirArtista());
         }
         private void OpenPromociones(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new AnadirPromocion();
+            MainContentFrame.Navigate(new AnadirPromocion());
         }
         private void OpenProductos(object sender, MouseButtonEventArgs e)
         {
@@ -44,7 +44,7 @@ namespace TiendaVinilos
 
         private void OpenQuienSomos(object sender, MouseButtonEventArgs e)
         {
-            MainContent.Content = new QuienSomos();
+            MainContentFrame.Navigate(new QuienSomos());
         }
 
         private void OpenListaDeseados(object sender, MouseButtonEventArgs e)
@@ -54,17 +54,17 @@ namespace TiendaVinilos
 
         private void OpenPerfilUser(object sender, MouseButtonEventArgs e)
         {
-            MainContent.Content = new PerfilUser();
+            MainContentFrame.Navigate(new PerfilUser());
         }
 
         private void OpenPreguntas(object sender, MouseButtonEventArgs e)
         {
-            MainContent.Content = new Preguntas();
+            MainContentFrame.Navigate(new Preguntas());
         }
 
         private void OpenCesta(object sender, MouseButtonEventArgs e)
         {
-            MainContent.Content = new cesta();
+            MainContentFrame.Navigate(new cesta());
         }
 
         private void OpenWindow(Window window)
