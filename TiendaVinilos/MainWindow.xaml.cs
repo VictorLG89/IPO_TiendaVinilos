@@ -67,6 +67,11 @@ namespace TiendaVinilos
             OpenWindow(new Preguntas());
         }
 
+        private void OpenCesta(object sender, MouseButtonEventArgs e)
+        {
+            OpenWindow(new cesta());
+        }
+
         private void OpenWindow(Window window)
         {
             window.Show();

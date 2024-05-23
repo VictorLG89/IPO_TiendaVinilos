@@ -22,7 +22,7 @@
             <Setter Property="Opacity" Value="1"/>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Opacity" Value="0.7"/>
+                    <Setter Property="Opacity" Value="0.4"/>
                 </Trigger>
             </Style.Triggers>
         </Style>
