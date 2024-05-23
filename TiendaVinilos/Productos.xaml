@@ -5,16 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TiendaVinilos"
         mc:Ignorable="d"
-        Height="350" Width="800">
+        MinHeight="800" MinWidth="800">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            
             <ColumnDefinition Width="*"/>
-   
         </Grid.ColumnDefinitions>
         <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListBox_SelectionChanged" Grid.ColumnSpan="3">
             <ListBox.ItemTemplate>

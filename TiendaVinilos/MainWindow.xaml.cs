@@ -39,7 +39,7 @@ namespace TiendaVinilos
         }
         private void OpenProductos(object sender, MouseButtonEventArgs e)
         {
-            MainContent.Content = new Productos();
+            MainContentFrame.Navigate(new Productos());
         }
 
         private void OpenQuienSomos(object sender, MouseButtonEventArgs e)
@@ -49,7 +49,7 @@ namespace TiendaVinilos
 
         private void OpenListaDeseados(object sender, MouseButtonEventArgs e)
         {
-            MainContent.Content = new ListaDeseados();
+            MainContentFrame.Navigate(new ListaDeseados());
         }
 
         private void OpenPerfilUser(object sender, MouseButtonEventArgs e)
