@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/eliminar.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/%e2%80%94pngtree%e2%80%94question%20vector%20icon_3718021%20(1).png")]
 
 

@@ -6,7 +6,42 @@
         xmlns:local="clr-namespace:TiendaVinilos"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    
+    <Window.Resources>
+        <!-- Estilo para Label con sombreado al pasar el mouse -->
+        <Style x:Key="InteractiveLabelStyle" TargetType="Label">
+            <Setter Property="Background" Value="#FFE9E9E9"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="LightGray"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Estilo para Image interactiva -->
+        <Style x:Key="InteractiveImageStyle" TargetType="Image">
+            <Setter Property="Opacity" Value="1"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Opacity" Value="0.7"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Estilo para Label no interactivo (sin sombreado) -->
+        <Style x:Key="NonInteractiveLabelStyle" TargetType="Label">
+            <Setter Property="Background" Value="#FFE9E9E9"/>
+        </Style>
+
+        <!-- Estilo para Image con sombreado al pasar el mouse -->
+        <Style TargetType="Image">
+            <Setter Property="Opacity" Value="1"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Opacity" Value="0.5"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid Background="#FFCBE3F3">
             <Grid.ColumnDefinitions>
@@ -32,25 +67,25 @@
                 <RowDefinition Height="50"/>
                 <RowDefinition/>
                 <RowDefinition Height="10"/>
-
-
             </Grid.RowDefinitions>
+
             <ComboBox x:Name="Idioma" Grid.Column="12" RenderTransformOrigin="0.043,-0.362" Width="NaN" Grid.Row="1" SelectionChanged="ComboBox_SelectionChanged" Margin="0,6,0,8" Height="NaN"/>
-            <TextBox x:Name="interrogacion" Grid.Column="9" Grid.Row="1" TextWrapping="Wrap" TextChanged="TextBox_TextChanged" TextAlignment="Center" Width="NaN" FontSize="25" HorizontalContentAlignment="Center" RenderTransformOrigin="0.504,0.5" Height="NaN" AutomationProperties.Name="?" Text="?" BorderThickness="0,0,0,0" SelectionOpacity="0" Background="#FFCBE3F3" VerticalContentAlignment="Stretch" Margin="0,2,0,0" MouseLeftButtonDown="OpenPreguntas"/>
-            <Image x:Name="carrito" Grid.Column="7" Height="NaN" Grid.Row="1" Source="/Images/carrito.png" Stretch="Fill" Margin="3,3,3,3" Width="NaN"/>
-            <Image x:Name="corazon" Grid.Column="10" Height="NaN" Grid.Row="1" Source="/Images/corazon.png" Stretch="Fill" Margin="7,8,7,8" Width="NaN" MouseLeftButtonDown="OpenListaDeseados"/>
-            <Image x:Name="fotoperfil" Grid.Column="11" Height="NaN" Grid.Row="1" Source="/Images/fotoperfil.png" Stretch="Fill" Margin="7,8,7,8" Width="NaN" MouseLeftButtonDown="OpenPerfilUser"/>
-            <Label Grid.Column="3" Content="Vinilos" Grid.Row="2" Width="NaN" Height="NaN" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#FFE9E9E9" MouseLeftButtonDown="OpenProductos"/>
-            <Label Grid.Column="4" Content="Artistas" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#FFE9E9E9" Height="NaN" Width="NaN" MouseLeftButtonDown="OpenArtistas"/>
-            <Label Grid.Column="5" Content="Ofertas" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#FFE9E9E9" Height="NaN" Width="NaN" MouseLeftButtonDown="OpenPromociones"/>
-            <Label Grid.Column="6" Content="Contacto" Grid.Row="2" Grid.ColumnSpan="4" Width="NaN" Height="NaN" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" ScrollViewer.CanContentScroll="True" Background="#FFE9E9E9" MouseLeftButtonDown="OpenQuienSomos"/>
-            <Label Content="" Grid.Row="2" Height="NaN" Background="#FFE9E9E9" Grid.ColumnSpan="3" Width="NaN" IsEnabled="False"/>
-            <Label Grid.Column="10" Content="" Grid.Row="2" Background="#FFE9E9E9" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="4" Width="NaN" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" Height="NaN"/>
+            <Image x:Name="interrogacion" Grid.Column="9" Grid.Row="1" Source="/Images/interrogacion.png" Stretch="Fill" Margin="3,3,3,3" Width="NaN" MouseLeftButtonDown="OpenPreguntas" Style="{StaticResource InteractiveImageStyle}"/>
+            <Image x:Name="carrito" Grid.Column="7" Height="NaN" Grid.Row="1" Source="/Images/carrito.png" Stretch="Fill" Margin="3,3,3,3" Width="NaN" MouseLeftButtonDown="OpenCesta" Style="{StaticResource InteractiveImageStyle}"/>
+            <Image x:Name="corazon" Grid.Column="10" Height="NaN" Grid.Row="1" Source="/Images/corazon.png" Stretch="Fill" Margin="7,8,7,8" Width="NaN" MouseLeftButtonDown="OpenListaDeseados" Style="{StaticResource InteractiveImageStyle}"/>
+            <Image x:Name="fotoperfil" Grid.Column="11" Height="NaN" Grid.Row="1" Source="/Images/fotoperfil.png" Stretch="Fill" Margin="7,8,7,8" Width="NaN" MouseLeftButtonDown="OpenPerfilUser" Style="{StaticResource InteractiveImageStyle}"/>
+
+            <Label Grid.Column="3" Content="Vinilos" Grid.Row="2" Width="NaN" Height="NaN" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" MouseLeftButtonDown="OpenProductos" Style="{StaticResource InteractiveLabelStyle}"/>
+            <Label Grid.Column="4" Content="Artistas" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Height="NaN" Width="NaN" MouseLeftButtonDown="OpenArtistas" Style="{StaticResource InteractiveLabelStyle}"/>
+            <Label Grid.Column="5" Content="Ofertas" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Height="NaN" Width="NaN" MouseLeftButtonDown="OpenPromociones" Style="{StaticResource InteractiveLabelStyle}"/>
+            <Label Grid.Column="6" Content="Contacto" Grid.Row="2" Grid.ColumnSpan="4" Width="NaN" Height="NaN" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" ScrollViewer.CanContentScroll="True" MouseLeftButtonDown="OpenQuienSomos" Style="{StaticResource InteractiveLabelStyle}"/>
+
+            <Label Content="" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="3" Width="158" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" Height="NaN" Style="{StaticResource NonInteractiveLabelStyle}" HorizontalAlignment="Center"/>
+            <Label Grid.Column="10" Content="" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="4" Width="NaN" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" Height="NaN" Style="{StaticResource NonInteractiveLabelStyle}"/>
+
             <Image Grid.Column="1" HorizontalAlignment="Center" Height="34" VerticalAlignment="Top" Width="76" Grid.Row="1" Source="/logoTienda.jpg"/>
             <Image Grid.Column="5" HorizontalAlignment="Left" Height="4" Margin="10,206,0,0" Grid.Row="3" VerticalAlignment="Top" Width="86"/>
             <Image Grid.Column="1" Height="37" Width="36" Grid.Row="1" Source="/Images/disco-de-vinilo.png" Margin="0,0,0,3"/>
-
-            <!-- Contenido de la cuadrícula -->
         </Grid>
     </Grid>
 </Window>
