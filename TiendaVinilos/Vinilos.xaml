@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="TiendaVinilos.Vinilos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TiendaVinilos"
+        mc:Ignorable="d"
+        Height="350" Width="800">
+   
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel Orientation="Horizontal">
+            <ListBox x:Name="lstListaPeliculas" SelectedIndex="0" Width="250" Height="350" VerticalAlignment="Bottom"  AlternationCount="2">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Width="785">
+                            <Image Source="{Binding Portada}" Width="50" Height="50" Margin="5"/>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Nombre}" FontWeight="Bold"/>
+                                <TextBlock Text="{Binding Autor}" />
+                            </StackPanel>
+                            <StackPanel Width="100" Margin="10,0,0,0">
+                                <TextBlock Text="{Binding Precio}" TextWrapping="Wrap" d:LayoutOverrides="Width, Height"/>
+                            </StackPanel>
+                            <StackPanel Width="70" Margin="500,0,0,0">
+                                <Image Source="/Images/corazonVacio.png" HorizontalAlignment="Center" Height="53" Width="24"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListBoxItem}">
+                        <Setter Property="Margin" Value="2"/>
+                        <Style.Triggers>
+                            <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                                <Setter Property="Background" Value="LightCyan"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Foreground" Value="Blue"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="BorderBrush" Value="Blue"/>
+                                <Setter Property="BorderThickness" Value="3"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+            </ListBox>
+            <StackPanel x:Name="spDetallesPelicula" Orientation="Vertical" Height="350" VerticalAlignment="Bottom" Width="550">
+                <Label x:Name="lblTitulo" FontWeight="Bold" FontSize="20" Content="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Titulo}"/>
+                <Image x:Name="imgCaratula" Height="120" Width="100" HorizontalAlignment="Left" Margin="5" Stretch="Fill" Source="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Portada}"/>
+                <Label FontWeight="Bold">Año:</Label>
+                <Label x:Name="lblAnio" Content="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Anio}"/>
+                <Label FontWeight="Bold">Duración (min.):</Label>
+                <Label x:Name="lblDuracion" Content="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Duracion}"/>
+                <Label FontWeight="Bold">Argumento:</Label>
+                <TextBlock x:Name="txtArgumento" Margin="5" Text="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Argumento}"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
+

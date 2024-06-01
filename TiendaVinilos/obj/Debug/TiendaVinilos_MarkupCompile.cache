@@ -11,10 +11,10 @@ false
 DEBUG;TRACE
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\App.xaml
 19145306889
-
-25897234746
-13-1310406943
+3-812501955
+27205471706
+56596541322
 AnadirArtista.xaml;AnadirDisco.xaml;AnadirGrupo.xaml;AnadirPromocion.xaml;Articulo.xaml;Artista.xaml;cesta.xaml;HistorialdePedidos.xaml;InicioDeSesion.xaml;ListaDeseados.xaml;MainWindow.xaml;MainWindowAdmin.xaml;PerfilUser.xaml;Preguntas.xaml;Productos.xaml;ProductosAdmin.xaml;QuienSomos.xaml;Registro.xaml;ResumenPerfil.xaml;
 
-False
+True
 

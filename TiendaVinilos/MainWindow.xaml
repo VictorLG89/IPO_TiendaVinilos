@@ -87,11 +87,12 @@
             <Image Grid.Column="5" HorizontalAlignment="Left" Height="4" Margin="10,46,0,0" Grid.Row="4" VerticalAlignment="Top" Width="86"/>
             <Image Grid.Column="1" Height="37" Width="36" Grid.Row="1" Source="/Images/disco-de-vinilo.png" Margin="2,0,2,3"/>
 
-            
+
         </Grid>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="250*"/>
+                <ColumnDefinition Width="550*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="100*"/>

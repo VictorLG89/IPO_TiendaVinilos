@@ -17,16 +17,23 @@ namespace TiendaVinilos
 {
     using System.Windows;
     using System.Windows.Input;
-    using TiendaVinilos.Service;
+    using TiendaVinilos.Data;
+    using TiendaVinilos.Services;
+    using TiendaVinilos.Models;
+    using TiendaVinilos.Properties;
+    using Microsoft.EntityFrameworkCore;
 
     public partial class MainWindow : Window
     {
-        private readonly VinylService _vinylService;
+        private readonly ViniloService _vinylService;
+        private readonly AppDbContext _context;
 
+        
         public MainWindow()
         {
             InitializeComponent();
-            _vinylService = new VinylService();
+            var dbContext = new AppDbContext(new DbContextOptions<AppDbContext>()); // Crea una instancia de AppDbContext
+            var _vinylService = new ViniloService(dbContext); // Crea una instancia de ViniloService pasando el contexto de la base de datos como argumento
             
         }
         private void OpenArtistas(object sender, RoutedEventArgs e)
@@ -107,6 +114,11 @@ namespace TiendaVinilos
         private void Label_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             // Manejo del evento Label
+        }
+
+        private void lstListaPeliculas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
