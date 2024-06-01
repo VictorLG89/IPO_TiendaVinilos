@@ -34,11 +34,11 @@ namespace TiendaVinilos
         }
         private void OpenPromociones(object sender, RoutedEventArgs e)
         {
-            MainContentFrame.Navigate(new Vinilos());
+            MainContentFrame.Navigate(new Productos());
         }
         private void OpenProductos(object sender, MouseButtonEventArgs e)
         {
-            MainContentFrame.Navigate(new Productos());
+            MainContentFrame.Navigate(new Vinilos());
         }
 
         private void OpenQuienSomos(object sender, MouseButtonEventArgs e)
