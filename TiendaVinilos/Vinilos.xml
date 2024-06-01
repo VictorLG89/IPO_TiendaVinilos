@@ -1,16 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿
 <Vinilos>
-	<Vinilo Titulo="..." Anio="..." Duracion="..."
-	Argumento="..."
-	Portada="..."
-	Autor="..." Genero="..."
-	AltaEnVideoteca="..." Visualizada="..."
-	URL_IMDB="..."/>
-	<Vinilo Titulo="Nebraska" Anio="2013" Duracion="110"
-	Argumento="A Woody Grant, un anciano con síntomas de demencia..."
-	Portada="Imagenes/cartel1.jpg"
-	Autor="Alexander Payne" Genero="Drama"
-	AltaEnVideoteca="04/09/2021" Visualizada="true"
-	URL_IMDB="https://www.imdb.com/title/tt1821549/?ref_=fn_al_tt_1"/>
-	...
+	<Vinilo Titulo="Cicatrices" Anio="2013" Duracion="110"
+	Portada="Images/cicatrices.jpg"
+	Autor="Natos y Waor"/>
+	<Vinilo Titulo="Untitulogitano" Anio="2020" Duracion="80"
+	Portada="Images/imgDiscoRosalía.jpg"
+	Autor="Rosalía"/>
+	<Vinilo Titulo="Thriller" Anio="2000" Duracion="90"
+	Portada="Images/Thriller.jpg"
+	Autor="Michael Jackson"/>
+	<Vinilo Titulo="Back in Black" Anio="1999" Duracion="210"
+	Portada="Images/backinblack.jpg"
+	Autor="ACDC"/>
+	<Vinilo Titulo="Led Zeppelin IV" Anio="199" Duracion="150"
+	Portada="Images/lziv.jpg"
+	Autor="Led Zeppelin"/>
+	<Vinilo Titulo="The Dark Side Of The Moon" Anio="1990" Duracion="220"
+	Portada="Images/tdsotm.jpg"
+	Autor="Pink Floyd"/>
+	
 </Vinilos>

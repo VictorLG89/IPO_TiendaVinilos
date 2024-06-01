@@ -17,7 +17,6 @@ namespace TiendaVinilos
 {
     using System.Windows;
     using System.Windows.Input;
-    using TiendaVinilos.Models;
     using TiendaVinilos.Properties;
     using Microsoft.EntityFrameworkCore;
 

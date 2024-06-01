@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml;
-using TiendaVinilos.Models;
+
 
 namespace TiendaVinilos
 {
@@ -37,23 +37,24 @@ namespace TiendaVinilos
         private void CargarContenidoListaXML()
         {
             XmlDocument doc = new XmlDocument();
-                var fichero = Application.GetResourceStream(new Uri("Datos/Vinilos.xml", UriKind.Relative));
+                var fichero = Application.GetResourceStream(new Uri("Vinilos.xml", UriKind.Relative));
             doc.Load(fichero.Stream);
             foreach(XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevoVinilo = new Vinilo("",0,0,null,null);
+                var nuevoVinilo = new Vinilo("Titulo",1,2,null,null);
 
-                nuevoVinilo.Titulo = node.Attributes["Titulo"].Value;
+                nuevoVinilo.Titulo = node.Attributes["Titulo"]?.Value ?? "Desconocido";
                 nuevoVinilo.Anio = Convert.ToInt32(node.Attributes["Anio"].Value);
                 nuevoVinilo.Duracion =Convert.ToInt32(node.Attributes["Duracion"].Value);
                 ///nuevoVinilo.Argumento = node.Attributes["Argumento"].Value;
-                nuevoVinilo.Portada = new Uri(node.Attributes["Caratula"].Value, UriKind.Relative);
-               /// nuevoVinilo.Director = node.Attributes["Director"].Value;
+                nuevoVinilo.Portada = new Uri(node.Attributes["Portada"].Value, UriKind.Relative);
+                nuevoVinilo.Autor = node.Attributes["Autor"].Value;
                 ///nuevoVinilo.GeneroPelicula = node.Attributes["Genero"].Value;
                 ///nuevoVinilo.AltaEnVideoteca = Convert.ToDateTime(node.Attributes["AltaEnVideoteca"].Value);
                 ///nuevoVinilo.Visualizada = Convert.ToBoolean(node.Attributes["Visualizada"].Value);
                 ///nuevoVinilo.URL_IMDB = new Uri(node.Attributes["URL_IMDB"].Value, UriKind.Absolute);
-            
+                
+
                 listadoVinilos.Add(nuevoVinilo);
             }
         }
