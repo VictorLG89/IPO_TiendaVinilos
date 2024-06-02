@@ -5,7 +5,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:TiendaVinilos"
     mc:Ignorable="d"
-    MinHeight="800" MinWidth="800"><Grid Background="White">
+    MinHeight="800" MinWidth="800">
+    <Grid Background="White">
 
     <Grid.ColumnDefinitions>
         <ColumnDefinition Width="90*"/>

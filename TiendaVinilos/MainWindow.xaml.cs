@@ -30,7 +30,7 @@ namespace TiendaVinilos
         }
         private void OpenArtistas(object sender, RoutedEventArgs e)
         {
-            MainContentFrame.Navigate(new AnadirArtista());
+            MainContentFrame.Navigate(new Artistas());
         }
         private void OpenPromociones(object sender, RoutedEventArgs e)
         {

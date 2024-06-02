@@ -11,23 +11,58 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="20"/>
                 <RowDefinition Height="120"/>
-                <RowDefinition Height="120"/>
+                <RowDefinition Height="280"/>
                 <RowDefinition Height="120"/>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="*"/>
 
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="300*"/>
-                <ColumnDefinition Width="200*"/>
-                <ColumnDefinition Width="300*"/>
+                <ColumnDefinition Width="280*"/>
+                <ColumnDefinition Width="240*"/>
+                <ColumnDefinition Width="280*"/>
             </Grid.ColumnDefinitions>
+            <ListBox x:Name="lstListaUsuarios"/>
             <StackPanel Grid.Row="2" Grid.Column="1" Margin="10,0,10,0" Height="NaN" Width="NaN">
-                <TextBlock Text="usuario_nombre" Margin="0,0,0,5" HorizontalAlignment="Center" FontSize="18"/>
-                <TextBlock Text="Nombre Apellido" Margin="0,0,0,5" HorizontalAlignment="Center" FontSize="18"/>
-                <TextBlock Text="usuario@email.com" Margin="0,0,0,5" HorizontalAlignment="Center" FontSize="18"/>
-                <TextBlock Text="1234567890" Margin="0,0,0,5" HorizontalAlignment="Center" FontSize="18"/>
+                <!-- Nombre de Usuario -->
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,0,20">
+                    <!-- Aumentado a 20 -->
+                    <TextBlock Text="Nombre de Usuario:" FontSize="16" Foreground="#FF0000FF" HorizontalAlignment="Center"/>
+                    <TextBlock x:Name="txtNombreUsuario" Margin="0,0,0,5" FontSize="18" Text="{Binding ElementName=lstListaUsuarios, Path=SelectedItem.Nombre}" HorizontalAlignment="Center"/>
+                </StackPanel>
+
+                <!-- Nombre y Apellido/s -->
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,0,20">
+                    <!-- Aumentado a 20 -->
+                    <TextBlock Text="Nombre y Apellido/s:" FontSize="16" Foreground="#FF0000FF" HorizontalAlignment="Center"/>
+                    <TextBlock x:Name="txtNombre" Margin="0,0,0,5" FontSize="18" HorizontalAlignment="Center">
+                        <TextBlock.Text>
+                            <MultiBinding StringFormat="{}{0} {1} {2}">
+                                <Binding ElementName="lstListaUsuarios" Path="SelectedItem.Nombre"/>
+                                <Binding ElementName="lstListaUsuarios" Path="SelectedItem.Apellido1"/>
+                                <Binding ElementName="lstListaUsuarios" Path="SelectedItem.Apellido2"/>
+                            </MultiBinding>
+                        </TextBlock.Text>
+                    </TextBlock>
+                </StackPanel>
+
+                <!-- Correo Electrónico -->
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,0,20">
+                    <!-- Aumentado a 20 -->
+                    <TextBlock Text="Correo Electrónico:" FontSize="16" Foreground="#FF0000FF" HorizontalAlignment="Center"/>
+                    <TextBlock x:Name="txtCorreo" Margin="0,0,0,5" FontSize="18" Text="{Binding ElementName=lstListaUsuarios, Path=SelectedItem.correo}" HorizontalAlignment="Center"/>
+                </StackPanel>
+
+                <!-- ID de Usuario -->
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,0,20">
+                    <!-- Aumentado a 20 -->
+                    <TextBlock Text="ID de Usuario:" FontSize="16" Foreground="#FF0000FF" HorizontalAlignment="Center"/>
+                    <TextBlock x:Name="txtIdUsuario" Margin="0,0,0,5" FontSize="18" Text="{Binding ElementName=lstListaUsuarios, Path=SelectedItem.IdUsuario}" HorizontalAlignment="Center"/>
+                </StackPanel>
             </StackPanel>
+
+
+
             <Button Grid.Column="1" Content="Lista de deseos" HorizontalAlignment="Center" Margin="0,5,0,5" Grid.Row="3" VerticalAlignment="Top" FontSize="18"/>
             <Button Grid.Column="1" Content="Historial de pedidos" HorizontalAlignment="Center" Margin="0,40,0,0" Grid.Row="3" VerticalAlignment="Top" FontSize="18"/>
             <Button Grid.Column="1" Content="Editar perfil" HorizontalAlignment="Center" Margin="0,75,0,0" Grid.Row="3" VerticalAlignment="Top" FontSize="18"/>

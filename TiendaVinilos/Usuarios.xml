@@ -1,0 +1,4 @@
+﻿<Usuarios>
+	<Usuario IdUsuario="1" NombreUsuario="usuario" Nombre="Usuario" Apellido1="García" Apellido2="" Admin="False" correo="usuario@usuario.com" FotoPerfil="" Contrasena="usuario"/>
+	<Usuario IdUsuario="2" NombreUsuario="admin" Nombre="Administrador" Apellido1="Gómez" Apellido2="Porro" Admin="True" correo="admin@admin.com" FotoPerfil="" Contrasena="admin"/>
+</Usuarios>

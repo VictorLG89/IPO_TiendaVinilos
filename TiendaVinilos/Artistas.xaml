@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="TiendaVinilos.Artistas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TiendaVinilos"
+        mc:Ignorable="d"
+        MinHeight="450" MinWidth="800">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250*"/>
+                <ColumnDefinition Width="550*"/>
+            </Grid.ColumnDefinitions>
+            <ListBox x:Name="lstListaArtistas" SelectedIndex="0" Grid.Column="0"  VerticalAlignment="Top"  AlternationCount="2" MinHeight="700" MinWidth="250">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="{Binding Foto}" Width="50" Height="50" Margin="5"/>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Nombre}" FontWeight="Bold"/>
+                            </StackPanel>
+                            <StackPanel Width="100" Margin="10,0,0,0">
+                                <TextBlock Text="{Binding Precio}" TextWrapping="Wrap" d:LayoutOverrides="Width, Height"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListBoxItem}">
+                        <Setter Property="Margin" Value="2"/>
+                        <Style.Triggers>
+                            <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                                <Setter Property="Background" Value="LightCyan"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Foreground" Value="Blue"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="BorderBrush" Value="Blue"/>
+                                <Setter Property="BorderThickness" Value="3"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+            </ListBox>
+            <StackPanel x:Name="spDetallesPelicula" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Top" MinHeight="350" MinWidth="550">
+                <Label x:Name="lblTitulo" FontWeight="Bold" FontSize="20" Content="{Binding ElementName=lstListaArtistas, Path=SelectedItem.Nombre}"/>
+                <Image x:Name="imgPortada" Height="120" Width="140" HorizontalAlignment="Left" Margin="5"  Source="{Binding ElementName=lstListaArtistas, Path=SelectedItem.Foto}"/>
+                <Label FontWeight="Bold">Año:</Label>
+                <Label x:Name="lblAnio" Content="{Binding ElementName=lstListaArtistas, Path=SelectedItem.Anio}"/>
+                <Label FontWeight="Bold">Nacionalidad:</Label>
+                <Label x:Name="lblNacionalidad" Content="{Binding ElementName=lstListaArtistas, Path=SelectedItem.Nacionalidad}"/>
+                <Label FontWeight="Bold">Tipo:</Label>
+                <Label x:Name="lblTipo" Content="{Binding ElementName=lstListaArtistas, Path=SelectedItem.Tipo}"/>
+                
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

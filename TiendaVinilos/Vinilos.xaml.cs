@@ -46,13 +46,9 @@ namespace TiendaVinilos
                 nuevoVinilo.Titulo = node.Attributes["Titulo"]?.Value ?? "Desconocido";
                 nuevoVinilo.Anio = Convert.ToInt32(node.Attributes["Anio"].Value);
                 nuevoVinilo.Duracion =Convert.ToInt32(node.Attributes["Duracion"].Value);
-                ///nuevoVinilo.Argumento = node.Attributes["Argumento"].Value;
                 nuevoVinilo.Portada = new Uri(node.Attributes["Portada"].Value, UriKind.Relative);
                 nuevoVinilo.Autor = node.Attributes["Autor"].Value;
-                ///nuevoVinilo.GeneroPelicula = node.Attributes["Genero"].Value;
-                ///nuevoVinilo.AltaEnVideoteca = Convert.ToDateTime(node.Attributes["AltaEnVideoteca"].Value);
-                ///nuevoVinilo.Visualizada = Convert.ToBoolean(node.Attributes["Visualizada"].Value);
-                ///nuevoVinilo.URL_IMDB = new Uri(node.Attributes["URL_IMDB"].Value, UriKind.Absolute);
+
                 
 
                 listadoVinilos.Add(nuevoVinilo);

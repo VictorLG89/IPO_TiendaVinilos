@@ -11,14 +11,20 @@ namespace TiendaVinilos
         public string Nombre { set; get; }
         public int Anio { set; get; }
         public string Nacionalidad { set; get; }
-        public int AutorId { set; get; }
+        public int IdAutor { set; get; }
+        public string Tipo { set; get; }
 
-        public Autor(string nombre, int anio, string nacionalidad, int autorId)
+        public Uri Foto { set; get; }
+
+        public Autor(string nombre, int anio, string nacionalidad, int autorId, string tipo, Uri foto)
         {
             Nombre = nombre;
             Anio = anio;
             Nacionalidad = nacionalidad;
-            AutorId = autorId;
+            IdAutor = autorId;
+            Tipo = tipo;
+            Foto = foto;
+
         }
     }
 }

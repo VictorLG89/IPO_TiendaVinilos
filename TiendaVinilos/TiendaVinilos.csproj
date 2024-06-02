@@ -203,6 +203,9 @@
     <Compile Include="Artista.xaml.cs">
       <DependentUpon>Artista.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Artistas.xaml.cs">
+      <DependentUpon>Artistas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Autor.cs" />
     <Compile Include="cesta.xaml.cs">
       <DependentUpon>cesta.xaml</DependentUpon>
@@ -228,6 +231,7 @@
     <Compile Include="ResumenPerfil.xaml.cs">
       <DependentUpon>ResumenPerfil.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Usuario.cs" />
     <Compile Include="Vinilo.cs" />
     <Compile Include="Vinilos.xaml.cs">
       <DependentUpon>Vinilos.xaml</DependentUpon>
@@ -255,6 +259,10 @@
     <Page Include="Artista.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Artistas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="cesta.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -379,7 +387,7 @@
   <ItemGroup>
     <Resource Include="Images\corazonVacio.png" />
     <Resource Include="Images\fondovinilos.jpeg" />
-    <Resource Include="Images\imgDiscoRosalía.jpg" />
+    <Resource Include="Images\Portadas\imgDiscoRosalía.jpg" />
     <Resource Include="Images\imgIcono.png" />
     <Resource Include="Images\imgLupa.png" />
     <Resource Include="Images\imgPlay.png" />
@@ -397,19 +405,33 @@
     <Resource Include="Vinilos.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\cicatrices.jpg" />
+    <Resource Include="Images\Portadas\cicatrices.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Thriller.jpg" />
+    <Resource Include="Images\Portadas\Thriller.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\backinblack.jpg" />
+    <Resource Include="Images\Portadas\backinblack.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\lziv.jpg" />
+    <Resource Include="Images\Portadas\lziv.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\tdsotm.jpg" />
+    <Resource Include="Images\Portadas\tdsotm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Autores.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Autores\ACDC\ACDC.jpg" />
+    <Resource Include="Images\Autores\LedZeppelin\LedZeppelin.jpg" />
+    <Resource Include="Images\Autores\MichaelJackson\MichaelJackson.jpg" />
+    <Resource Include="Images\Autores\NatosWaor\natos_y_waor.jpeg" />
+    <Resource Include="Images\Autores\PinkFloyd\PinkFloyd.jpg" />
+    <Resource Include="Images\Autores\Rosalia\Rosalia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Usuarios.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\SQLitePCLRaw.lib.e_sqlite3.2.0.2\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets" Condition="Exists('packages\SQLitePCLRaw.lib.e_sqlite3.2.0.2\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets')" />

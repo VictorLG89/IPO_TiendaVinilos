@@ -1,22 +1,21 @@
 ﻿
 <Vinilos>
 	<Vinilo Titulo="Cicatrices" Anio="2013" Duracion="110"
-	Portada="Images/cicatrices.jpg"
+	Portada="Images/Portadas/cicatrices.jpg"
 	Autor="Natos y Waor"/>
 	<Vinilo Titulo="Untitulogitano" Anio="2020" Duracion="80"
-	Portada="Images/imgDiscoRosalía.jpg"
+	Portada="Images/Portadas/imgDiscoRosalía.jpg"
 	Autor="Rosalía"/>
 	<Vinilo Titulo="Thriller" Anio="2000" Duracion="90"
-	Portada="Images/Thriller.jpg"
+	Portada="Images/Portadas/Thriller.jpg"
 	Autor="Michael Jackson"/>
 	<Vinilo Titulo="Back in Black" Anio="1999" Duracion="210"
-	Portada="Images/backinblack.jpg"
-	Autor="ACDC"/>
+	Portada="Images/Portadas/backinblack.jpg"
+	Autor="AC/DC"/>
 	<Vinilo Titulo="Led Zeppelin IV" Anio="199" Duracion="150"
-	Portada="Images/lziv.jpg"
+	Portada="Images/Portadas/lziv.jpg"
 	Autor="Led Zeppelin"/>
 	<Vinilo Titulo="The Dark Side Of The Moon" Anio="1990" Duracion="220"
-	Portada="Images/tdsotm.jpg"
+	Portada="Images/Portadas/tdsotm.jpg"
 	Autor="Pink Floyd"/>
-	
 </Vinilos>

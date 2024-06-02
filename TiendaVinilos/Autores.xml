@@ -1,0 +1,9 @@
+﻿
+<Autores>
+	<Autor Nombre="Natos y Waor" Anio="2012" Nacionalidad="Terrestre" IdAutor="1" Tipo="Grupo" Foto="Images/Autores/NatosWaor/natos_y_waor.jpeg"/>
+	<Autor Nombre="Michael Jackson" Anio="1999" Nacionalidad="Terrestre" IdAutor="2" Tipo="Solista" Foto="Images/Autores/MichaelJackson/MichaelJackson.jpg"/>
+	<Autor Nombre="Pink Floyd" Anio="1990" Nacionalidad="Terrestre" IdAutor="3" Tipo="Grupo" Foto="Images/Autores/PinkFloyd/PinkFloyd.jpg"/>
+	<Autor Nombre="Rosalia" Anio="2015" Nacionalidad="Terrestre" IdAutor="4" Tipo="Solista" Foto="Images/Autores/Rosalia/Rosalia.jpg"/>
+	<Autor Nombre="AC/DC" Anio="1990" Nacionalidad="Terrestre" IdAutor="5" Tipo="Grupo" Foto="Images/Autores/ACDC/ACDC.jpg"/>
+	<Autor Nombre="Led Zeppelin" Anio="1990" Nacionalidad="Terrestre" IdAutor="6" Tipo="Grupo" Foto="Images/Autores/LedZeppelin/LedZeppelin.jpg"/>
+</Autores>
