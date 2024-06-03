@@ -19,13 +19,13 @@ namespace TiendaVinilos
 {
     public partial class InicioDeSesion : Window
     {
-        private string rutaXml = "Usuarios.xml";
+        private string rutaXml = "usuarios.xml";
 
         public InicioDeSesion()
         {
             InitializeComponent();
             tbxEmail.Text = "Usuario";
-            pbxContraseña.Password = "Contrasena";
+            pbxContraseña.Password = "Contraseña";
         }
 
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
@@ -51,7 +51,7 @@ namespace TiendaVinilos
         private void PasswordBox_GotFocus(object sender, RoutedEventArgs e)
         {
             PasswordBox passwordBox = sender as PasswordBox;
-            if (passwordBox != null && passwordBox.Password == "Contrasena")
+            if (passwordBox != null && passwordBox.Password == "Contraseña")
             {
                 passwordBox.Password = "";
                 passwordBox.Foreground = new SolidColorBrush(Colors.Black); // Cambia el color del texto a negro
@@ -63,7 +63,7 @@ namespace TiendaVinilos
             PasswordBox passwordBox = sender as PasswordBox;
             if (passwordBox != null && string.IsNullOrWhiteSpace(passwordBox.Password))
             {
-                passwordBox.Password = "Contrasena";
+                passwordBox.Password = "Contraseña";
                 passwordBox.Foreground = new SolidColorBrush(Colors.Gray); // Cambia el color del texto a gris
             }
         }
@@ -76,8 +76,18 @@ namespace TiendaVinilos
             if (ValidarCredenciales(nombreUsuario, contraseña))
             {
                 MessageBox.Show("Inicio de sesión exitoso", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
+
+                if (UsuarioActual.Admin)
+                {
+                    MainWindowAdmin mainWindowAdmin = new MainWindowAdmin();
+                    mainWindowAdmin.Show();
+                }
+                else
+                {
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
+                }
+
                 this.Close();
             }
             else
@@ -96,7 +106,7 @@ namespace TiendaVinilos
             try
             {
                 XmlDocument doc = new XmlDocument();
-                var fichero = Application.GetResourceStream(new Uri("Usuarios.xml", UriKind.Relative));
+                var fichero = Application.GetResourceStream(new Uri("usuarios.xml", UriKind.Relative));
                 doc.Load(fichero.Stream);
 
                 foreach (XmlNode node in doc.DocumentElement.ChildNodes)
