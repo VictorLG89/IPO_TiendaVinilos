@@ -232,6 +232,7 @@
       <DependentUpon>ResumenPerfil.xaml</DependentUpon>
     </Compile>
     <Compile Include="Usuario.cs" />
+    <Compile Include="UsuarioActual.cs" />
     <Compile Include="Vinilo.cs" />
     <Compile Include="Vinilos.xaml.cs">
       <DependentUpon>Vinilos.xaml</DependentUpon>
