@@ -62,15 +62,17 @@ namespace TiendaVinilos
         {
             Image imgCorazon = (Image)sender;
             Vinilo viniloSeleccionado = (Vinilo)imgCorazon.DataContext;
-
+            Vinilo viniloSeleccionadoAux = viniloSeleccionado;
             if (viniloSeleccionado != null)
             {
                 // Verificar si el vinilo seleccionado ya está en la lista de deseos del usuario
                 bool estaEnListaDeseos = UsuarioActual.ListaDeseos.Any(v => v.IdVinilo == viniloSeleccionado.IdVinilo);
+                
 
                 if (estaEnListaDeseos)
-                { 
-                    viewModel.EliminarDeListaDeseos(viniloSeleccionado);
+                {
+                    viniloSeleccionadoAux = UsuarioActual.ListaDeseos.FirstOrDefault(v => v.IdVinilo == viniloSeleccionado.IdVinilo);
+                    viewModel.EliminarDeListaDeseos(viniloSeleccionadoAux);
                     imgCorazon.Source = new BitmapImage(new Uri("/Images/corazonVacio.png", UriKind.Relative));
                 }
                 else

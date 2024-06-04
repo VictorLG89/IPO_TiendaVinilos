@@ -16,7 +16,7 @@
         <ListBox x:Name="lstListaDeseados" ItemsSource="{Binding ListaDeseos}" Grid.ColumnSpan="3">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal" Width="785">
+                    <StackPanel Orientation="Horizontal" MinWidth="785">
                         <Image Source="{Binding Portada}" Width="50" Height="50" Margin="5"/>
                         <StackPanel>
                             <TextBlock Text="{Binding Nombre}" FontWeight="Bold"/>
