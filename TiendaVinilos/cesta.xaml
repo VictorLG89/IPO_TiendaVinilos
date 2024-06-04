@@ -40,8 +40,8 @@
                             <TextBlock Text="{Binding Vinilo.Titulo}" FontWeight="Bold"/>
                             <TextBlock Text="{Binding Vinilo.Autor}" />
                         </StackPanel>
-                        <StackPanel>
-                            <TextBlock Text="Cantidad:" FontWeight="Bold"/>
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Text="Cantidad:" FontWeight="Bold" HorizontalAlignment="Center"/>
                             <TextBlock Text="{Binding Cantidad}"/>
                         </StackPanel>
                         <StackPanel Width="100" Margin="10,0,0,0">

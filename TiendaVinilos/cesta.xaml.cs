@@ -17,6 +17,7 @@ namespace TiendaVinilos
     public partial class cesta : UserControl
     {
         private ViewModel viewModel;
+        public static Frame MainContentFrame { get; set; }
 
         public cesta()
         {
@@ -47,6 +48,12 @@ namespace TiendaVinilos
                 lstCesta.Visibility = Visibility.Visible;
             }
         }
+        private void RecargarCesta()
+        {
+            // Abrir la ventana de lista de deseos en el MainContentFrame
+
+            MainContentFrame.Navigate(new cesta());
+        }
 
         private void imgBasura_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -54,6 +61,7 @@ namespace TiendaVinilos
             if (producto != null)
             {
                 viewModel.EliminarDeCesta(producto);
+                RecargarCesta();
                 ActualizarMensajeVacio();
             }
         }

@@ -31,8 +31,15 @@ namespace TiendaVinilos
         {
             if (Cesta.Contains(producto))
             {
-                Cesta.Remove(producto);
-                
+                if (producto.Cantidad > 1)
+                {
+                    producto.Cantidad--; // Restar 1 a la cantidad si es mayor que 1
+
+                }
+                else
+                {
+                    Cesta.Remove(producto); // Eliminar el producto si la cantidad es 1 o menos
+                }
             }
         }
 

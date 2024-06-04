@@ -64,6 +64,7 @@ namespace TiendaVinilos
 
         private void OpenCesta(object sender, MouseButtonEventArgs e)
         {
+            cesta.MainContentFrame = MainContentFrame;
             MainContentFrame.Navigate(new cesta());
         }
 
