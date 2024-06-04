@@ -23,7 +23,7 @@
                 <ColumnDefinition Width="250*"/>
                 <ColumnDefinition Width="550*"/>
             </Grid.ColumnDefinitions>
-            <ListBox x:Name="lstListaPeliculas" SelectedIndex="0" Grid.Column="0"  VerticalAlignment="Top"  AlternationCount="2" MinHeight="700" MinWidth="250" HorizontalContentAlignment="Center">
+            <ListBox x:Name="lstListaPeliculas" SelectedIndex="0" Grid.Column="0" VerticalAlignment="Top" AlternationCount="2" MinHeight="700" MinWidth="250" HorizontalContentAlignment="Center">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" MinWidth="250" HorizontalAlignment="Left">
@@ -74,6 +74,7 @@
                     <Run Text="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Precio}"/>
                     <Run Text=" €"/>
                 </TextBlock>
+                <Button x:Name="btnCesta" Content="Añadir a la cesta" Click="btnAnadirACesta_Click" Margin="5"/>
             </StackPanel>
         </Grid>
     </Grid>

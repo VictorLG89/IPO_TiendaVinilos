@@ -84,7 +84,30 @@ namespace TiendaVinilos
             }
         }
 
+        private void btnAnadirACesta_Click(object sender, RoutedEventArgs e)
+        {
+            Button btnCesta = sender as Button;
+            
+            if (lstListaPeliculas.SelectedItem is Vinilo selectedVinilo)
+            {
+                var productoExistente = UsuarioActual.Cesta.FirstOrDefault(p => p.Vinilo.IdVinilo == selectedVinilo.IdVinilo);
+                if (productoExistente != null)
+                {
+                    productoExistente.Cantidad++;
+                }
+                else
+                {
+                    var nuevoProducto = new Producto
+                    {
+                        Vinilo = selectedVinilo,
+                        Cantidad = 1
+                    };
+                    UsuarioActual.Cesta.Add(nuevoProducto);
+                }
 
+                MessageBox.Show($"{selectedVinilo.Titulo} añadido a la cesta.", "Vinilo añadido", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
 
         private void imgCorazon_MouseLeave(object sender, MouseEventArgs e)
         {

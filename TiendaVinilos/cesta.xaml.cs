@@ -14,24 +14,58 @@ using System.Windows.Shapes;
 
 namespace TiendaVinilos
 {
-    /// <summary>
-    /// Lógica de interacción para cesta.xaml
-    /// </summary>
     public partial class cesta : UserControl
     {
+        private ViewModel viewModel;
+
         public cesta()
         {
             InitializeComponent();
+            viewModel = new ViewModel();
+            DataContext = viewModel;
+            viewModel.Cesta.CollectionChanged += Cesta_CollectionChanged;
+            // Mostrar mensaje si la cesta está vacía
+            ActualizarMensajeVacio();
+        }
+        private void Cesta_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            // Mostrar la etiqueta si la lista está vacía
+            ActualizarMensajeVacio();
+        }
+        private void ActualizarMensajeVacio()
+        {
+            if (viewModel.Cesta.Count == 0)
+            {
+                // Mostrar la etiqueta y ocultar la lista
+                txtMensajeVacio.Visibility = Visibility.Visible;
+                lstCesta.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                // Ocultar la etiqueta y mostrar la lista
+                txtMensajeVacio.Visibility = Visibility.Collapsed;
+                lstCesta.Visibility = Visibility.Visible;
+            }
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void imgBasura_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            var producto = (sender as FrameworkElement).DataContext as Producto;
+            if (producto != null)
+            {
+                viewModel.EliminarDeCesta(producto);
+                ActualizarMensajeVacio();
+            }
         }
 
-        private void ListBox_SelectionChanged(object sender, RoutedEventArgs e)
+        private void imgBasura_MouseEnter(object sender, MouseEventArgs e)
         {
-            // Aquí colocas la lógica que deseas ejecutar cuando se cambia la selección en el ListBox
+            Mouse.OverrideCursor = Cursors.Hand;
+        }
+
+        private void imgBasura_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = null;
         }
     }
 }

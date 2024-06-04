@@ -18,6 +18,7 @@ namespace TiendaVinilos
         public static string Correo { get; set; }
         public static Uri FotoPerfil { get; set; }
         public static ObservableCollection<Vinilo> ListaDeseos { get; set; } = new ObservableCollection<Vinilo>();
+        public static ObservableCollection<Producto> Cesta { get; set; } = new ObservableCollection<Producto>();
     }
 
 }

@@ -149,3 +149,4 @@ C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\EditarPerf
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\HistorialPedidos.g.cs
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\EditarPerfil.baml
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\HistorialPedidos.baml
+C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\GeneratedInternalTypeHelper.g.cs

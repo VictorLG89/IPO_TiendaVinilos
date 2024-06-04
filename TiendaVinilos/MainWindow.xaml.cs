@@ -26,7 +26,7 @@ namespace TiendaVinilos
         public MainWindow()
         {
             InitializeComponent();
-            
+            DataContext = new ViewModel();
         }
         private void OpenArtistas(object sender, RoutedEventArgs e)
         {
