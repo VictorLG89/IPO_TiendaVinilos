@@ -13,6 +13,19 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+
+        <!-- Mensaje cuando la lista esté vacía -->
+        <TextBlock x:Name="txtMensajeVacio" 
+           Text="Ups, parece que no tienes ningún vinilo en tu lista de deseos." 
+           HorizontalAlignment="Center" 
+           VerticalAlignment="Top" 
+           Visibility="Collapsed"
+           Margin="0,20,0,0"
+           FontStyle="Italic"
+           Foreground="#FF6D6D6D"
+           FontSize="26"/>
+
+        <!-- Lista de deseos -->
         <ListBox x:Name="lstListaDeseados" ItemsSource="{Binding ListaDeseos}" Grid.ColumnSpan="3">
             <ListBox.ItemTemplate>
                 <DataTemplate>

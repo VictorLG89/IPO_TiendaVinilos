@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace TiendaVinilos
 {
-    /// <summary>
-    /// Lógica de interacción para ListaDeseados.xaml
-    /// </summary>
     public partial class ListaDeseados : UserControl
     {
         private ViewModel viewModel;
@@ -27,6 +24,35 @@ namespace TiendaVinilos
             InitializeComponent();
             viewModel = new ViewModel();
             DataContext = viewModel;
+
+            // Suscribirse al evento de cambio en la colección de deseos
+            viewModel.ListaDeseos.CollectionChanged += ListaDeseos_CollectionChanged;
+
+            // Mostrar la etiqueta si la lista está vacía al inicio
+            MostrarEtiquetaSiListaVacia();
+        }
+
+        private void ListaDeseos_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            // Mostrar la etiqueta si la lista está vacía
+            MostrarEtiquetaSiListaVacia();
+        }
+
+        private void MostrarEtiquetaSiListaVacia()
+        {
+            // Verificar si la lista de deseos está vacía
+            if (viewModel.ListaDeseos.Count == 0)
+            {
+                // Mostrar la etiqueta y ocultar la lista
+                txtMensajeVacio.Visibility = Visibility.Visible;
+                lstListaDeseados.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                // Ocultar la etiqueta y mostrar la lista
+                txtMensajeVacio.Visibility = Visibility.Collapsed;
+                lstListaDeseados.Visibility = Visibility.Visible;
+            }
         }
 
         private void imgCorazon_MouseEnter(object sender, MouseEventArgs e)
@@ -52,4 +78,3 @@ namespace TiendaVinilos
         }
     }
 }
-

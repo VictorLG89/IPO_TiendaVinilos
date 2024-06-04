@@ -25,10 +25,10 @@ namespace TiendaVinilos
         {
             InitializeComponent();
             // Asignar eventos a los botones
-            btnListaDeseos.Click += BtnListaDeseos_Click;
-            btnHistorialPedidos.Click += BtnHistorialPedidos_Click;
-            btnEditarPerfil.Click += BtnEditarPerfil_Click;
-            lblCerrarSesion.MouseDown += lblCerrarSesion_MouseDown;
+            //btnListaDeseos.Click += BtnListaDeseos_Click;
+            //btnHistorialPedidos.Click += BtnHistorialPedidos_Click;
+            //btnEditarPerfil.Click += BtnEditarPerfil_Click;
+            //lblCerrarSesion.MouseDown += lblCerrarSesion_MouseDown;
 
         }
 
@@ -57,12 +57,38 @@ namespace TiendaVinilos
 
         private void lblCerrarSesion_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            // Lógica para cerrar la sesión aquí
+            UsuarioActual.IdUsuario = "0";
+            UsuarioActual.NombreUsuario = null;
+            UsuarioActual.Nombre = null;
+            UsuarioActual.Apellido1 = null;
+            UsuarioActual.Apellido2 = null;
+            UsuarioActual.Admin = false;
+            UsuarioActual.Correo = null;
+            UsuarioActual.FotoPerfil = null;
+            UsuarioActual.ListaDeseos.Clear();
+
+            // Crear una instancia de la ventana de inicio de sesión
+            InicioDeSesion inicioDeSesionWindow = new InicioDeSesion();
+
+            // Mostrar la ventana de inicio de sesión
+            inicioDeSesionWindow.Show();
+
+            // Cerrar esta ventana
+            Window.GetWindow(this).Close();
         }
         private void lblCerrarSesion_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            // Lógica para cerrar sesión aquí
+            
         }
+        private void lblCerrarSesion_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Hand;
+        }
+        private void lblCerrarSesion_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = null; // Restaura el cursor a su estado normal
+        }
+
 
     }
 }

@@ -86,7 +86,6 @@
 
             <Image Grid.Column="5" HorizontalAlignment="Left" Height="4" Margin="10,46,0,0" Grid.Row="4" VerticalAlignment="Top" Width="86"/>
             <Image Grid.Column="1" Height="37" Width="36" Grid.Row="1" Source="/Images/disco-de-vinilo.png" Margin="2,0,2,3"/>
-            <Label Content="{x:Static local:UsuarioActual.Correo}" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" FontSize="16" Width="88" Height="27"/>
 
 
         </Grid>
