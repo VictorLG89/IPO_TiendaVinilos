@@ -6,16 +6,15 @@
         xmlns:local="clr-namespace:TiendaVinilos"
         mc:Ignorable="d"
         MinHeight="800" MinWidth="800">
-   
+
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
+
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -27,7 +26,7 @@
             <ListBox x:Name="lstListaPeliculas" SelectedIndex="0" Grid.Column="0"  VerticalAlignment="Top"  AlternationCount="2" MinHeight="700" MinWidth="250">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal" MinWidth="250">
                             <Image Source="{Binding Portada}" Width="50" Height="50" Margin="5"/>
                             <StackPanel>
                                 <TextBlock Text="{Binding Nombre}" FontWeight="Bold"/>
@@ -37,7 +36,7 @@
                                 <TextBlock Text="{Binding Precio}" TextWrapping="Wrap" d:LayoutOverrides="Width, Height"/>
                             </StackPanel>
                             <StackPanel HorizontalAlignment="Right">
-                                <Image Source="/Images/corazonVacio.png" HorizontalAlignment="Center" Height="53" Width="24" MouseLeftButtonDown="Corazon_MouseLeftButtonDown" MouseEnter="Corazon_MouseEnter" MouseLeave="Corazon_MouseLeave"/>
+                                <Image Source="{Binding CorazonImage}" DataContext="{Binding}" HorizontalAlignment="Center" Height="53" Width="24" MouseLeftButtonDown="imgCorazon_MouseLeftButtonDown" MouseEnter="imgCorazon_MouseEnter" MouseLeave="imgCorazon_MouseLeave" />
                             </StackPanel>
                         </StackPanel>
                     </DataTemplate>
@@ -59,16 +58,16 @@
                     </Style>
                 </ListBox.ItemContainerStyle>
             </ListBox>
-                <StackPanel x:Name="spDetallesPelicula" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Top" MinHeight="350" MinWidth="550">
-                    <Label x:Name="lblTitulo" FontWeight="Bold" FontSize="20" Content="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Titulo}"/>
-                    <Image x:Name="imgPortada" Height="120" Width="100" HorizontalAlignment="Left" Margin="5" Stretch="Fill" Source="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Portada}"/>
-                    <Label FontWeight="Bold">Año:</Label>
-                    <Label x:Name="lblAnio" Content="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Anio}"/>
-                    <Label FontWeight="Bold">Duración (min.):</Label>
-                    <Label x:Name="lblDuracion" Content="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Duracion}"/>
-                    <Label FontWeight="Bold">Argumento:</Label>
-                    <TextBlock x:Name="txtArgumento" Margin="5" Text="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Argumento}"/>
-                </StackPanel>
+            <StackPanel x:Name="spDetallesPelicula" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Top" MinHeight="350" MinWidth="550">
+                <Label x:Name="lblTitulo" FontWeight="Bold" FontSize="20" Content="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Titulo}"/>
+                <Image x:Name="imgPortada" Height="120" Width="100" HorizontalAlignment="Left" Margin="5" Stretch="Fill" Source="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Portada}"/>
+                <Label FontWeight="Bold">Año:</Label>
+                <Label x:Name="lblAnio" Content="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Anio}"/>
+                <Label FontWeight="Bold">Duración (min.):</Label>
+                <Label x:Name="lblDuracion" Content="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Duracion}"/>
+                <Label FontWeight="Bold">Argumento:</Label>
+                <TextBlock x:Name="txtArgumento" Margin="5" Text="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Argumento}"/>
+            </StackPanel>
         </Grid>
     </Grid>
 </UserControl>

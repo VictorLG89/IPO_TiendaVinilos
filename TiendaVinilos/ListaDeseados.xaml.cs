@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,13 +20,36 @@ namespace TiendaVinilos
     /// </summary>
     public partial class ListaDeseados : UserControl
     {
+        private ViewModel viewModel;
+
         public ListaDeseados()
         {
             InitializeComponent();
+            viewModel = new ViewModel();
+            DataContext = viewModel;
         }
-        private void ListBox_SelectionChanged(object sender, RoutedEventArgs e)
+
+        private void imgCorazon_MouseEnter(object sender, MouseEventArgs e)
         {
-            // Aquí colocas la lógica que deseas ejecutar cuando se cambia la selección en el ListBox
+            Cursor = Cursors.Hand;
+        }
+
+        private void imgCorazon_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Cursor = Cursors.Arrow;
+        }
+
+        private void imgCorazon_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Image imgCorazon = (Image)sender;
+            Vinilo viniloSeleccionado = (Vinilo)imgCorazon.DataContext;
+
+            if (UsuarioActual.ListaDeseos.Contains(viniloSeleccionado))
+            {
+                viewModel.EliminarDeListaDeseos(viniloSeleccionado);
+                imgCorazon.Source = new BitmapImage(new Uri("/Images/corazonVacio.png", UriKind.Relative));
+            }
         }
     }
 }
+

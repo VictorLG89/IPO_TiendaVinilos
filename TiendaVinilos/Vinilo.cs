@@ -9,20 +9,23 @@ namespace TiendaVinilos
 {
     public class Vinilo
     {
+        public int IdVinilo { set; get; }
         public string Titulo { set; get; }
         public int Anio { set; get; }
         public int Duracion { set; get; }
         public Uri Portada { set; get; }
         public string Autor {set; get; }
         public double Precio { set; get; }
-        
-        public Vinilo(string titulo, int anio, int duracion, Uri portada, string autor)
+        public string CorazonImage { get; set; }
+
+        public Vinilo(int IdVinilo, string titulo, int anio, int duracion, Uri portada, string autor)
         {
             Titulo = titulo;
             Anio = anio;
             Duracion = duracion;
             Portada = portada;
             Autor = autor;
+            CorazonImage = "Images/corazonVacio.png";
         }
 
     }

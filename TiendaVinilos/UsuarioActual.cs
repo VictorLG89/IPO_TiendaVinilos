@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,6 @@ namespace TiendaVinilos
         public static bool Admin { get; set; }
         public static string Correo { get; set; }
         public static string FotoPerfil { get; set; }
-        public static List<Vinilo> ListaDeseos { get; set; } = new List<Vinilo>();
+        public static ObservableCollection<Vinilo> ListaDeseos { get; set; } = new ObservableCollection<Vinilo>();
     }
 }
