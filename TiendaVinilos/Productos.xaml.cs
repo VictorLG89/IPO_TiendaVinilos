@@ -28,5 +28,10 @@ namespace TiendaVinilos
         {
 
         }
+
+        private void lstListaPeliculas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
