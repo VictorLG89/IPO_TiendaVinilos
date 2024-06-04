@@ -37,7 +37,7 @@
                                 <TextBlock Text="{Binding Precio}" TextWrapping="Wrap" d:LayoutOverrides="Width, Height"/>
                             </StackPanel>
                             <StackPanel HorizontalAlignment="Right">
-                                <Image Source="/Images/corazonVacio.png" HorizontalAlignment="Center" Height="53" Width="24"/>
+                                <Image Source="/Images/corazonVacio.png" HorizontalAlignment="Center" Height="53" Width="24" MouseLeftButtonDown="Corazon_MouseLeftButtonDown" MouseEnter="Corazon_MouseEnter" MouseLeave="Corazon_MouseLeave"/>
                             </StackPanel>
                         </StackPanel>
                     </DataTemplate>

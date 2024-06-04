@@ -48,11 +48,46 @@ namespace TiendaVinilos
                 nuevoVinilo.Duracion =Convert.ToInt32(node.Attributes["Duracion"].Value);
                 nuevoVinilo.Portada = new Uri(node.Attributes["Portada"].Value, UriKind.Relative);
                 nuevoVinilo.Autor = node.Attributes["Autor"].Value;
+                nuevoVinilo.Precio = Convert.ToDouble(node.Attributes["Precio"].Value);
 
                 
 
                 listadoVinilos.Add(nuevoVinilo);
             }
+        }
+        private void Corazon_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            // Obtener el vinilo seleccionado
+            Vinilo viniloSeleccionado = (Vinilo)lstListaPeliculas.SelectedItem;
+
+            // Verificar si el vinilo ya está en la lista de deseos del usuario actual
+            if (UsuarioActual.ListaDeseos.Contains(viniloSeleccionado))
+            {
+                // Quitar el vinilo de la lista de deseos del usuario actual
+                UsuarioActual.ListaDeseos.Remove(viniloSeleccionado);
+
+                // Cambiar la imagen del corazón lleno por una imagen de corazón vacío
+                Image corazon = (Image)sender;
+                corazon.Source = new BitmapImage(new Uri("/Images/corazonVacio.png", UriKind.Relative));
+            }
+            else
+            {
+                // Agregar el vinilo a la lista de deseos del usuario actual
+                UsuarioActual.ListaDeseos.Add(viniloSeleccionado);
+
+                // Cambiar la imagen del corazón vacío por una imagen de corazón lleno
+                Image corazon = (Image)sender;
+                corazon.Source = new BitmapImage(new Uri("/Images/corazonLleno.png", UriKind.Relative));
+            }
+        }
+        private void Corazon_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
+        private void Corazon_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Cursor = Cursors.Arrow;
         }
     }
 }

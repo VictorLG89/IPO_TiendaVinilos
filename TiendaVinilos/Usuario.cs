@@ -17,6 +17,7 @@ namespace TiendaVinilos
         public string correo { set; get; }
         public Uri FotoPerfil { set; get; }
         public string Contrasena { set; get; }
+        public static List<Vinilo> ListaDeseos { get; set; } = new List<Vinilo>();
 
         public Usuario(int id, string nombreUsuario, string nombre, string apellido1, string apellido2, bool admin, string Correo, Uri fotoPerfil, string contrasena)
         {

@@ -16,5 +16,6 @@ namespace TiendaVinilos
         public static bool Admin { get; set; }
         public static string Correo { get; set; }
         public static string FotoPerfil { get; set; }
+        public static List<Vinilo> ListaDeseos { get; set; } = new List<Vinilo>();
     }
 }

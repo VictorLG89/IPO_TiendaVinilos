@@ -2,20 +2,20 @@
 <Vinilos>
 	<Vinilo Titulo="Cicatrices" Anio="2013" Duracion="110"
 	Portada="Images/Portadas/cicatrices.jpg"
-	Autor="Natos y Waor"/>
+	Autor="Natos y Waor" Precio="25,00"/>
 	<Vinilo Titulo="Untitulogitano" Anio="2020" Duracion="80"
 	Portada="Images/Portadas/imgDiscoRosalía.jpg"
-	Autor="Rosalía"/>
+	Autor="Rosalía" Precio="23,99"/>
 	<Vinilo Titulo="Thriller" Anio="2000" Duracion="90"
 	Portada="Images/Portadas/Thriller.jpg"
-	Autor="Michael Jackson"/>
+	Autor="Michael Jackson" Precio="29,99"/>
 	<Vinilo Titulo="Back in Black" Anio="1999" Duracion="210"
 	Portada="Images/Portadas/backinblack.jpg"
-	Autor="AC/DC"/>
+	Autor="AC/DC" Precio="28,00"/>
 	<Vinilo Titulo="Led Zeppelin IV" Anio="199" Duracion="150"
 	Portada="Images/Portadas/lziv.jpg"
-	Autor="Led Zeppelin"/>
+	Autor="Led Zeppelin" Precio="30,00"/>
 	<Vinilo Titulo="The Dark Side Of The Moon" Anio="1990" Duracion="220"
 	Portada="Images/Portadas/tdsotm.jpg"
-	Autor="Pink Floyd"/>
+	Autor="Pink Floyd" Precio="35,50"/>
 </Vinilos>
