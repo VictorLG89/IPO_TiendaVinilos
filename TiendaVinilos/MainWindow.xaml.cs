@@ -34,7 +34,7 @@ namespace TiendaVinilos
         }
         private void OpenPromociones(object sender, RoutedEventArgs e)
         {
-            MainContentFrame.Navigate(new Productos());
+            MainContentFrame.Navigate(new ProductosAdmin());
         }
         private void OpenProductos(object sender, MouseButtonEventArgs e)
         {
@@ -53,6 +53,7 @@ namespace TiendaVinilos
 
         private void OpenPerfilUser(object sender, MouseButtonEventArgs e)
         {
+            PerfilUser.MainContentFrame = MainContentFrame;
             MainContentFrame.Navigate(new PerfilUser());
         }
 

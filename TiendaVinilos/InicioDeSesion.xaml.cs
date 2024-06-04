@@ -19,7 +19,7 @@ namespace TiendaVinilos
 {
     public partial class InicioDeSesion : Window
     {
-        private string rutaXml = "usuarios.xml";
+        private string rutaXml = "Usuarios.xml";
 
         public InicioDeSesion()
         {
@@ -106,7 +106,7 @@ namespace TiendaVinilos
             try
             {
                 XmlDocument doc = new XmlDocument();
-                var fichero = Application.GetResourceStream(new Uri("usuarios.xml", UriKind.Relative));
+                var fichero = Application.GetResourceStream(new Uri("Usuarios.xml", UriKind.Relative));
                 doc.Load(fichero.Stream);
 
                 foreach (XmlNode node in doc.DocumentElement.ChildNodes)
@@ -116,14 +116,14 @@ namespace TiendaVinilos
 
                     if (nombreUsuario == nombreUsuarioXml && contraseña == contraseñaXml)
                     {
-                        UsuarioActual.IdUsuario = int.Parse(node.Attributes["IdUsuario"].Value);
+                        UsuarioActual.IdUsuario = node.Attributes["IdUsuario"].Value;
                         UsuarioActual.NombreUsuario = nombreUsuarioXml;
                         UsuarioActual.Nombre = node.Attributes["Nombre"].Value;
                         UsuarioActual.Apellido1 = node.Attributes["Apellido1"].Value;
                         UsuarioActual.Apellido2 = node.Attributes["Apellido2"].Value;
                         UsuarioActual.Admin = bool.Parse(node.Attributes["Admin"].Value);
                         UsuarioActual.Correo = node.Attributes["correo"].Value;
-                        UsuarioActual.FotoPerfil = node.Attributes["FotoPerfil"].Value;
+                        UsuarioActual.FotoPerfil = new Uri(node.Attributes["FotoPerfil"].Value, UriKind.Relative);
                         return true;
                     }
                 }
