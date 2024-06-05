@@ -207,9 +207,11 @@
       <DependentUpon>Artistas.xaml</DependentUpon>
     </Compile>
     <Compile Include="Autor.cs" />
-    <Compile Include="Cesta.cs" />
     <Compile Include="cesta.xaml.cs">
       <DependentUpon>cesta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.xaml.cs">
+      <DependentUpon>Checkout.xaml</DependentUpon>
     </Compile>
     <Compile Include="EditarPerfil.xaml.cs">
       <DependentUpon>EditarPerfil.xaml</DependentUpon>
@@ -278,6 +280,10 @@
     <Page Include="cesta.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Checkout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EditarPerfil.xaml">
       <SubType>Designer</SubType>

@@ -75,5 +75,9 @@ namespace TiendaVinilos
         {
             Mouse.OverrideCursor = null;
         }
+        private void CheckoutButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

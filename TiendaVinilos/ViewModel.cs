@@ -13,12 +13,32 @@ namespace TiendaVinilos
 
         public ObservableCollection<Producto> Cesta => UsuarioActual.Cesta;
         public ObservableCollection<Vinilo> ListaDeseos => UsuarioActual.ListaDeseos;
+       // public ObservableCollection<Producto> Pedido;
+        public Pedido PedidoActual { get; set; }
 
 
         public ViewModel()
         {
         }
+        //private void OpenCheckoutWindow(object parameter)
+        //{
+          //  Checkout checkoutWindow = new Checkout();
+            //checkoutWindow.DataContext = this; // Pasar el ViewModel a la ventana de checkout
+            //checkoutWindow.ShowDialog();
+        //}
 
+        public void FinalizarPedido()
+        {
+            if (Cesta.Any())
+            {
+                PedidoActual.Productos = new ObservableCollection<Producto>(Cesta);
+                UsuarioActual.HistorialPedidos.Add(PedidoActual);
+                UsuarioActual.Cesta.Clear();
+                Pedido Pedido = new Pedido(); // Crear un nuevo pedido para la siguiente compra
+                OnPropertyChanged(nameof(Pedido));
+                OnPropertyChanged(nameof(Cesta));
+            }
+        }
         public void EliminarDeListaDeseos(Vinilo vinilo)
         {
             if (ListaDeseos.Contains(vinilo))
