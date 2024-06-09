@@ -19,18 +19,43 @@ namespace TiendaVinilos
     using System.Windows.Input;
     using TiendaVinilos.Properties;
     using Microsoft.EntityFrameworkCore;
+    using System.Globalization;
+    using System.Text.RegularExpressions;
 
     public partial class MainWindow : Window
     {
-
+        private string currentCulture = "es-ES";
         public MainWindow()
         {
             InitializeComponent();
             DataContext = new ViewModel();
+            Resources.MergedDictionaries.Add(App.SelectCulture("es-ES"));
+        }
+        private void cb_elementoSeleccionado(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBoxItem cbi = (ComboBoxItem)cbIdiomas.SelectedItem;
+            string selectedText = cbi.Content.ToString();
+            if ((selectedText.Equals("ES") || selectedText.Equals("SP")) && !CultureInfo.CurrentCulture.Name.Equals("es-ES"))
+            {
+                ChangeCulture("es-ES");
+            }
+            else if (selectedText.Equals("EN") && !CultureInfo.CurrentCulture.Name.Equals("en-US"))
+            {
+                ChangeCulture("en-US");
+            }
+        }
+
+        private void ChangeCulture(string culture)
+        {
+            currentCulture = culture;
+            Resources.MergedDictionaries.Clear();
+            Resources.MergedDictionaries.Add(App.SelectCulture(culture));
+            
         }
         private void OpenArtistas(object sender, RoutedEventArgs e)
         {
-            MainContentFrame.Navigate(new Artistas());
+
+            MainContentFrame.Navigate(new Artistas(currentCulture));
         }
         private void OpenPromociones(object sender, RoutedEventArgs e)
         {
@@ -38,34 +63,34 @@ namespace TiendaVinilos
         }
         private void OpenProductos(object sender, MouseButtonEventArgs e)
         {
-            MainContentFrame.Navigate(new Vinilos());
+            MainContentFrame.Navigate(new Vinilos(currentCulture));
         }
 
         private void OpenQuienSomos(object sender, MouseButtonEventArgs e)
         {
-            MainContentFrame.Navigate(new QuienSomos());
+            MainContentFrame.Navigate(new QuienSomos(currentCulture));
         }
 
         private void OpenListaDeseados(object sender, MouseButtonEventArgs e)
         {
-            MainContentFrame.Navigate(new ListaDeseados());
+            MainContentFrame.Navigate(new ListaDeseados(currentCulture));
         }
 
         private void OpenPerfilUser(object sender, MouseButtonEventArgs e)
         {
             PerfilUser.MainContentFrame = MainContentFrame;
-            MainContentFrame.Navigate(new PerfilUser());
+            MainContentFrame.Navigate(new PerfilUser(currentCulture));
         }
 
         private void OpenPreguntas(object sender, MouseButtonEventArgs e)
         {
-            MainContentFrame.Navigate(new Preguntas());
+            MainContentFrame.Navigate(new Preguntas(currentCulture));
         }
 
         private void OpenCesta(object sender, MouseButtonEventArgs e)
         {
             cesta.MainContentFrame = MainContentFrame;
-            MainContentFrame.Navigate(new cesta());
+            MainContentFrame.Navigate(new cesta(currentCulture));
         }
 
         private void OpenWindow(Window window)

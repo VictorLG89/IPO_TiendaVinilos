@@ -9,7 +9,7 @@
     <Grid>
         <!-- Mensaje cuando la lista esté vacía -->
         <TextBlock x:Name="txtMensajeVacio" 
-           Text="Ups, parece que no tienes ningún pedido todavía." 
+           Text="{DynamicResource lblViniloHistorial}" 
            HorizontalAlignment="Center" 
            VerticalAlignment="Top" 
            Visibility="Collapsed"

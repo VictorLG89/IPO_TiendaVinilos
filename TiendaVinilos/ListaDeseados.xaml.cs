@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,9 +20,10 @@ namespace TiendaVinilos
     {
         private ViewModel viewModel;
 
-        public ListaDeseados()
+        public ListaDeseados(string culture)
         {
             InitializeComponent();
+            Resources.MergedDictionaries.Add(App.SelectCulture(culture));
             viewModel = new ViewModel();
             DataContext = viewModel;
 

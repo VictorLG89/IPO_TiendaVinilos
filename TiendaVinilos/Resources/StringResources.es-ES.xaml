@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="WindowTitle">Artistas</sys:String>
+    <sys:String x:Key="lblAnio">Año:</sys:String>
+    <sys:String x:Key="lblNacionalidad">Nacionalidad:</sys:String>
+    <sys:String x:Key="lblTipo">Tipo:</sys:String>
+    <sys:String x:Key="lblDuracion">Duración (min.):</sys:String>
+    <sys:String x:Key="lblAutor">Autor:</sys:String>
+    <sys:String x:Key="lblPrecio">Precio:</sys:String>
+    <sys:String x:Key="btnAnadirACesta">Añadir a la cesta</sys:String>
+    <sys:String x:Key="btnVinilos">Vinilos</sys:String>
+    <sys:String x:Key="btnArtistas">Artistas</sys:String>
+    <sys:String x:Key="btnOfertas">Ofertas</sys:String>
+    <sys:String x:Key="btnQuienSomos">Quién somos</sys:String>
+    <sys:String x:Key="lblQuienSomos">¿Quién somos?&#xA;Somos una empresa amante de la música que quiere compartir esta pasión con todo el mundo, poniendo al alcance de cualquiera todos los discos de vinilo.&#xA;</sys:String>
+    <sys:String x:Key="lblPrecioTotal">Precio Total: </sys:String>
+    <sys:String x:Key="lblCheckout">Pasar por caja</sys:String>
+    <sys:String x:Key="lblCantidad">Cantidad: </sys:String>
+    <sys:String x:Key="lblPrecioUnitario">Precio Unitario: </sys:String>
+    <sys:String x:Key="lblPregunta">Haznos una pregunta</sys:String>
+    <sys:String x:Key="lblEscribeAqui">Escribe Aqui...</sys:String>
+    <sys:String x:Key="lblEnviar">Enviar</sys:String>
+    <sys:String x:Key="lblListaDeseos">Ups, parece que no tienes ningún vinilo en tu lista de deseos.</sys:String>
+    <sys:String x:Key="lblNombreUsuario">Nombre de Usuario: </sys:String>
+    <sys:String x:Key="lblNombreApellidos">Nombre y Apellido/s: </sys:String>
+    <sys:String x:Key="lblCorreo">Correo Electrónico: </sys:String>
+    <sys:String x:Key="lblUltimoAcceso">Último acceso: </sys:String>
+    <sys:String x:Key="lblListaDeseos2">Lista de deseos</sys:String>
+    <sys:String x:Key="lblHistorial">Historial de pedidos</sys:String>
+    <sys:String x:Key="lblCerrarSesion">Cerrar Sesión</sys:String>
+    <sys:String x:Key="lblViniloCesta">Ups, parece que no tienes ningún producto en la cesta</sys:String>
+    <sys:String x:Key="lblViniloHistorial">Ups, parece que no tienes ningún pedido todavía.</sys:String>
+</ResourceDictionary>

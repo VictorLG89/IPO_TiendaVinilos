@@ -15,7 +15,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>
-        <ListBox Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListBox_SelectionChanged">
+        <ListBox Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal" Width="484">
@@ -28,6 +28,6 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button Content="Añadir nuevo" HorizontalAlignment="Left" Margin="33,10,0,0" VerticalAlignment="Top" Width="92" Click="Button_Click"/>
+        <Button Content="Añadir nuevo" HorizontalAlignment="Left" Margin="33,10,0,0" VerticalAlignment="Top" Width="92"/>
     </Grid>
 </Window>

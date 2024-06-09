@@ -20,6 +20,7 @@ namespace TiendaVinilos
     /// </summary>
     public partial class MainWindowAdmin : Window
     {
+        private string currentCulture = "es-ES";
         public MainWindowAdmin()
         {
             InitializeComponent();
@@ -44,33 +45,10 @@ namespace TiendaVinilos
             MainContentFrame.Navigate(new AnadirPromocion());
         }
 
-        private void OnContactoClicked(object sender, MouseButtonEventArgs e)
-        {
-
-            MainContentFrame.Navigate(new QuienSomos());
-
-        }
-
-        private void OpenListaDeseados(object sender, MouseButtonEventArgs e)
-        {
-            MainContentFrame.Navigate(new ListaDeseados());
-        }
-
         private void OpenPerfilUser(object sender, MouseButtonEventArgs e)
         {
             PerfilUser.MainContentFrame = MainContentFrame;
-            MainContentFrame.Navigate(new PerfilUser());
-        }
-
-        private void OpenPreguntas(object sender, MouseButtonEventArgs e)
-        {
-            MainContentFrame.Navigate(new Preguntas());
-        }
-
-        private void OpenCesta(object sender, MouseButtonEventArgs e)
-        {
-            cesta.MainContentFrame = MainContentFrame;
-            MainContentFrame.Navigate(new cesta());
+            MainContentFrame.Navigate(new PerfilUser(currentCulture));
         }
         private void OpenWindow(Window window)
         {

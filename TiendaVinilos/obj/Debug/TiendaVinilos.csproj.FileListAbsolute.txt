@@ -21,8 +21,6 @@ C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\AnadirArti
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\AnadirDisco.g.cs
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\AnadirGrupo.g.cs
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\AnadirPromocion.g.cs
-C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Articulo.g.cs
-C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Artista.g.cs
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Artistas.g.cs
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\cesta.g.cs
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\InicioDeSesion.g.cs
@@ -121,8 +119,6 @@ C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\AnadirArti
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\AnadirDisco.baml
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\AnadirGrupo.baml
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\AnadirPromocion.baml
-C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Articulo.baml
-C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Artista.baml
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Artistas.baml
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\cesta.baml
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\InicioDeSesion.baml
@@ -154,3 +150,8 @@ C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Resumen.g.
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Resumen.baml
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\AutoresAdmin.g.cs
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\PromocionesAdmin.g.cs
+C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Resources\StringResources.en-US.baml
+C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Resources\StringResources.es-ES.baml
+C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\App.baml
+C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\AutoresAdmin.baml
+C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\PromocionesAdmin.baml

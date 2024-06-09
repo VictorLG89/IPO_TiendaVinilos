@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,11 +23,14 @@ namespace TiendaVinilos
     {
         private ViewModel viewModel;
         public static Frame MainContentFrame { get; set; }
-        public HistorialPedidos()
+        public static string culture2 { get; set; }
+        public HistorialPedidos(string culture)
         {
             InitializeComponent();
+            Resources.MergedDictionaries.Add(App.SelectCulture(culture));
             viewModel = new ViewModel();
             DataContext = viewModel;
+            culture2 = culture;
             // Suscribirse al evento de cambio en la colección de deseos
             viewModel.HistorialPedidos.CollectionChanged += ListaDeseos_CollectionChanged;
 
@@ -45,7 +49,7 @@ namespace TiendaVinilos
         }
         private void RecargarHistorial()
         {
-            MainContentFrame.Navigate(new HistorialPedidos());
+            MainContentFrame.Navigate(new HistorialPedidos(culture2));
         }
         private void ListaDeseos_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {

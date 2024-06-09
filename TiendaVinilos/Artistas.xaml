@@ -11,7 +11,6 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
@@ -23,7 +22,7 @@
                 <ColumnDefinition Width="250*"/>
                 <ColumnDefinition Width="550*"/>
             </Grid.ColumnDefinitions>
-            <ListBox x:Name="lstListaArtistas" SelectedIndex="0" Grid.Column="0"  VerticalAlignment="Top"  AlternationCount="2" MinHeight="700" MinWidth="250">
+            <ListBox x:Name="lstListaArtistas" SelectedIndex="0" Grid.Column="0" VerticalAlignment="Top" AlternationCount="2" MinHeight="700" MinWidth="250">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -56,14 +55,13 @@
             </ListBox>
             <StackPanel x:Name="spDetallesPelicula" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Top" MinHeight="350" MinWidth="550" Margin="30,30,30,30">
                 <Label x:Name="lblTitulo" FontWeight="Bold" FontSize="20" Content="{Binding ElementName=lstListaArtistas, Path=SelectedItem.Nombre}"/>
-                <Image x:Name="imgPortada" Height="120" Width="140" HorizontalAlignment="Left" Margin="5"  Source="{Binding ElementName=lstListaArtistas, Path=SelectedItem.Foto}"/>
-                <Label FontWeight="Bold">Año:</Label>
+                <Image x:Name="imgPortada" Height="120" Width="140" HorizontalAlignment="Left" Margin="5" Source="{Binding ElementName=lstListaArtistas, Path=SelectedItem.Foto}"/>
+                <Label FontWeight="Bold" Content="{DynamicResource lblAnio}"/>
                 <Label x:Name="lblAnio" Content="{Binding ElementName=lstListaArtistas, Path=SelectedItem.Anio}"/>
-                <Label FontWeight="Bold">Nacionalidad:</Label>
+                <Label FontWeight="Bold" Content="{DynamicResource lblNacionalidad}"/>
                 <Label x:Name="lblNacionalidad" Content="{Binding ElementName=lstListaArtistas, Path=SelectedItem.Nacionalidad}"/>
-                <Label FontWeight="Bold">Tipo:</Label>
+                <Label FontWeight="Bold" Content="{DynamicResource lblTipo}"/>
                 <Label x:Name="lblTipo" Content="{Binding ElementName=lstListaArtistas, Path=SelectedItem.Tipo}"/>
-                
             </StackPanel>
         </Grid>
     </Grid>

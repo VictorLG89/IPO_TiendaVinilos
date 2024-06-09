@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,9 +23,12 @@ namespace TiendaVinilos
     {
         private ViewModel viewModel;
         public static Frame MainContentFrame { get; set; }
-        public Checkout()
+        public static string culture2 { get; set; }
+        public Checkout(string culture)
         {
             InitializeComponent();
+            Resources.MergedDictionaries.Add(App.SelectCulture(culture));
+            culture2 = culture;
             viewModel = new ViewModel();
             DataContext = viewModel;
         }
@@ -111,7 +115,7 @@ namespace TiendaVinilos
             MessageBox.Show("Pedido realizado con éxito.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
 
             // Cerrar la ventana de checkout
-            MainContentFrame.Navigate(new Vinilos());
+            MainContentFrame.Navigate(new Vinilos(culture2));
 
         }
     }

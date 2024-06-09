@@ -6,6 +6,7 @@ using System.Windows.Input;
 using System.Windows.Media.Imaging;
 using System.Xml;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 
 namespace TiendaVinilos
@@ -14,9 +15,10 @@ namespace TiendaVinilos
     {
         List<Vinilo> listadoVinilos;
         private ViewModel viewModel;
-        public Vinilos()
+        public Vinilos(string culture)
         {
             InitializeComponent();
+            Resources.MergedDictionaries.Add(App.SelectCulture(culture));
             listadoVinilos = new List<Vinilo>();
             CargarContenidoListaXML();
             lstListaPeliculas.ItemsSource = listadoVinilos;

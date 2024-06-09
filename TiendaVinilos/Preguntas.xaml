@@ -23,7 +23,7 @@
     </Grid.RowDefinitions>
 
     <!-- Título que no se puede editar -->
-    <TextBlock Grid.Column="1" Grid.Row="1" Text="Haznos una pregunta" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold" Margin="0,10"/>
+    <TextBlock Grid.Column="1" Grid.Row="1" Text="{DynamicResource lblPregunta}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold" Margin="0,10"/>
 
     <StackPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center">
         <!-- Caja de texto con watermark -->
@@ -31,7 +31,7 @@
             <TextBox.Style>
                 <Style TargetType="TextBox">
                     <Setter Property="Foreground" Value="Gray"/>
-                    <Setter Property="Text" Value="Escribe aquí..."/>
+                    <Setter Property="Text" Value="{DynamicResource lblEscribeAqui}"/>
                     <Style.Triggers>
                         <Trigger Property="IsKeyboardFocused" Value="True">
                             <Setter Property="Foreground" Value="Black"/>
@@ -45,7 +45,7 @@
             </TextBox.Style>
         </TextBox>
 
-        <Button Grid.Column="1" Content="Enviar" Grid.Row="3" RenderTransformOrigin="0.545,0.079" Margin="0,10,0,0" Width="100" HorizontalAlignment="Center"/>
+        <Button Grid.Column="1" Content="{DynamicResource lblEnviar}" Grid.Row="3" RenderTransformOrigin="0.545,0.079" Margin="0,10,0,0" Width="100" HorizontalAlignment="Center"/>
     </StackPanel>
 </Grid>
 </UserControl>

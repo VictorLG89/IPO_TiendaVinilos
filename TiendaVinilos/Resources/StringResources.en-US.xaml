@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="WindowTitle">Artists</sys:String>
+    <sys:String x:Key="lblAnio">Year:</sys:String>
+    <sys:String x:Key="lblNacionalidad">Nationality:</sys:String>
+    <sys:String x:Key="lblTipo">Type:</sys:String>
+    <sys:String x:Key="lblDuracion">Duration (min.):</sys:String>
+    <sys:String x:Key="lblAutor">Author:</sys:String>
+    <sys:String x:Key="lblPrecio">Price:</sys:String>
+    <sys:String x:Key="btnAnadirACesta">Add to Cart</sys:String>
+    <sys:String x:Key="btnVinilos">Vinyls</sys:String>
+    <sys:String x:Key="btnArtistas">Artists</sys:String>
+    <sys:String x:Key="btnOfertas">Promotions</sys:String>
+    <sys:String x:Key="btnQuienSomos">About us</sys:String>
+    <sys:String x:Key="lblQuienSomos">About us: We are a music-loving company that wants to share this passion with everyone, making all vinyl records available to anyone.</sys:String>
+    <sys:String x:Key="lblPrecioTotal">Total Price:</sys:String>
+    <sys:String x:Key="lblCheckout">Checkout</sys:String>
+    <sys:String x:Key="lblCantidad">Quantity:</sys:String>
+    <sys:String x:Key="lblPrecioUnitario">Unit Price:</sys:String>
+    <sys:String x:Key="lblPregunta">Make us a question</sys:String>
+    <sys:String x:Key="lblEscribeAqui">Write Here...</sys:String>
+    <sys:String x:Key="lblEnviar">Send</sys:String>
+    <sys:String x:Key="lblListaDeseos">Oops, you don´t have anything in your wishlist.</sys:String>
+    <sys:String x:Key="lblNombreUsuario">Username:</sys:String>
+    <sys:String x:Key="lblNombreApellidos">Name and Surname:</sys:String>
+    <sys:String x:Key="lblCorreo">E-mail:</sys:String>
+    <sys:String x:Key="lblUltimoAcceso">Last access:</sys:String>
+    <sys:String x:Key="lblListaDeseos2">Wishlist</sys:String>
+    <sys:String x:Key="lblHistorial">Orders history</sys:String>
+    <sys:String x:Key="lblCerrarSesion">Logout</sys:String>
+    <sys:String x:Key="lblViniloCesta">Oops, you don´t have anything in your shopping cart.</sys:String>
+    <sys:String x:Key="lblViniloHistorial">Oops, you haven't placed any order yet.</sys:String>
+</ResourceDictionary>

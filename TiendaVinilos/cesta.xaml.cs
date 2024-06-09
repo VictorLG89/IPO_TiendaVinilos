@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -18,10 +19,12 @@ namespace TiendaVinilos
     {
         private ViewModel viewModel;
         public static Frame MainContentFrame { get; set; }
-
-        public cesta()
+        public static string culture2 {get; set;}
+        public cesta(string culture)
         {
             InitializeComponent();
+            Resources.MergedDictionaries.Add(App.SelectCulture(culture));
+            culture2 = culture;
             viewModel = new ViewModel();
             DataContext = viewModel;
             viewModel.Cesta.CollectionChanged += Cesta_CollectionChanged;
@@ -52,7 +55,7 @@ namespace TiendaVinilos
         {
             // Abrir la ventana de lista de deseos en el MainContentFrame
 
-            MainContentFrame.Navigate(new cesta());
+            MainContentFrame.Navigate(new cesta(culture2));
         }
 
         private void imgBasura_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -78,7 +81,7 @@ namespace TiendaVinilos
         private void CheckoutButton_Click(object sender, RoutedEventArgs e)
         {
             Checkout.MainContentFrame = MainContentFrame;
-            MainContentFrame.Navigate(new Checkout());
+            MainContentFrame.Navigate(new Checkout(culture2));
         }
     }
 }

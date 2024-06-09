@@ -197,12 +197,6 @@
     <Compile Include="AnadirPromocion.xaml.cs">
       <DependentUpon>AnadirPromocion.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Articulo.xaml.cs">
-      <DependentUpon>Articulo.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Artista.xaml.cs">
-      <DependentUpon>Artista.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Artistas.xaml.cs">
       <DependentUpon>Artistas.xaml</DependentUpon>
     </Compile>
@@ -270,14 +264,6 @@
     <Page Include="AnadirPromocion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Articulo.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Artista.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Artistas.xaml">
       <SubType>Designer</SubType>
@@ -356,6 +342,14 @@
     <Page Include="Registro.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\StringResources.en-US.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\StringResources.es-ES.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resumen.xaml">
       <SubType>Designer</SubType>

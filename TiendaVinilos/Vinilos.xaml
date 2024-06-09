@@ -64,17 +64,17 @@
             <StackPanel x:Name="spDetallesPelicula" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Top" MinHeight="350" MinWidth="550" Margin="30,30,30,30">
                 <Label x:Name="lblTitulo" FontWeight="Bold" FontSize="20" Content="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Titulo}"/>
                 <Image x:Name="imgPortada" Height="120" Width="100" HorizontalAlignment="Left" Margin="5" Stretch="Fill" Source="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Portada}"/>
-                <Label FontWeight="Bold">Autor:</Label>
+                <Label FontWeight="Bold" Content="{DynamicResource lblAutor}"/>
                 <Label x:Name="lblAutor" Content="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Autor}"/>
-                <Label FontWeight="Bold">Año:</Label>
+                <Label FontWeight="Bold" Content="{DynamicResource lblAnio}"/>
                 <Label x:Name="lblAnio" Content="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Anio}"/>
-                <Label FontWeight="Bold">Duración (min.):</Label>
+                <Label FontWeight="Bold" Content="{DynamicResource lblDuracion}"/>
                 <Label x:Name="lblDuracion" Content="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Duracion}"/>
-                <Label FontWeight="Bold">Precio:</Label>
+                <Label FontWeight="Bold" Content="{DynamicResource lblPrecio}"/>
                 <TextBlock x:Name="txtPrecio" Margin="5">
                     <Run Text="{Binding ElementName=lstListaPeliculas, Path=SelectedItem.Precio, StringFormat=C}" FontSize="20"/>
                 </TextBlock>
-                <Button x:Name="btnCesta" Content="Añadir a la cesta" Click="btnAnadirACesta_Click" Margin="5" Width="108" Height="40" HorizontalAlignment="Left"/>
+                <Button x:Name="btnCesta" Content="{DynamicResource btnAnadirACesta}" Click="btnAnadirACesta_Click" Margin="5" Width="108" Height="40" HorizontalAlignment="Left"/>
             </StackPanel>
         </Grid>
     </Grid>

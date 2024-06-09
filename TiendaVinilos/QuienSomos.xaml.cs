@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,9 +20,10 @@ namespace TiendaVinilos
     /// </summary>
     public partial class QuienSomos : UserControl
     {
-        public QuienSomos()
+        public QuienSomos(string culture)
         {
             InitializeComponent();
+            Resources.MergedDictionaries.Add(App.SelectCulture(culture));
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

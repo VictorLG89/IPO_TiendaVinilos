@@ -73,16 +73,20 @@
 
             </Grid.RowDefinitions>
 
-            <ComboBox x:Name="Idioma" Grid.Column="12" RenderTransformOrigin="0.043,-0.362" Width="NaN" Grid.Row="1" SelectionChanged="ComboBox_SelectionChanged" Margin="0,6,0,8" Height="NaN"/>
+            <ComboBox x:Name="cbIdiomas" SelectionChanged="cb_elementoSeleccionado" Width="48" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="12" Grid.Row="1">
+                <ComboBoxItem Content="ES" />
+                <ComboBoxItem Content="EN" />
+            </ComboBox>
+            <ContentControl x:Name="MainContent"  Content="{Binding}" />
             <Image x:Name="interrogacion" Grid.Column="9" Grid.Row="1" Source="/Images/interrogacion.png" Stretch="Fill" Margin="3,3,3,3" Width="NaN" MouseLeftButtonDown="OpenPreguntas" Style="{StaticResource InteractiveImageStyle}"/>
             <Image x:Name="carrito" Grid.Column="7" Height="NaN" Grid.Row="1" Source="/Images/carrito.png" Stretch="Fill" Margin="3,3,3,3" Width="NaN" MouseLeftButtonDown="OpenCesta" Style="{StaticResource InteractiveImageStyle}"/>
             <Image x:Name="corazon" Grid.Column="10" Height="NaN" Grid.Row="1" Source="/Images/corazon.png" Stretch="Fill" Margin="7,8,7,8" Width="NaN" MouseLeftButtonDown="OpenListaDeseados" Style="{StaticResource InteractiveImageStyle}"/>
             <Image x:Name="fotoperfil" Grid.Column="11" Height="NaN" Grid.Row="1" Source="/Images/fotoperfil.png" Stretch="Fill" Margin="7,8,7,8" Width="NaN" MouseLeftButtonDown="OpenPerfilUser" Style="{StaticResource InteractiveImageStyle}"/>
 
-            <Label Grid.Column="3" Content="Vinilos" Grid.Row="2" Width="NaN" Height="NaN" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" MouseLeftButtonDown="OpenProductos" Style="{StaticResource InteractiveLabelStyle}"/>
-            <Label Grid.Column="4" Content="Artistas" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Height="NaN" Width="NaN" MouseLeftButtonDown="OpenArtistas" Style="{StaticResource InteractiveLabelStyle}"/>
-            <Label Grid.Column="5" Content="Ofertas" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Height="NaN" Width="NaN" MouseLeftButtonDown="OpenPromociones" Style="{StaticResource InteractiveLabelStyle}"/>
-            <Label Grid.Column="6" Content="Quién somos" Grid.Row="2" Grid.ColumnSpan="4" Width="NaN" Height="NaN" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" ScrollViewer.CanContentScroll="True" MouseLeftButtonDown="OpenQuienSomos" Style="{StaticResource InteractiveLabelStyle}"/>
+            <Label Grid.Column="3" Content="{DynamicResource btnVinilos}" Grid.Row="2" Width="NaN" Height="NaN" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" MouseLeftButtonDown="OpenProductos" Style="{StaticResource InteractiveLabelStyle}"/>
+            <Label Grid.Column="4" Content="{DynamicResource btnArtistas}" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Height="NaN" Width="NaN" MouseLeftButtonDown="OpenArtistas" Style="{StaticResource InteractiveLabelStyle}"/>
+            <Label Grid.Column="5" Content="{DynamicResource btnOfertas}" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Height="NaN" Width="NaN" MouseLeftButtonDown="OpenPromociones" Style="{StaticResource InteractiveLabelStyle}"/>
+            <Label Grid.Column="6" Content="{DynamicResource btnQuienSomos}" Grid.Row="2" Grid.ColumnSpan="4" Width="NaN" Height="NaN" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" ScrollViewer.CanContentScroll="True" MouseLeftButtonDown="OpenQuienSomos" Style="{StaticResource InteractiveLabelStyle}"/>
 
             <Label Grid.Column="0" Content="" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="3" Width="NaN" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" Height="NaN" Style="{StaticResource NonInteractiveLabelStyle}"/>
             <Label Grid.Column="10" Content="" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="4" Width="NaN" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" Height="NaN" Style="{StaticResource NonInteractiveLabelStyle}"/>
@@ -101,7 +105,7 @@
                 <RowDefinition Height="350*"/>
             </Grid.RowDefinitions>
             <Frame x:Name="MainContentFrame" NavigationUIVisibility="Hidden" Grid.Row="2" VerticalAlignment="bottom" Grid.RowSpan="2"/>
-            <ContentControl x:Name="MainContent" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+            <ContentControl x:Name="MainContent2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
         </Grid>
 
     </Grid>

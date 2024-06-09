@@ -17,7 +17,7 @@
 
         <!-- Mensaje cuando la lista esté vacía -->
         <TextBlock x:Name="txtMensajeVacio" 
-           Text="Ups, parece que no tienes ningún vinilo en tu lista de deseos." 
+           Text="{DynamicResource lblListaDeseos}" 
            HorizontalAlignment="Center" 
            VerticalAlignment="Top" 
            Visibility="Collapsed"

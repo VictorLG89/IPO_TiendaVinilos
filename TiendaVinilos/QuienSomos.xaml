@@ -20,6 +20,6 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Image Grid.Column="1" HorizontalAlignment="Right" Height="250" Grid.Row="1" Width="300" Source="Images/disco-de-vinilo.png" Margin="0,0,30,0"/>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Width="400" Height="250" FontSize="22"><Run/><LineBreak/><Run Text="¿Quién somos?&#xA;Somos una empresa amante de la música que quiere compartir esta pasión con todo el mundo, poniendo al alcance de cualquiera todos los discos de vinilo.&#xA;"/></TextBlock>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Width="400" Height="250" FontSize="22"><Run/><LineBreak/><Run Text="{DynamicResource lblQuienSomos}"/></TextBlock>
     </Grid>
 </UserControl>

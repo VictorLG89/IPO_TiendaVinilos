@@ -20,16 +20,13 @@ namespace TiendaVinilos
     /// </summary>
     public partial class PerfilUser : UserControl
     {
+        public static string culture2 { get; set; }
         public static Frame MainContentFrame { get; set; }
-        public PerfilUser()
+        public PerfilUser(string culture)
         {
             InitializeComponent();
-            // Asignar eventos a los botones
-            //btnListaDeseos.Click += BtnListaDeseos_Click;
-            //btnHistorialPedidos.Click += BtnHistorialPedidos_Click;
-            //btnEditarPerfil.Click += BtnEditarPerfil_Click;
-            //lblCerrarSesion.MouseDown += lblCerrarSesion_MouseDown;
-
+            Resources.MergedDictionaries.Add(App.SelectCulture(culture));
+            culture2 = culture;
         }
 
         public void SetMainContentFrame(Frame mainContentFrame)
@@ -40,14 +37,14 @@ namespace TiendaVinilos
         private void BtnListaDeseos_Click(object sender, RoutedEventArgs e)
         {
             // Abrir la ventana de lista de deseos en el MainContentFrame
-            MainContentFrame.Navigate(new ListaDeseados());
+            MainContentFrame.Navigate(new ListaDeseados(culture2));
         }
 
         private void BtnHistorialPedidos_Click(object sender, RoutedEventArgs e)
         {
             HistorialPedidos.MainContentFrame = MainContentFrame;
             // Abrir la ventana de historial de pedidos en el MainContentFrame
-            MainContentFrame.Navigate(new HistorialPedidos());
+            MainContentFrame.Navigate(new HistorialPedidos(culture2));
         }
 
         private void BtnEditarPerfil_Click(object sender, RoutedEventArgs e)
