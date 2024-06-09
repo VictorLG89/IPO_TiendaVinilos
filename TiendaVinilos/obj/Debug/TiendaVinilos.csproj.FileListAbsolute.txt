@@ -152,3 +152,5 @@ C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Checkout.g
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Checkout.baml
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Resumen.g.cs
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Resumen.baml
+C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\AutoresAdmin.g.cs
+C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\PromocionesAdmin.g.cs
