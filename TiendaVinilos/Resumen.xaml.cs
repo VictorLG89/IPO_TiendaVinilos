@@ -15,23 +15,14 @@ using System.Windows.Shapes;
 namespace TiendaVinilos
 {
     /// <summary>
-    /// Lógica de interacción para HistorialdePedidos.xaml
+    /// Lógica de interacción para Resumen.xaml
     /// </summary>
-    public partial class HistorialdePedidos : Window
+    public partial class Resumen : Window
     {
-        public HistorialdePedidos()
+        public Resumen(ViewModel viewModel)
         {
             InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void txtEncurso_Copy_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
+            DataContext = viewModel;
         }
     }
 }

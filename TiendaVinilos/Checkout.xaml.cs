@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,37 @@ namespace TiendaVinilos
     /// </summary>
     public partial class Checkout : UserControl
     {
+        private ViewModel viewModel;
+        public static Frame MainContentFrame { get; set; }
         public Checkout()
         {
             InitializeComponent();
+            viewModel = new ViewModel();
+            DataContext = viewModel;
+        }
+
+        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            if (textBox != null && textBox.Text == textBox.Tag.ToString())
+            {
+                textBox.Text = "";
+                textBox.Foreground = new SolidColorBrush(Colors.Black); // Cambia el color del texto a negro
+            }
+        }
+        public void SetMainContentFrame(Frame mainContentFrame)
+        {
+            MainContentFrame = mainContentFrame;
+        }
+
+        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            if (textBox != null && string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                textBox.Text = textBox.Tag.ToString();
+                textBox.Foreground = new SolidColorBrush(Colors.Gray); // Cambia el color del texto a gris
+            }
         }
 
         private void ResumenButton_Click(object sender, RoutedEventArgs e)
@@ -41,8 +70,9 @@ namespace TiendaVinilos
 
         private void PagarButton_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is ViewModel viewModel)
-            {
+
+            
+
                 // Lógica de validación de los datos de la tarjeta y la dirección (simplificada)
                 if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtNumero.Text) ||
                     string.IsNullOrWhiteSpace(txtExpiracion.Text) || string.IsNullOrWhiteSpace(txtCVV.Text) ||
@@ -53,12 +83,30 @@ namespace TiendaVinilos
                     return;
                 }
 
-                // Finalizar el pedido
-                viewModel.FinalizarPedido();
+            // Finalizar el pedido
+            //viewModel.FinalizarPedido();
+            Pedido PedidoActual = new Pedido(txtCiudad.Text, txtCodigoPostal.Text, txtPais.Text, txtDireccion.Text);
 
-                // Cerrar la ventana de checkout
-                
-            }
+            // Crear una nueva lista de productos para evitar la referencia de la misma lista
+            PedidoActual.Productos = new ObservableCollection<Producto>(UsuarioActual.Cesta.Select(p => new Producto
+            {
+                Vinilo = p.Vinilo,
+                Cantidad = p.Cantidad,
+                //PrecioTotal = p.PrecioTotal
+            }));
+
+            
+
+            UsuarioActual.HistorialPedidos.Add(PedidoActual);
+
+            UsuarioActual.Cesta.Clear();
+            PedidoActual = new Pedido(null, null, null, null); // Crear un nuevo pedido para la siguiente compra
+
+            MessageBox.Show("Pedido realizado con éxito.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            // Cerrar la ventana de checkout
+            MainContentFrame.Navigate(new Vinilos());
+
         }
     }
 }

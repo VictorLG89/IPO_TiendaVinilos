@@ -25,7 +25,6 @@ C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Articulo.g
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Artista.g.cs
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Artistas.g.cs
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\cesta.g.cs
-C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\HistorialdePedidos.g.cs
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\InicioDeSesion.g.cs
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\ListaDeseados.g.cs
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\MainWindow.g.cs
@@ -126,7 +125,6 @@ C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Articulo.b
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Artista.baml
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Artistas.baml
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\cesta.baml
-C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\HistorialdePedidos.baml
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\InicioDeSesion.baml
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\ListaDeseados.baml
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\MainWindow.baml
@@ -152,3 +150,5 @@ C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\HistorialP
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Checkout.g.cs
 C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Checkout.baml
+C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Resumen.g.cs
+C:\Users\victo\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\obj\Debug\Resumen.baml

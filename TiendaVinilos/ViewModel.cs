@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TiendaVinilos
 {
@@ -13,9 +14,9 @@ namespace TiendaVinilos
 
         public ObservableCollection<Producto> Cesta => UsuarioActual.Cesta;
         public ObservableCollection<Vinilo> ListaDeseos => UsuarioActual.ListaDeseos;
-       // public ObservableCollection<Producto> Pedido;
-        public Pedido PedidoActual { get; set; }
-
+        public ObservableCollection<Pedido> HistorialPedidos => UsuarioActual.HistorialPedidos;
+        // public ObservableCollection<Producto> Pedido;
+        public Pedido PedidoActual = new Pedido(null,null,null,null);
 
         public ViewModel()
         {
@@ -29,15 +30,12 @@ namespace TiendaVinilos
 
         public void FinalizarPedido()
         {
-            if (Cesta.Any())
-            {
-                PedidoActual.Productos = new ObservableCollection<Producto>(Cesta);
-                UsuarioActual.HistorialPedidos.Add(PedidoActual);
-                UsuarioActual.Cesta.Clear();
-                Pedido Pedido = new Pedido(); // Crear un nuevo pedido para la siguiente compra
-                OnPropertyChanged(nameof(Pedido));
-                OnPropertyChanged(nameof(Cesta));
-            }
+            PedidoActual.Productos = Cesta;
+            UsuarioActual.HistorialPedidos.Add(PedidoActual);
+            UsuarioActual.Cesta.Clear();
+            PedidoActual = new Pedido(null,null,null,null); // Crear un nuevo pedido para la siguiente compra
+            OnPropertyChanged(nameof(Pedido));
+            OnPropertyChanged(nameof(Cesta));                  
         }
         public void EliminarDeListaDeseos(Vinilo vinilo)
         {

@@ -82,13 +82,14 @@
             <Label Grid.Column="3" Content="Vinilos" Grid.Row="2" Width="NaN" Height="NaN" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" MouseLeftButtonDown="OpenProductos" Style="{StaticResource InteractiveLabelStyle}"/>
             <Label Grid.Column="4" Content="Artistas" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Height="NaN" Width="NaN" MouseLeftButtonDown="OpenArtistas" Style="{StaticResource InteractiveLabelStyle}"/>
             <Label Grid.Column="5" Content="Ofertas" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Height="NaN" Width="NaN" MouseLeftButtonDown="OpenPromociones" Style="{StaticResource InteractiveLabelStyle}"/>
-            <Label Grid.Column="6" Content="Contacto" Grid.Row="2" Grid.ColumnSpan="4" Width="NaN" Height="NaN" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" ScrollViewer.CanContentScroll="True" MouseLeftButtonDown="OpenQuienSomos" Style="{StaticResource InteractiveLabelStyle}"/>
+            <Label Grid.Column="6" Content="Quién somos" Grid.Row="2" Grid.ColumnSpan="4" Width="NaN" Height="NaN" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" ScrollViewer.CanContentScroll="True" MouseLeftButtonDown="OpenQuienSomos" Style="{StaticResource InteractiveLabelStyle}"/>
 
             <Label Grid.Column="0" Content="" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="3" Width="NaN" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" Height="NaN" Style="{StaticResource NonInteractiveLabelStyle}"/>
             <Label Grid.Column="10" Content="" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="4" Width="NaN" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" Height="NaN" Style="{StaticResource NonInteractiveLabelStyle}"/>
 
             <Image Grid.Column="5" HorizontalAlignment="Left" Height="4" Margin="10,46,0,0" Grid.Row="4" VerticalAlignment="Top" Width="86"/>
             <Image Grid.Column="1" Height="37" Width="36" Grid.Row="1" Source="/Images/disco-de-vinilo.png" Margin="2,0,2,3"/>
+
 
 
         </Grid>

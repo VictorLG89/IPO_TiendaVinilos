@@ -14,14 +14,19 @@ namespace TiendaVinilos
         public string Ciudad { get; set; }
         public string CodigoPostal { get; set; }
         public string Pais { get; set; }
-        public DateTime Fecha { get; set; }
+        public string Fecha { get; set; }
         public bool Completado { get; set; }
         public double PrecioTotal => Productos.Sum(p => p.PrecioTotal);
 
-        public Pedido()
+        public Pedido(string direccion, string ciudad, string codigopostal, string pais)
         {
+            Fecha = DateTime.Now.ToString("dd/MM/yyyy");
             Productos = new ObservableCollection<Producto>();
             Completado = false;
+            Direccion = direccion;
+            Ciudad = ciudad;
+            CodigoPostal = codigopostal;
+            Pais = pais;
         }
     }
 }

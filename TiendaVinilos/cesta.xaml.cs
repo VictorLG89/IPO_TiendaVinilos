@@ -77,7 +77,8 @@ namespace TiendaVinilos
         }
         private void CheckoutButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Checkout.MainContentFrame = MainContentFrame;
+            MainContentFrame.Navigate(new Checkout());
         }
     }
 }

@@ -216,9 +216,6 @@
     <Compile Include="EditarPerfil.xaml.cs">
       <DependentUpon>EditarPerfil.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HistorialdePedidos.xaml.cs">
-      <DependentUpon>HistorialdePedidos.xaml</DependentUpon>
-    </Compile>
     <Compile Include="HistorialPedidos.xaml.cs">
       <DependentUpon>HistorialPedidos.xaml</DependentUpon>
     </Compile>
@@ -238,6 +235,9 @@
     </Compile>
     <Compile Include="Registro.xaml.cs">
       <DependentUpon>Registro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resumen.xaml.cs">
+      <DependentUpon>Resumen.xaml</DependentUpon>
     </Compile>
     <Compile Include="ResumenPerfil.xaml.cs">
       <DependentUpon>ResumenPerfil.xaml</DependentUpon>
@@ -288,10 +288,6 @@
     <Page Include="EditarPerfil.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="HistorialdePedidos.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="HistorialPedidos.xaml">
       <SubType>Designer</SubType>
@@ -346,6 +342,10 @@
     <Page Include="Registro.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resumen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ResumenPerfil.xaml">
       <Generator>MSBuild:Compile</Generator>
