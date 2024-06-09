@@ -47,7 +47,7 @@ namespace TiendaVinilos
             doc.Load(fichero.Stream);
             foreach (XmlNode node in doc.DocumentElement.ChildNodes)
             {
-                var nuevoVinilo = new Vinilo(0,"Titulo", 1, 2, null, null);
+                var nuevoVinilo = new Vinilo(0,"Titulo", 1, 2, null, null,0);
 
                 nuevoVinilo.IdVinilo = Convert.ToInt32(node.Attributes["IdVinilo"].Value);
                 nuevoVinilo.Titulo = node.Attributes["Titulo"]?.Value ?? "Desconocido";

@@ -19,7 +19,7 @@ namespace TiendaVinilos
         public string CorazonImage { get; set; }
         public string Promocion { get; set; }
 
-        public Vinilo(string titulo, int anio, int duracion, Uri portada, string autor, double precio)
+        public Vinilo(int IdVinilo, string titulo, int anio, int duracion, Uri portada, string autor, double precio)
         {
             Titulo = titulo;
             Anio = anio;
