@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:TiendaVinilos"
              mc:Ignorable="d"
-             MinHeight="800" MinWidth="800">
+             MinHeight="800" MinWidth="800"
+             Background="White">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -26,17 +27,17 @@
            FontSize="26"/>
 
         <!-- Lista de deseos -->
-        <ListBox x:Name="lstListaDeseados" ItemsSource="{Binding ListaDeseos}" Grid.ColumnSpan="3">
+        <ListBox x:Name="lstListaDeseados" ItemsSource="{Binding ListaDeseos}" Grid.ColumnSpan="3" Margin="30,30,30,30">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal" MinWidth="785">
+                    <StackPanel Orientation="Horizontal" MinWidth="785" MinHeight="40">
                         <Image Source="{Binding Portada}" Width="50" Height="50" Margin="5"/>
                         <StackPanel>
-                            <TextBlock Text="{Binding Nombre}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Nombre}"/>
                             <TextBlock Text="{Binding Autor}" />
                         </StackPanel>
-                        <StackPanel Width="100" Margin="10,0,0,0">
-                            <TextBlock Text="{Binding Precio}" TextWrapping="Wrap" d:LayoutOverrides="Width, Height"/>
+                        <StackPanel Width="100" Margin="10,0,0,0" VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Precio, StringFormat=C}" TextWrapping="Wrap" d:LayoutOverrides="Width, Height"/>
                         </StackPanel>
                         <StackPanel Width="70" Margin="500,0,0,0" >
                             <Image x:Name="imgCorazon" Source="/Images/corazon.png" HorizontalAlignment="Center" Height="53" Width="24" MouseEnter="imgCorazon_MouseEnter" MouseLeave="imgCorazon_MouseLeave" MouseLeftButtonDown="imgCorazon_MouseLeftButtonDown"/>

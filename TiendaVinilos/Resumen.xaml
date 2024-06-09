@@ -20,7 +20,8 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <TextBlock Text="{Binding PrecioTotal, StringFormat=Precio Total: C}" FontSize="16" FontWeight="Bold" Margin="10"/>
+            <TextBlock Text="Precio Total: "/>
+            <TextBlock Text="{Binding PrecioTotalCesta, StringFormat=C}" FontSize="16" FontWeight="Bold" Margin="10"/>
         </StackPanel>
     </Grid>
 </Window>

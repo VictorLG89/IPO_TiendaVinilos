@@ -18,6 +18,7 @@ namespace TiendaVinilos
         public Uri FotoPerfil { set; get; }
         public string Contrasena { set; get; }
         public static List<Vinilo> ListaDeseos { get; set; } = new List<Vinilo>();
+        public string UltimoAcceso { set; get; }
 
         public Usuario(int id, string nombreUsuario, string nombre, string apellido1, string apellido2, bool admin, string Correo, Uri fotoPerfil, string contrasena)
         {
@@ -30,6 +31,7 @@ namespace TiendaVinilos
             correo = Correo;
             FotoPerfil = fotoPerfil;
             Contrasena = contrasena;
+            UltimoAcceso = DateTime.Now.ToString("dd/MM/yyyy");
 
         }
     }

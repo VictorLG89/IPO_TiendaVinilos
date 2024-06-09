@@ -45,6 +45,7 @@ namespace TiendaVinilos
 
         private void BtnHistorialPedidos_Click(object sender, RoutedEventArgs e)
         {
+            HistorialPedidos.MainContentFrame = MainContentFrame;
             // Abrir la ventana de historial de pedidos en el MainContentFrame
             MainContentFrame.Navigate(new HistorialPedidos());
         }

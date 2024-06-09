@@ -17,9 +17,11 @@ namespace TiendaVinilos
         public static bool Admin { get; set; }
         public static string Correo { get; set; }
         public static Uri FotoPerfil { get; set; }
+        public static string UltimoAcceso { set; get; }
         public static ObservableCollection<Vinilo> ListaDeseos { get; set; } = new ObservableCollection<Vinilo>();
         public static ObservableCollection<Producto> Cesta { get; set; } = new ObservableCollection<Producto>();
         public static ObservableCollection<Pedido> HistorialPedidos { get; set; } = new ObservableCollection<Pedido>();
-     }
+        
+    }
 
 }

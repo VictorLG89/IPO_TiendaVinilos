@@ -46,9 +46,10 @@
                 <TextBlock x:Name="txtCorreo" Margin="0,0,0,5" FontSize="18" Text="{x:Static local:UsuarioActual.Correo}" HorizontalAlignment="Center"/>
             </StackPanel>
 
-            <StackPanel Orientation="Vertical" Margin="0,0,0,20">
-               <!-- <TextBlock Text="ID de Usuario:" FontSize="16" Foreground="#FF0000FF" HorizontalAlignment="Center"/>
-                <TextBlock x:Name="txtIdUsuario" Margin="0,0,0,5" FontSize="18" Text="{x:Static local:UsuarioActual.IdUsuario}" HorizontalAlignment="Center"/>-->
+            <StackPanel Orientation="Horizontal"    Margin="0,0,0,20" HorizontalAlignment="Center">
+                <TextBlock Text="Último acceso: " FontWeight="Bold" Height="16" HorizontalAlignment="Center" Margin="40,0,0,0"/>
+                <TextBlock x:Name="txtUltimoAcceso" Text="{x:Static local:UsuarioActual.UltimoAcceso}" 
+                  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10" Width="100"/>
             </StackPanel>
         </StackPanel>
 

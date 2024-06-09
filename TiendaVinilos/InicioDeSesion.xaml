@@ -15,21 +15,21 @@
             <ColumnDefinition Width="218*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0*"/>
+            <RowDefinition Height="30*"/>
             <RowDefinition Height="115"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="70"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="200*"/>
         </Grid.RowDefinitions>
         <TextBox x:Name="tbxEmail" Grid.Column="2" Margin="0,28,0,22" Grid.Row="2" TextWrapping="Wrap" Text="Usuario" VerticalContentAlignment="Center" BorderBrush="#FF605B5B" BorderThickness="1,2" TabIndex="1" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
         <PasswordBox x:Name="pbxContraseña" Grid.Column="2" Margin="0,26,0,1" Grid.Row="3" BorderThickness="2" Password="Contraseña" TabIndex="2" GotFocus="PasswordBox_GotFocus" LostFocus="PasswordBox_LostFocus" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
         <Button x:Name="btnLogin" Content="Iniciar Sesión" Grid.Column="2" Margin="37,28.8,37,0" Grid.Row="4" BorderThickness="2" VerticalAlignment="Top" Click="comprobarInformacion"/>
         <Label x:Name="lblUsuario" Foreground="Black" RenderTransformOrigin="0.902,-0.345" Content="Nombre de Usuario" Grid.Column="2" Grid.Row="2" VerticalContentAlignment="Center" Margin="0,2,70,49"/>
         <Label x:Name="lblContraseña" Foreground="black" Content="Contraseña" Grid.Column="2" Grid.Row="3" VerticalContentAlignment="Center" Margin="1.2,0.2,68.8,26.2" HorizontalContentAlignment="Left"/>
-        <Label x:Name="lblEstado" FontStyle="Italic" IsTabStop="True" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Content="Estado de la aplicacion" Margin="49,3,49,3" Grid.Row="7" Padding="10,10,10,10" FontSize="9" Background="White" Grid.Column="2">
+        <Label x:Name="lblEstado" FontStyle="Italic" IsTabStop="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Bienvenido a TiendaVinilos" Margin="49,3,49,3" Grid.Row="7" Padding="10,10,10,10" FontSize="9" Background="White" Grid.Column="2">
             <Label.Foreground>
                 <SolidColorBrush Color="Black" Opacity="0.7"/>
             </Label.Foreground>
@@ -39,6 +39,6 @@
                 <ImageBrush ImageSource="/Images/disco-de-vinilo.png"/>
             </Image.OpacityMask>
         </Image>
-        <Button Grid.Column="2" Content="No tengo cuenta" Margin="40,10,40,0" Grid.Row="6" VerticalAlignment="Top"/>
+        
     </Grid>
 </Window>

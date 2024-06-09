@@ -55,16 +55,22 @@ namespace TiendaVinilos
 
         private void ResumenButton_Click(object sender, RoutedEventArgs e)
         {
-            // Muestra un resumen del pedido
-            if (DataContext is ViewModel viewModel)
+            // Obtener el ViewModel del DataContext del UserControl actual
+            ViewModel viewModel = this.DataContext as ViewModel;
+
+            // Verificar si el ViewModel es válido
+            if (viewModel != null)
             {
-                string resumen = "Resumen del Pedido:\n\n";
-                foreach (var producto in viewModel.PedidoActual.Productos)
-                {
-                    resumen += $"{producto.Vinilo.Titulo} x {producto.Cantidad} - {producto.PrecioTotal:C}\n";
-                }
-                resumen += $"\nTotal: {viewModel.PedidoActual.PrecioTotal:C}";
-                MessageBox.Show(resumen, "Resumen del Pedido", MessageBoxButton.OK, MessageBoxImage.Information);
+                // Crear una instancia de la ventana Resumen y pasar el ViewModel como argumento
+                Resumen resumenWindow = new Resumen(viewModel);
+
+                // Mostrar la ventana Resumen
+                resumenWindow.ShowDialog();
+            }
+            else
+            {
+                // Manejar el caso en el que el ViewModel no sea válido
+                MessageBox.Show("Error: No se pudo obtener el ViewModel.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

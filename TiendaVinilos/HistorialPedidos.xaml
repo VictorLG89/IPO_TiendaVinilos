@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TiendaVinilos"
         mc:Ignorable="d"
-        MinHeight="750" MinWidth="800" >
+        MinHeight="750" MinWidth="800" Background="White">
     <Grid>
         <!-- Mensaje cuando la lista esté vacía -->
         <TextBlock x:Name="txtMensajeVacio" 
@@ -18,7 +18,7 @@
            Foreground="#FF6D6D6D"
            FontSize="26"/>
         
-        <ListBox x:Name="lstPedidos" ItemsSource="{Binding HistorialPedidos}" Margin="0,0,0,10">
+        <ListBox x:Name="lstPedidos" ItemsSource="{Binding HistorialPedidos}" Margin="30,30,30,10">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="5">
@@ -36,10 +36,37 @@
                                         <TextBlock Text="{Binding Vinilo.Titulo}" Margin="5"/>
                                         <TextBlock Text="{Binding Cantidad, StringFormat='Cantidad: {0}'}" Margin="5"/>
                                         <TextBlock Text="{Binding PrecioTotal, StringFormat='Total: {0} €'}" Margin="5"/>
+                                        
                                     </StackPanel>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
+                        <TextBlock Text="Estado: " Margin="5"/>
+                        <TextBlock Margin="5">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    
+                                    <Setter Property="Text" Value="En progreso"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Completado}" Value="True">
+                                            <Setter Property="Text" Value="Completado"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                        <Button Content="Marcar como recibido" Click="MarkAsReceivedButton_Click" Margin="5">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Completado}" Value="True">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

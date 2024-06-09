@@ -54,7 +54,7 @@
                     </Style>
                 </ListBox.ItemContainerStyle>
             </ListBox>
-            <StackPanel x:Name="spDetallesPelicula" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Top" MinHeight="350" MinWidth="550">
+            <StackPanel x:Name="spDetallesPelicula" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Top" MinHeight="350" MinWidth="550" Margin="30,30,30,30">
                 <Label x:Name="lblTitulo" FontWeight="Bold" FontSize="20" Content="{Binding ElementName=lstListaArtistas, Path=SelectedItem.Nombre}"/>
                 <Image x:Name="imgPortada" Height="120" Width="140" HorizontalAlignment="Left" Margin="5"  Source="{Binding ElementName=lstListaArtistas, Path=SelectedItem.Foto}"/>
                 <Label FontWeight="Bold">Año:</Label>

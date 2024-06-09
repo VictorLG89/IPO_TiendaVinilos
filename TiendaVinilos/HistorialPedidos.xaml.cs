@@ -21,6 +21,7 @@ namespace TiendaVinilos
     public partial class HistorialPedidos : UserControl
     {
         private ViewModel viewModel;
+        public static Frame MainContentFrame { get; set; }
         public HistorialPedidos()
         {
             InitializeComponent();
@@ -32,6 +33,20 @@ namespace TiendaVinilos
             // Mostrar la etiqueta si la lista está vacía al inicio
             MostrarEtiquetaSiListaVacia();
         }
+        private void MarkAsReceivedButton_Click(object sender, RoutedEventArgs e)
+        {
+            var pedido = (sender as FrameworkElement).DataContext as Pedido;
+            if (pedido != null)
+            {
+                viewModel.CompletarPedido(pedido);
+                RecargarHistorial();
+                MostrarEtiquetaSiListaVacia();
+            }
+        }
+        private void RecargarHistorial()
+        {
+            MainContentFrame.Navigate(new HistorialPedidos());
+        }
         private void ListaDeseos_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             // Mostrar la etiqueta si la lista está vacía
@@ -41,7 +56,7 @@ namespace TiendaVinilos
         private void MostrarEtiquetaSiListaVacia()
         {
             // Verificar si la lista de deseos está vacía
-            if (viewModel.ListaDeseos.Count == 0)
+            if (viewModel.HistorialPedidos.Count == 0)
             {
                 // Mostrar la etiqueta y ocultar la lista
                 txtMensajeVacio.Visibility = Visibility.Visible;

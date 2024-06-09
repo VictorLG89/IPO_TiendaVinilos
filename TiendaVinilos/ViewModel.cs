@@ -13,6 +13,7 @@ namespace TiendaVinilos
     {
 
         public ObservableCollection<Producto> Cesta => UsuarioActual.Cesta;
+        public double PrecioTotalCesta => Cesta?.Sum(producto => producto.PrecioTotal) ?? 0;    
         public ObservableCollection<Vinilo> ListaDeseos => UsuarioActual.ListaDeseos;
         public ObservableCollection<Pedido> HistorialPedidos => UsuarioActual.HistorialPedidos;
         // public ObservableCollection<Producto> Pedido;
@@ -21,13 +22,20 @@ namespace TiendaVinilos
         public ViewModel()
         {
         }
-        //private void OpenCheckoutWindow(object parameter)
-        //{
-          //  Checkout checkoutWindow = new Checkout();
-            //checkoutWindow.DataContext = this; // Pasar el ViewModel a la ventana de checkout
-            //checkoutWindow.ShowDialog();
-        //}
-
+        public void CompletarPedido(Pedido pedido)
+        {
+            if (pedido != null)
+            {
+                foreach (var p in HistorialPedidos)
+                {
+                    if (p == pedido)
+                    {
+                        p.Completado = true;
+                        return; // Termina la iteración una vez que se ha encontrado y modificado el pedido
+                    }
+                }
+            }
+        }
         public void FinalizarPedido()
         {
             PedidoActual.Productos = Cesta;

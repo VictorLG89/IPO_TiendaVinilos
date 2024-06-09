@@ -124,6 +124,7 @@ namespace TiendaVinilos
                         UsuarioActual.Admin = bool.Parse(node.Attributes["Admin"].Value);
                         UsuarioActual.Correo = node.Attributes["correo"].Value;
                         UsuarioActual.FotoPerfil = new Uri(node.Attributes["FotoPerfil"].Value, UriKind.Relative);
+                        UsuarioActual.UltimoAcceso = DateTime.Now.ToString("dd/MM/yyyy");
                         return true;
                     }
                 }
