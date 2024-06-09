@@ -55,15 +55,15 @@
         </Grid.ColumnDefinitions>
         <Grid Background="#FFCBE3F3">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="10*"/>
-                <ColumnDefinition Width="40*"/>
-                <ColumnDefinition Width="108*"/>
-                <ColumnDefinition Width="121*"/>
-                <ColumnDefinition Width="121*"/>
-                <ColumnDefinition Width="121*"/>
-                <ColumnDefinition Width="108*"/>
-                <ColumnDefinition Width="40*"/>
-                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="108"/>
+                <ColumnDefinition Width="154"/>
+                <ColumnDefinition Width="154"/>
+                <ColumnDefinition Width="154"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="68"/>
+                <ColumnDefinition Width="10"/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
@@ -75,8 +75,7 @@
 
 
             </Grid.RowDefinitions>
-            <ComboBox x:Name="Idioma" Grid.Column="6" RenderTransformOrigin="0.043,-0.362" Grid.Row="1" SelectionChanged="ComboBox_SelectionChanged" Margin="109,14,0,16" Height="30" Grid.ColumnSpan="2"/>
-
+            <ComboBox x:Name="Idioma" Grid.Column="7" RenderTransformOrigin="0.043,-0.362" Grid.Row="1" SelectionChanged="ComboBox_SelectionChanged" Margin="0,6,0,8" Height="30"/>
             <Image x:Name="fotoperfil" Grid.Column="6" Height="34" Grid.Row="1" Source="/Images/fotoperfil.png" Stretch="Fill" Width="34" MouseLeftButtonDown="OpenPerfilUser" Style="{StaticResource InteractiveImageStyle}" Margin="7,8,7,8"/>
 
             <Label Grid.Column="3" Content="Vinilos" Grid.Row="2" 
@@ -92,10 +91,11 @@
                    Padding="0,0,0,0" Background="#FFE9E9E9" Height="NaN" Width="NaN"
                    MouseLeftButtonDown="OnOfertasClicked"/>
 
-            <Label Content="" Grid.Row="2" Height="NaN" Background="#FFE9E9E9" Grid.ColumnSpan="3" Width="NaN" IsEnabled="False"/>
-            <Label Grid.Column="6" Content="" Grid.Row="2" Background="#FFE9E9E9" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="4" Width="NaN" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" Height="NaN"/>
+
             <Label Content="" Grid.Row="2" Height="NaN" Background="#FFE9E9E9" Grid.ColumnSpan="3" Width="NaN" IsEnabled="False"/>
             <Label Grid.Column="10" Content="" Grid.Row="2" Background="#FFE9E9E9" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="4" Width="NaN" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" Height="NaN"/>
+            <Label Content="" Grid.Row="2" Height="NaN" Background="#FFE9E9E9" Grid.ColumnSpan="3" Width="NaN" IsEnabled="False"/>
+            <Label Grid.Column="6" Content="" Grid.Row="2" Background="#FFE9E9E9" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="NaN" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" Height="NaN" Margin="0,0,-22,0" Grid.ColumnSpan="3"/>
 
             <Image Grid.Column="1" Height="37" Width="37" Grid.Row="1" Source="/Images/disco-de-vinilo.png"/>
 
@@ -110,6 +110,7 @@
             </Grid.RowDefinitions>
             <Frame x:Name="MainContentFrame" NavigationUIVisibility="Hidden" Grid.Row="2" VerticalAlignment="bottom" Grid.RowSpan="2"/>
             <ContentControl x:Name="MainContent" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+
         </Grid>
     </Grid>
 </Window>

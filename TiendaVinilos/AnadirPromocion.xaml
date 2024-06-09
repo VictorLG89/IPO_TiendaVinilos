@@ -43,7 +43,7 @@
             <CheckBox Content="Programar notificación" d:LayoutOverrides="Width, Height"/>
             <DatePicker d:LayoutOverrides="Width, Height"/>
         </StackPanel>
-
+        
         <Button Grid.Column="5" Content="Guardar promoción" HorizontalAlignment="Left" Margin="183,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="27" Width="117" RenderTransformOrigin="0.82,0.486" Click="Button_Click"/>
         <Button Grid.Column="5" Content="Cancelar" HorizontalAlignment="Left" Margin="61,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="27" Width="117"/>
 

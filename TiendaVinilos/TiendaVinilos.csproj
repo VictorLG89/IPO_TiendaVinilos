@@ -197,6 +197,9 @@
     <Compile Include="AnadirPromocion.xaml.cs">
       <DependentUpon>AnadirPromocion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Artista1.xaml.cs">
+      <DependentUpon>Artista1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Artistas.xaml.cs">
       <DependentUpon>Artistas.xaml</DependentUpon>
     </Compile>
@@ -264,6 +267,10 @@
     <Page Include="AnadirPromocion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Artista1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Artistas.xaml">
       <SubType>Designer</SubType>
@@ -467,6 +474,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ListaDiscos.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Vinilo.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\SQLitePCLRaw.lib.e_sqlite3.2.0.2\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets" Condition="Exists('packages\SQLitePCLRaw.lib.e_sqlite3.2.0.2\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets')" />

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,24 +21,29 @@ namespace TiendaVinilos
     /// </summary>
     public partial class MainWindowAdmin : Window
     {
-        private string currentCulture = "es-ES";
+        public static string culture2 { get; set; }
         public MainWindowAdmin()
         {
             InitializeComponent();
+            
             DataContext = new ViewModel();
+            culture2 = "es-ES";
         }
+
+       
+
         private void AddVinilos(object sender, MouseButtonEventArgs e)
         {
-
+            
             MainContentFrame.Navigate(new AnadirDisco());
-
+           
         }
 
         private void AddArtistas(object sender, MouseButtonEventArgs e)
         {
-
-            MainContentFrame.Navigate(new AnadirArtista());
-
+           
+             MainContentFrame.Navigate(new AnadirArtista());
+            
         }
 
         private void OnOfertasClicked(object sender, MouseButtonEventArgs e)
@@ -45,11 +51,13 @@ namespace TiendaVinilos
             MainContentFrame.Navigate(new AnadirPromocion());
         }
 
+       
         private void OpenPerfilUser(object sender, MouseButtonEventArgs e)
         {
             PerfilUser.MainContentFrame = MainContentFrame;
-            MainContentFrame.Navigate(new PerfilUser(currentCulture));
+            MainContentFrame.Navigate(new PerfilUser(culture2));
         }
+
         private void OpenWindow(Window window)
         {
             window.Show();
@@ -67,6 +75,6 @@ namespace TiendaVinilos
         {
             // Manejo del evento Label
         }
+        
     }
 }
-

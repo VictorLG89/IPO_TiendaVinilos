@@ -6,18 +6,21 @@ using System.Windows.Controls;
 using System.Xml.Linq;
 using Microsoft.Win32;
 using System.Windows.Media.Imaging;
+using System.Collections.Generic;
 
 namespace TiendaVinilos
 {
     public partial class AnadirDisco : UserControl
     {
         private string rutaImagen = string.Empty;
-        private string rutaArchivo = @"C:\Users\lopez\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\Vinilo.xml";
+        private List<Vinilo> vinilos = new List<Vinilo>();
+        private string rutaArchivo = @"C:\Users\lopez\Source\Repos\IPO_TiendaVinilos\TiendaVinilos\Vinilo.xml"; 
 
         public AnadirDisco()
         {
             InitializeComponent();
             CargarDiscos();
+            PaisComboBox.ItemsSource = paises;
         }
         private void CargarDiscos()
         {
@@ -26,21 +29,28 @@ namespace TiendaVinilos
                 if (File.Exists(rutaArchivo))
                 {
                     XDocument doc = XDocument.Load(rutaArchivo);
-                    var discos = doc.Descendants("Vinilo")
-                                    .Select(v => new
-                                    {
-                                        Nombre = v.Element("Nombre")?.Value,
-                                        SelloDiscografico = v.Element("SelloDiscografico")?.Value
-                                    })
-                                    .ToList();
+                    vinilos = doc.Descendants("Vinilo")
+                        .Select(v => new Vinilo(
+                            IdVinilo: int.Parse(v.Attribute("IdVinilo")?.Value), // Ajusta si el IdVinilo está como atributo en el XML
+                            titulo: v.Element("Nombre")?.Value,
+                            anio: DateTime.Parse(v.Element("FechaLanzamiento")?.Value).Year, // Obtener el año de la fecha de lanzamiento
+                            duracion: int.Parse(v.Element("Duracion")?.Value), // Ajusta según el formato de tu XML
+                            portada: null, // Ajusta si tienes la ruta de la imagen en el XML
+                            autor: v.Element("Autor")?.Value,
+                            precio: double.Parse(v.Element("Precio")?.Value)
+                        ))
+                        .ToList();
 
-                    DiscosListBox.ItemsSource = discos;
-                    DiscosListBox.DisplayMemberPath = "Nombre";
+                    // Asignar los vinilos a la lista de ListBox
+                    DiscosListBox.ItemsSource = vinilos;
+                }
+                else
+                {
+                    MessageBox.Show("El archivo XML no existe.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
-            catch (Exception)
-            {
-            }
+            catch (Exception ex)
+            { }
         }
 
 
@@ -54,7 +64,7 @@ namespace TiendaVinilos
             {
                 rutaImagen = openFileDialog.FileName;
                 BitmapImage bitmap = new BitmapImage(new Uri(rutaImagen));
-                ImagenVinilo.Source = bitmap; // Asignar la imagen seleccionada al control Image
+                imgPortada.Source = bitmap; // Asignar la imagen seleccionada al control Image
             }
         }
 
@@ -67,7 +77,26 @@ namespace TiendaVinilos
             string pais = PaisComboBox.Text;
             DateTime fechaLanzamiento = FechaLanzamientoDatePicker.SelectedDate ?? DateTime.Now;
             string enlacesRedesSociales = RedesSocialesTextBox.Text;
-
+            double precio= double.Parse(txtPrecio.Text);
+            if (double.TryParse(txtPrecio.Text, out precio))
+            {
+                // El valor se pudo convertir correctamente a double
+            }
+            else
+            {
+                // Mostrar un mensaje de error al usuario o manejar la situación de otra manera
+                MessageBox.Show("El precio ingresado no es válido. Por favor, ingrese un número decimal.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            double duracion = int.Parse(DuracionTextBox.Text);
+            if (double.TryParse(DuracionTextBox.Text, out duracion))
+            {
+                // La conversión fue exitosa, 'duracion' contiene el valor convertido
+            }
+            else
+            {
+                // La conversión falló, el texto no es un número entero válido
+                MessageBox.Show("La duración ingresada no es válida. Por favor, ingrese un número entero.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
             // Convertir la imagen a base64 si se ha seleccionado una
             string base64Imagen = string.Empty;
             if (!string.IsNullOrEmpty(rutaImagen))
@@ -96,7 +125,9 @@ namespace TiendaVinilos
                         new XElement("Pais", pais),
                         new XElement("FechaLanzamiento", fechaLanzamiento.ToString("yyyy-MM-dd")),
                         new XElement("EnlacesRedesSociales", enlacesRedesSociales),
-                        new XElement("Foto", base64Imagen)
+                        new XElement("Foto", base64Imagen),
+                        new XElement("Precio", precio),
+                        new XElement("Duracion", duracion)
                     )
                 );
 
@@ -152,6 +183,60 @@ namespace TiendaVinilos
             byte[] imagenBytes = File.ReadAllBytes(rutaImagen);
             return Convert.ToBase64String(imagenBytes);
         }
+        private void CargarVinilosDesdeXML()
+        {
+            try
+            {
+                if (File.Exists(rutaArchivo))
+                {
+                    XDocument doc = XDocument.Load(rutaArchivo);
+                    List<Vinilo> vinilos = new List<Vinilo>();
+
+                    foreach (var element in doc.Root.Elements("Vinilo"))
+                    {
+                        int idVinilo = int.Parse(element.Element("IdVinilo").Value);
+                        string titulo = element.Element("Titulo").Value;
+                        int anio = int.Parse(element.Element("Anio").Value);
+                        int duracion = int.Parse(element.Element("Duracion").Value);
+                        Uri portada = new Uri(element.Element("Portada").Value);
+                        string autor = element.Element("Autor").Value;
+                        double precio = double.Parse(element.Element("Precio").Value);
+
+                        vinilos.Add(new Vinilo(idVinilo, titulo, anio, duracion, portada, autor,precio));
+                    }
+
+                    // Mostrar los vinilos en la interfaz gráfica (por ejemplo, en un ListBox)
+                    DiscosListBox.ItemsSource = vinilos;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar los vinilos: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+        private void DiscosListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Mostrar los detalles del vinilo seleccionado en la lista
+            if (DiscosListBox.SelectedItem != null)
+            {
+                Vinilo viniloSeleccionado = (Vinilo)DiscosListBox.SelectedItem;
+                lblTitulo.Content = viniloSeleccionado.Titulo;
+                imgPortada.Source = new BitmapImage(viniloSeleccionado.Portada);
+                lblAnio.Content = viniloSeleccionado.Anio;
+                lblDuracion.Content = viniloSeleccionado.Duracion;
+                txtPrecio.Text = $"{viniloSeleccionado.Precio} €";
+            }
+        }
+        private List<string> paises = new List<string>
+        {
+            "España",
+            "Estados Unidos",
+            "Argentina",
+            "México",
+            // Agrega más países según sea necesario
+        };
+
+     
 
     }
 }
