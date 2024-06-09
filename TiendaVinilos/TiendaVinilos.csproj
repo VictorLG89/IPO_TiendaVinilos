@@ -207,6 +207,9 @@
       <DependentUpon>Artistas.xaml</DependentUpon>
     </Compile>
     <Compile Include="Autor.cs" />
+    <Compile Include="AutoresAdmin.xaml.cs">
+      <DependentUpon>AutoresAdmin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="cesta.xaml.cs">
       <DependentUpon>cesta.xaml</DependentUpon>
     </Compile>
@@ -229,6 +232,9 @@
     <Compile Include="Producto.cs" />
     <Compile Include="ProductosAdmin.xaml.cs">
       <DependentUpon>ProductosAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PromocionesAdmin.xaml.cs">
+      <DependentUpon>PromocionesAdmin.xaml</DependentUpon>
     </Compile>
     <Compile Include="QuienSomos.xaml.cs">
       <DependentUpon>QuienSomos.xaml</DependentUpon>
@@ -276,6 +282,10 @@
     <Page Include="Artistas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoresAdmin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="cesta.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -334,6 +344,10 @@
     <Page Include="ProductosAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PromocionesAdmin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="QuienSomos.xaml">
       <SubType>Designer</SubType>
@@ -456,6 +470,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\franco.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ListaDiscos.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\SQLitePCLRaw.lib.e_sqlite3.2.0.2\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets" Condition="Exists('packages\SQLitePCLRaw.lib.e_sqlite3.2.0.2\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets')" />

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TiendaVinilos"
         mc:Ignorable="d"
-        Title="Resumen" Height="450" Width="800">
+        Title="Resumen" MinHeight="450" Width="800">
     <Grid>
         <StackPanel>
             <TextBlock Text="Resumen del Pedido" FontSize="20" FontWeight="Bold" Margin="10"/>
@@ -20,6 +20,7 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
+            
             <TextBlock Text="Precio Total: "/>
             <TextBlock Text="{Binding PrecioTotalCesta, StringFormat=C}" FontSize="16" FontWeight="Bold" Margin="10"/>
         </StackPanel>

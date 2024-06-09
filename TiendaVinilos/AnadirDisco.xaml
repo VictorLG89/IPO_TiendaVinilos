@@ -1,51 +1,51 @@
-﻿<Window x:Class="TiendaVinilos.AnadirDisco"
+﻿<UserControl x:Class="TiendaVinilos.AnadirDisco"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TiendaVinilos"
         mc:Ignorable="d"
-        Title="AnadirDisco" Height="450" Width="800">
-    <Grid>
+        MinHeight="800" MinWidth="800">
+    <Grid Background="White">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="30"/>
-            <ColumnDefinition Width="120"/>
-            <ColumnDefinition Width="10"/>
-            <ColumnDefinition Width="300"/>
-            <ColumnDefinition Width="10"/>
-            <ColumnDefinition Width="300"/>
-            <ColumnDefinition Width="30"/>
-
-
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="300*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="300*"/>
+            <ColumnDefinition Width="30*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="120"/>
-            <RowDefinition Height="27"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="120*"/>
+            <RowDefinition Height="27*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="27"/>
-            <RowDefinition Height="27"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Column="3" Height="NaN" Margin="0,0,0,10" Grid.RowSpan="3" Grid.Row="1" Width="NaN">
+        <StackPanel Grid.Column="3" Height="554" Grid.RowSpan="3" Grid.Row="1" Width="NaN" VerticalAlignment="Top">
             <Label Content="Nombre "/>
-
-            <TextBox TextWrapping="Wrap" Text="TextBox" Width="120" HorizontalAlignment="Left"/>
+            <TextBox x:Name="NombreTextBox" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left"/>
             <Label Content="Sello discográfico"/>
-            <TextBox TextWrapping="Wrap" Text="TextBox" Width="120" HorizontalAlignment="Left"/>
+            <TextBox x:Name="SelloDiscograficoTextBox" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left"/>
             <Label Content="Autor"/>
-            <ComboBox Width="120" HorizontalAlignment="Left"/>
+            <TextBox x:Name="AutorTextBox" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left"/>
             <Label Content="País"/>
-            <ComboBox Width="120" HorizontalAlignment="Left"/>
+            <ComboBox x:Name="PaisComboBox" Width="120" HorizontalAlignment="Left"/>
             <Label Content="Fecha de lanzamiento"/>
-            <DatePicker d:LayoutOverrides="Width, Height"/>
+            <DatePicker x:Name="FechaLanzamientoDatePicker"/>
             <Label Content="Enlaces a redes sociales"/>
-            <TextBox TextWrapping="Wrap" Text="TextBox" Width="120" HorizontalAlignment="Left"/>
-
+            <TextBox x:Name="RedesSocialesTextBox" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left"/>
         </StackPanel>
-        <Button Grid.Column="1" Content="Añadir foto" Margin="0,119,0,0" Grid.RowSpan="2" Grid.Row="1" Click="Button_Click"/>
-        <Image Grid.Column="1" Height="100" Width="100" Margin="0,9,0,0" Grid.RowSpan="2"/>
-        <Button Grid.Column="5" Content="Guardar disco" HorizontalAlignment="Left" Margin="193,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="27" Width="107" RenderTransformOrigin="0.82,0.486"/>
-        <Button Grid.Column="5" Content="Cancelar" HorizontalAlignment="Left" Margin="61,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="27" Width="117"/>
+        <Button Grid.Column="1" Content="Añadir foto" Grid.RowSpan="1" Grid.Row="1" Click="Button_Click" VerticalAlignment="Top" Margin="0,135,0,0"/>
+        <Image x:Name="ImagenVinilo" Grid.Column="1" Height="100" Width="100" Margin="0,9,0,0" Grid.RowSpan="1" VerticalAlignment="Top" Grid.Row="1"/>
+        <Button Grid.Column="3" Content="Guardar disco" Click="Guardar_Click" HorizontalAlignment="Right" Margin="202,178,0,0" Grid.Row="1" VerticalAlignment="Center" Height="27" Width="90" RenderTransformOrigin="0.82,0.486"/>
+        <Button Grid.Column="3" Content="Cancelar" HorizontalAlignment="Center" Margin="7,178,0,0" Grid.Row="1" VerticalAlignment="Center" Height="27" Width="90"/>
+        <Button Grid.Column="3" Content="Eliminar disco" Click="Eliminar_Click" HorizontalAlignment="Left" Margin="4,350,0,0" Grid.Row="1" VerticalAlignment="Center" Height="27" Width="90"/>
+        <ListBox x:Name="DiscosListBox" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="2" Height="25" VerticalAlignment="Bottom" Margin="0,0,0,65"/>
+
 
     </Grid>
-</Window>
+</UserControl>
+

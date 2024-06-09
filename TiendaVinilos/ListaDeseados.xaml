@@ -39,7 +39,7 @@
                         <StackPanel Width="100" Margin="10,0,0,0" VerticalAlignment="Center">
                             <TextBlock Text="{Binding Precio, StringFormat=C}" TextWrapping="Wrap" d:LayoutOverrides="Width, Height"/>
                         </StackPanel>
-                        <StackPanel Width="70" Margin="500,0,0,0" >
+                        <StackPanel Width="70" Margin="50,0,0,0" >
                             <Image x:Name="imgCorazon" Source="/Images/corazon.png" HorizontalAlignment="Center" Height="53" Width="24" MouseEnter="imgCorazon_MouseEnter" MouseLeave="imgCorazon_MouseLeave" MouseLeftButtonDown="imgCorazon_MouseLeftButtonDown"/>
                         </StackPanel>
                     </StackPanel>

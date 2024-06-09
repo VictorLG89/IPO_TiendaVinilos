@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TiendaVinilos"
         mc:Ignorable="d"
-        Height="450" Width="800">
+        MinHeight="800" MinWidth="800">
     <Grid Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30"/>
@@ -43,7 +43,7 @@
             <CheckBox Content="Programar notificación" d:LayoutOverrides="Width, Height"/>
             <DatePicker d:LayoutOverrides="Width, Height"/>
         </StackPanel>
-        
+
         <Button Grid.Column="5" Content="Guardar promoción" HorizontalAlignment="Left" Margin="183,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="27" Width="117" RenderTransformOrigin="0.82,0.486" Click="Button_Click"/>
         <Button Grid.Column="5" Content="Cancelar" HorizontalAlignment="Left" Margin="61,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="27" Width="117"/>
 

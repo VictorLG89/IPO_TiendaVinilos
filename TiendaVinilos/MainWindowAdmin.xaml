@@ -4,48 +4,122 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TiendaVinilos"
-        mc:Ignorable="d"
-        Title="MainWindowAdmin" Height="450" Width="800">
-    <Grid>
+        mc:Ignorable="d" MinHeight="450" MinWidth="800">
+    <Window.DataContext>
+        <local:ViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <!-- Estilo para Label con sombreado al pasar el mouse -->
+        <Style x:Key="InteractiveLabelStyle" TargetType="Label">
+            <Setter Property="Background" Value="#FFE9E9E9"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="LightGray"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Estilo para Image interactiva -->
+        <Style x:Key="InteractiveImageStyle" TargetType="Image">
+            <Setter Property="Opacity" Value="1"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Opacity" Value="0.4"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Estilo para Label no interactivo (sin sombreado) -->
+        <Style x:Key="NonInteractiveLabelStyle" TargetType="Label">
+            <Setter Property="Background" Value="#FFE9E9E9"/>
+        </Style>
+
+        <!-- Estilo para Image con sombreado al pasar el mouse -->
+        <Style TargetType="Image">
+            <Setter Property="Opacity" Value="1"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Opacity" Value="0.5"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
         <Grid Background="#FFCBE3F3">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="10"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="108"/>
-                <ColumnDefinition Width="121"/>
-                <ColumnDefinition Width="121"/>
-                <ColumnDefinition Width="121"/>
-                <ColumnDefinition Width="26"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="15"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="68"/>
-                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="108*"/>
+                <ColumnDefinition Width="121*"/>
+                <ColumnDefinition Width="121*"/>
+                <ColumnDefinition Width="121*"/>
+                <ColumnDefinition Width="26*"/>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="68*"/>
+                <ColumnDefinition Width="10*"/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="10"/>
-                <RowDefinition Height="40"/>
+                <RowDefinition Height="60"/>
                 <RowDefinition Height="50"/>
-                <RowDefinition/>
-                <RowDefinition Height="10"/>
+                <!--<RowDefinition/>-->
+                <RowDefinition Height="10*"/>
 
 
             </Grid.RowDefinitions>
-            <ComboBox x:Name="Idioma" Grid.Column="12" RenderTransformOrigin="0.043,-0.362" Width="NaN" Grid.Row="1" SelectionChanged="ComboBox_SelectionChanged" Margin="0,6,0,8" Height="NaN"/>
-            <Label Grid.Column="3" Content="Vinilos" Grid.Row="2" Width="NaN" Height="NaN" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#FFE9E9E9"/>
-            <Label Grid.Column="4" Content="Artistas" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#FFE9E9E9" Height="NaN" Width="NaN"/>
-            <Label Grid.Column="5" Content="Ofertas" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#FFE9E9E9" Height="NaN" Width="NaN"/>
-            <Label Grid.Column="6" Content="Contacto" Grid.Row="2" Grid.ColumnSpan="4" Width="NaN" Height="NaN" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" ScrollViewer.CanContentScroll="True" Background="#FFE9E9E9"/>
+            <ComboBox x:Name="Idioma" Grid.Column="12" RenderTransformOrigin="0.043,-0.362" Grid.Row="1" SelectionChanged="ComboBox_SelectionChanged" Margin="0,6,0,8" Height="30"/>
+            <Image x:Name="interrogacion" Grid.Column="9" Grid.Row="1" Source="/Images/interrogacion.png" Stretch="Fill" MouseLeftButtonDown="OpenPreguntas" Style="{StaticResource InteractiveImageStyle}" Height="44" Margin="3,3,3,3" Width="44"/>
+            <Image x:Name="carrito" Grid.Column="7" Height="44" Grid.Row="1" Source="/Images/carrito.png" Stretch="Fill" Width="44" MouseLeftButtonDown="OpenCesta" Style="{StaticResource InteractiveImageStyle}" Margin="0,3,6,3" HorizontalAlignment="Left"/>
+            <Image x:Name="corazon" Grid.Column="10" Height="34" Grid.Row="1" Source="/Images/corazon.png" Stretch="Fill" Width="34" MouseLeftButtonDown="OpenListaDeseados" Style="{StaticResource InteractiveImageStyle}" Margin="7,8,7,8"/>
+            <Image x:Name="fotoperfil" Grid.Column="11" Height="34" Grid.Row="1" Source="/Images/fotoperfil.png" Stretch="Fill" Width="34" MouseLeftButtonDown="OpenPerfilUser" Style="{StaticResource InteractiveImageStyle}" Margin="7,8,7,8"/>
+
+            <Label Grid.Column="3" Content="Vinilos" Grid.Row="2" 
+                   Width="NaN" Height="NaN" HorizontalContentAlignment="Center" 
+                   VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#FFE9E9E9"
+                    MouseLeftButtonDown="AddVinilos"/>
+            <Label Grid.Column="4" Content="Artistas" Grid.Row="2" 
+                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+                   Padding="0,0,0,0" Background="#FFE9E9E9" 
+                   Height="NaN" Width="NaN" MouseLeftButtonDown="AddArtistas"/>
+            <Label Grid.Column="5" Content="Ofertas" Grid.Row="2" 
+                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                   Padding="0,0,0,0" Background="#FFE9E9E9" Height="NaN" Width="NaN"
+                   MouseLeftButtonDown="OnOfertasClicked"/>
+            <Label Grid.Column="6" Content="Contacto" Grid.Row="2" 
+                   Grid.ColumnSpan="4" Width="NaN" Height="NaN" Padding="0,0,0,0" 
+                   VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
+                   ScrollViewer.CanContentScroll="True" Background="#FFE9E9E9"
+                   MouseLeftButtonDown="OnContactoClicked"/>
+
             <Label Content="" Grid.Row="2" Height="NaN" Background="#FFE9E9E9" Grid.ColumnSpan="3" Width="NaN" IsEnabled="False"/>
             <Label Grid.Column="10" Content="" Grid.Row="2" Background="#FFE9E9E9" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="4" Width="NaN" Padding="0,0,0,0" ScrollViewer.CanContentScroll="True" Height="NaN"/>
-            <Image Grid.Column="1" HorizontalAlignment="Center" Height="34" VerticalAlignment="Top" Width="76" Grid.Row="1" Source="/logoTienda.jpg"/>
-            <Image Grid.Column="5" HorizontalAlignment="Left" Height="4" Margin="10,206,0,0" Grid.Row="3" VerticalAlignment="Top" Width="86"/>
-            <Image Grid.Column="1" Height="37" Width="36" Grid.Row="1" Source="/Images/disco-de-vinilo.png" Margin="0,0,0,3"/>
+
+            <Image Grid.Column="1" Height="37" Width="37" Grid.Row="1" Source="/Images/disco-de-vinilo.png"/>
 
             <!-- Contenido de la cuadrícula -->
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100*"/>
+                <RowDefinition Height="350*"/>
+            </Grid.RowDefinitions>
+            <Frame x:Name="MainContentFrame" NavigationUIVisibility="Hidden" Grid.Row="2" VerticalAlignment="bottom" Grid.RowSpan="2"/>
+            <ContentControl x:Name="MainContent" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
         </Grid>
     </Grid>
 </Window>

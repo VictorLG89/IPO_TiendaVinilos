@@ -17,7 +17,7 @@ namespace TiendaVinilos
     /// <summary>
     /// Lógica de interacción para AnadirGrupo.xaml
     /// </summary>
-    public partial class AnadirGrupo : Window
+    public partial class AnadirGrupo : UserControl
     {
         public AnadirGrupo()
         {
