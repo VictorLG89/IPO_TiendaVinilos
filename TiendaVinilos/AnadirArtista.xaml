@@ -40,11 +40,13 @@
             <Label Content="Discografía"/>
             <ListBox Height="40" d:ItemsSource="{d:SampleData ItemCount=5}"/>
 
-            <Button Content="Guardar artista" HorizontalAlignment="Left" Width="90" Height="20" Click="GuardarArtista_Click" Margin="0,9,0,0"/>
+            <Button Content="Guardar artista" HorizontalAlignment="Right" Width="90" Height="20" Click="GuardarArtista_Click" Margin="0,9,0,0"/>
+            
             <Label Content="Eliminar artista" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,11,0,0"/>
             <ListBox x:Name="ArtistaListBox" Height="53"/>
             <Button Content="Eliminar artista" Width="90" Height="27" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,0" Click="EliminarArtista_Click"/>
         </StackPanel>
+        <Button Content="Cancelar proceso" Height="20" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="3" Margin="0,0,0,54" Click="CancelarProceso_Click"/>
         <Button Grid.Column="1" Content="Añadir foto" Grid.Row="1" Click="Button_Click" VerticalAlignment="Top" Margin="0,119,0,0"/>
         <Image Grid.Column="1" Height="100" Width="100" Margin="0,9,0,0" Grid.Row="1" VerticalAlignment="Top" x:Name="ImagenArtista"/>
         <StackPanel Grid.Column="3" Grid.Row="3" Height="NaN" Grid.RowSpan="2"/>
@@ -58,7 +60,6 @@
                     </ItemsPanelTemplate>
                 </ListBox.ItemsPanel>
             </ListBox>
-            <Button Content="Cancelar proceso" Height="20" HorizontalAlignment="Right" Margin="0,10,0,0"/> <!--Click="Cancelar_Click" />-->
         </StackPanel>
     </Grid>
 </UserControl>

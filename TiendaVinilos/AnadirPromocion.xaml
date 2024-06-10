@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TiendaVinilos"
         mc:Ignorable="d"
         MinHeight="800" MinWidth="800">
-    <Grid Background="White">
+    <Grid Background="White" HorizontalAlignment="Left" Margin="0,0,0,25">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30"/>
             <ColumnDefinition Width="120"/>
@@ -44,14 +44,14 @@
 
             <Label Content="Descuento en porcentaje (%)" d:LayoutOverrides="Width, Height"/>
             <TextBox Name="DescuentoTextBox" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left"/>
-            
+
             <CheckBox Content="Enviar notificación a clientes" d:LayoutOverrides="Width, Height"/>
             <CheckBox Content="Programar notificación" d:LayoutOverrides="Width, Height"/>
             <DatePicker d:LayoutOverrides="Width, Height"/>
         </StackPanel>
 
 
-        <Button Grid.Column="5" Content="Guardar promoción" HorizontalAlignment="Left" Margin="183,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="27" Width="117" RenderTransformOrigin="0.82,0.486" />
-        <Button Grid.Column="5" Content="Cancelar" HorizontalAlignment="Left" Margin="61,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="27" Width="117" Click="Cancelar_Click"/>
+        <Button Grid.Column="3" Content="Guardar promoción" HorizontalAlignment="Right" Grid.Row="3" VerticalAlignment="Top" Height="28" Width="116" RenderTransformOrigin="0.499,0.675" Margin="0,196,2,0" />
+        <Button Grid.Column="3" Content="Cancelar proceso" HorizontalAlignment="Left" Margin="0,197,0,0" Grid.Row="3" VerticalAlignment="Top" Height="27" Width="117" Click="Cancelar_Click"/>
     </Grid>
 </UserControl>

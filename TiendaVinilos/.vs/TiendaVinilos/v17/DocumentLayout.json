@@ -3,84 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|c:\\users\\lopez\\source\\repos\\ipo_tiendavinilos\\tiendavinilos\\anadirdisco.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:anadirdisco.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|c:\\users\\lopez\\source\\repos\\ipo_tiendavinilos\\tiendavinilos\\anadirdisco.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:anadirdisco.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|c:\\users\\lopez\\source\\repos\\ipo_tiendavinilos\\tiendavinilos\\anadirartista.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:anadirartista.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|c:\\users\\lopez\\source\\repos\\ipo_tiendavinilos\\tiendavinilos\\anadirdisco.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:anadirdisco.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\mainwindowadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:mainwindowadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|c:\\users\\lopez\\source\\repos\\ipo_tiendavinilos\\tiendavinilos\\mainwindowadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\mainwindowadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:mainwindowadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\anadirpromocion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:anadirpromocion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\anadirpromocion.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:anadirpromocion.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\artista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:artista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{248EC716-FB34-4295-B70F-47A1C7C89474}|Elementos de la soluci\u00F3n{248EC716-FB34-4295-B70F-47A1C7C89474}|C:\\Users\\lopez\\Source\\Repos\\IPO_TiendaVinilos\\TiendaVinilos\\Promocion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{248EC716-FB34-4295-B70F-47A1C7C89474}|Elementos de la soluci\u00F3n{248EC716-FB34-4295-B70F-47A1C7C89474}|solutionrelative:Promocion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\artistas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:artistas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\cesta.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:cesta.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\perfiluser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:perfiluser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\historialpedidos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:historialpedidos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\resources\\stringresources.en-us.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:resources\\stringresources.en-us.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\resources\\stringresources.es-es.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:resources\\stringresources.es-es.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\cesta.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:cesta.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\vinilos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:vinilos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\perfiluser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:perfiluser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -119,78 +51,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AnadirDisco.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\AnadirDisco.xaml.cs",
+              "RelativeDocumentMoniker": "AnadirDisco.xaml.cs",
+              "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\AnadirDisco.xaml.cs",
+              "RelativeToolTip": "AnadirDisco.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T08:09:52.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AnadirDisco.xaml",
               "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\AnadirDisco.xaml",
               "RelativeDocumentMoniker": "AnadirDisco.xaml",
               "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\AnadirDisco.xaml",
               "RelativeToolTip": "AnadirDisco.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-10T07:25:57.835Z",
+              "WhenOpened": "2024-06-10T08:05:26.064Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AnadirArtista.xaml",
-              "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\AnadirArtista.xaml",
-              "RelativeDocumentMoniker": "AnadirArtista.xaml",
-              "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\AnadirArtista.xaml",
-              "RelativeToolTip": "AnadirArtista.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-10T07:25:54.843Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AnadirDisco.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\AnadirDisco.xaml.cs",
-              "RelativeDocumentMoniker": "AnadirDisco.xaml.cs",
-              "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\AnadirDisco.xaml.cs",
-              "RelativeToolTip": "AnadirDisco.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFgAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T07:13:00.486Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Artista.cs",
-              "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\Artista.cs",
-              "RelativeDocumentMoniker": "Artista.cs",
-              "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\Artista.cs",
-              "RelativeToolTip": "Artista.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAADwvxEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T06:23:18.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AnadirPromocion.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\AnadirPromocion.xaml.cs",
-              "RelativeDocumentMoniker": "AnadirPromocion.xaml.cs",
-              "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\AnadirPromocion.xaml.cs",
-              "RelativeToolTip": "AnadirPromocion.xaml.cs",
-              "ViewState": "AQIAAI8AAAAAAAAAAAAjwKIAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T05:54:43.531Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AnadirPromocion.xaml",
-              "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\AnadirPromocion.xaml",
-              "RelativeDocumentMoniker": "AnadirPromocion.xaml",
-              "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\AnadirPromocion.xaml",
-              "RelativeToolTip": "AnadirPromocion.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-10T06:32:59.686Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "MainWindowAdmin.xaml.cs",
               "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\MainWindowAdmin.xaml.cs",
               "RelativeDocumentMoniker": "MainWindowAdmin.xaml.cs",
@@ -200,158 +85,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-10T05:54:43.531Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Promocion.cs",
-              "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\Promocion.cs",
-              "RelativeDocumentMoniker": "Promocion.cs",
-              "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\Promocion.cs",
-              "RelativeToolTip": "Promocion.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T05:59:34.975Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindowAdmin.xaml",
-              "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\MainWindowAdmin.xaml",
-              "RelativeDocumentMoniker": "MainWindowAdmin.xaml",
-              "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\MainWindowAdmin.xaml",
-              "RelativeToolTip": "MainWindowAdmin.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-10T05:54:43.547Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAvAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH\u002BSURBVDhP7ZRPaNNQHMe/TdNma2NrW1jUFYZYN0YKHqZischAMCCjh94siEfp0buIeBZ2LYKXHvSWQ4toDkKC0F7EU93NQyEthkFnG9uuaf6YhIcusknBHTz4gR\u002B/x\u002B/7e1/ee8l7IRzhmbi3s0TTzc3zcYQpp3R3K9sk0sJQJPtscgmcSzJ4\u002BeErPvemj99\u002B6t0j0sKEcF96SsbgV\u002BOX\u002BQvxyvu9A9zaSOL2\u002BrK8Zn9R6vU66QBomkYul0OpVNJns9mLYrGoE8mHhhPaImNoI4Nboikcmjb29TkYOr6dZtPbPM\u002BTDmAwGGAymaDb7Q44jttvt9tSoVDQiOyu8AhvPqo7\u002BqHVfP5OReXGCgQ\u002BiRU2BMMwSAcgSZIfiUQC5XIZLMs\u002BSKVSYj6f/\u002B7pgTPs9CbofTPw6E4WQj6JTAyYz\u002BdE/YXjONB1HaIoQtO03el0\u002BpBIQcPrq6Ybbr64jLOMA8e2/MnHYds2RqMR3C2nG43GGVJGmGSfm1evrI8PtMqltSzoMOVPOo5MJuN/GC/6/T5UVVU6nY7saYEVyrKMVquF8Xh8oplnIgjCz/DMTdMk6m\u002BGlmX5Z3bSNhchYHga/Df8e/59Q5pkn2g0CoqioCgKGIYh1T8zHA4Ri7mXnhB4barV6jX3hjzxmryffBG8VycSibyu1WqvSOk0AX4A4Q67Z\u002BxJ14gAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-06-10T05:54:43.735Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "cesta.xaml",
-              "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\cesta.xaml",
-              "RelativeDocumentMoniker": "cesta.xaml",
-              "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\cesta.xaml",
-              "RelativeToolTip": "cesta.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-10T05:54:43.735Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "StringResources.es-ES.xaml",
-              "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\Resources\\StringResources.es-ES.xaml",
-              "RelativeDocumentMoniker": "Resources\\StringResources.es-ES.xaml",
-              "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\Resources\\StringResources.es-ES.xaml",
-              "RelativeToolTip": "Resources\\StringResources.es-ES.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-10T05:54:43.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Artistas.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\Artistas.xaml.cs",
-              "RelativeDocumentMoniker": "Artistas.xaml.cs",
-              "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\Artistas.xaml.cs",
-              "RelativeToolTip": "Artistas.xaml.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAABJAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH\u002BSURBVDhP7ZRPaNNQHMe/TdNma2NrW1jUFYZYN0YKHqZischAMCCjh94siEfp0buIeBZ2LYKXHvSWQ4toDkKC0F7EU93NQyEthkFnG9uuaf6YhIcusknBHTz4gR\u002B/x\u002B/7e1/ee8l7IRzhmbi3s0TTzc3zcYQpp3R3K9sk0sJQJPtscgmcSzJ4\u002BeErPvemj99\u002B6t0j0sKEcF96SsbgV\u002BOX\u002BQvxyvu9A9zaSOL2\u002BrK8Zn9R6vU66QBomkYul0OpVNJns9mLYrGoE8mHhhPaImNoI4Nboikcmjb29TkYOr6dZtPbPM\u002BTDmAwGGAymaDb7Q44jttvt9tSoVDQiOyu8AhvPqo7\u002BqHVfP5OReXGCgQ\u002BiRU2BMMwSAcgSZIfiUQC5XIZLMs\u002BSKVSYj6f/\u002B7pgTPs9CbofTPw6E4WQj6JTAyYz\u002BdE/YXjONB1HaIoQtO03el0\u002BpBIQcPrq6Ybbr64jLOMA8e2/MnHYds2RqMR3C2nG43GGVJGmGSfm1evrI8PtMqltSzoMOVPOo5MJuN/GC/6/T5UVVU6nY7saYEVyrKMVquF8Xh8oplnIgjCz/DMTdMk6m\u002BGlmX5Z3bSNhchYHga/Df8e/59Q5pkn2g0CoqioCgKGIYh1T8zHA4Ri7mXnhB4barV6jX3hjzxmryffBG8VycSibyu1WqvSOk0AX4A4Q67Z\u002BxJ14gAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-06-10T05:54:43.735Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "StringResources.en-US.xaml",
-              "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\Resources\\StringResources.en-US.xaml",
-              "RelativeDocumentMoniker": "Resources\\StringResources.en-US.xaml",
-              "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\Resources\\StringResources.en-US.xaml",
-              "RelativeToolTip": "Resources\\StringResources.en-US.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-10T05:54:43.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "HistorialPedidos.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\HistorialPedidos.xaml.cs",
-              "RelativeDocumentMoniker": "HistorialPedidos.xaml.cs",
-              "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\HistorialPedidos.xaml.cs",
-              "RelativeToolTip": "HistorialPedidos.xaml.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAgwDMAAABDAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH\u002BSURBVDhP7ZRPaNNQHMe/TdNma2NrW1jUFYZYN0YKHqZischAMCCjh94siEfp0buIeBZ2LYKXHvSWQ4toDkKC0F7EU93NQyEthkFnG9uuaf6YhIcusknBHTz4gR\u002B/x\u002B/7e1/ee8l7IRzhmbi3s0TTzc3zcYQpp3R3K9sk0sJQJPtscgmcSzJ4\u002BeErPvemj99\u002B6t0j0sKEcF96SsbgV\u002BOX\u002BQvxyvu9A9zaSOL2\u002BrK8Zn9R6vU66QBomkYul0OpVNJns9mLYrGoE8mHhhPaImNoI4Nboikcmjb29TkYOr6dZtPbPM\u002BTDmAwGGAymaDb7Q44jttvt9tSoVDQiOyu8AhvPqo7\u002BqHVfP5OReXGCgQ\u002BiRU2BMMwSAcgSZIfiUQC5XIZLMs\u002BSKVSYj6f/\u002B7pgTPs9CbofTPw6E4WQj6JTAyYz\u002BdE/YXjONB1HaIoQtO03el0\u002BpBIQcPrq6Ybbr64jLOMA8e2/MnHYds2RqMR3C2nG43GGVJGmGSfm1evrI8PtMqltSzoMOVPOo5MJuN/GC/6/T5UVVU6nY7saYEVyrKMVquF8Xh8oplnIgjCz/DMTdMk6m\u002BGlmX5Z3bSNhchYHga/Df8e/59Q5pkn2g0CoqioCgKGIYh1T8zHA4Ri7mXnhB4barV6jX3hjzxmryffBG8VycSibyu1WqvSOk0AX4A4Q67Z\u002BxJ14gAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-06-10T05:54:43.735Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "PerfilUser.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\PerfilUser.xaml.cs",
-              "RelativeDocumentMoniker": "PerfilUser.xaml.cs",
-              "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\PerfilUser.xaml.cs",
-              "RelativeToolTip": "PerfilUser.xaml.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAmwC4AAABDAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH\u002BSURBVDhP7ZRPaNNQHMe/TdNma2NrW1jUFYZYN0YKHqZischAMCCjh94siEfp0buIeBZ2LYKXHvSWQ4toDkKC0F7EU93NQyEthkFnG9uuaf6YhIcusknBHTz4gR\u002B/x\u002B/7e1/ee8l7IRzhmbi3s0TTzc3zcYQpp3R3K9sk0sJQJPtscgmcSzJ4\u002BeErPvemj99\u002B6t0j0sKEcF96SsbgV\u002BOX\u002BQvxyvu9A9zaSOL2\u002BrK8Zn9R6vU66QBomkYul0OpVNJns9mLYrGoE8mHhhPaImNoI4Nboikcmjb29TkYOr6dZtPbPM\u002BTDmAwGGAymaDb7Q44jttvt9tSoVDQiOyu8AhvPqo7\u002BqHVfP5OReXGCgQ\u002BiRU2BMMwSAcgSZIfiUQC5XIZLMs\u002BSKVSYj6f/\u002B7pgTPs9CbofTPw6E4WQj6JTAyYz\u002BdE/YXjONB1HaIoQtO03el0\u002BpBIQcPrq6Ybbr64jLOMA8e2/MnHYds2RqMR3C2nG43GGVJGmGSfm1evrI8PtMqltSzoMOVPOo5MJuN/GC/6/T5UVVU6nY7saYEVyrKMVquF8Xh8oplnIgjCz/DMTdMk6m\u002BGlmX5Z3bSNhchYHga/Df8e/59Q5pkn2g0CoqioCgKGIYh1T8zHA4Ri7mXnhB4barV6jX3hjzxmryffBG8VycSibyu1WqvSOk0AX4A4Q67Z\u002BxJ14gAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-06-10T05:54:43.751Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "cesta.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\cesta.xaml.cs",
-              "RelativeDocumentMoniker": "cesta.xaml.cs",
-              "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\cesta.xaml.cs",
-              "RelativeToolTip": "cesta.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFMAAAA+AAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH\u002BSURBVDhP7ZRPaNNQHMe/TdNma2NrW1jUFYZYN0YKHqZischAMCCjh94siEfp0buIeBZ2LYKXHvSWQ4toDkKC0F7EU93NQyEthkFnG9uuaf6YhIcusknBHTz4gR\u002B/x\u002B/7e1/ee8l7IRzhmbi3s0TTzc3zcYQpp3R3K9sk0sJQJPtscgmcSzJ4\u002BeErPvemj99\u002B6t0j0sKEcF96SsbgV\u002BOX\u002BQvxyvu9A9zaSOL2\u002BrK8Zn9R6vU66QBomkYul0OpVNJns9mLYrGoE8mHhhPaImNoI4Nboikcmjb29TkYOr6dZtPbPM\u002BTDmAwGGAymaDb7Q44jttvt9tSoVDQiOyu8AhvPqo7\u002BqHVfP5OReXGCgQ\u002BiRU2BMMwSAcgSZIfiUQC5XIZLMs\u002BSKVSYj6f/\u002B7pgTPs9CbofTPw6E4WQj6JTAyYz\u002BdE/YXjONB1HaIoQtO03el0\u002BpBIQcPrq6Ybbr64jLOMA8e2/MnHYds2RqMR3C2nG43GGVJGmGSfm1evrI8PtMqltSzoMOVPOo5MJuN/GC/6/T5UVVU6nY7saYEVyrKMVquF8Xh8oplnIgjCz/DMTdMk6m\u002BGlmX5Z3bSNhchYHga/Df8e/59Q5pkn2g0CoqioCgKGIYh1T8zHA4Ri7mXnhB4barV6jX3hjzxmryffBG8VycSibyu1WqvSOk0AX4A4Q67Z\u002BxJ14gAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-06-10T05:54:43.751Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Vinilos.xaml",
-              "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\Vinilos.xaml",
-              "RelativeDocumentMoniker": "Vinilos.xaml",
-              "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\Vinilos.xaml",
-              "RelativeToolTip": "Vinilos.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-10T05:54:43.751Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "PerfilUser.xaml",
-              "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\PerfilUser.xaml",
-              "RelativeDocumentMoniker": "PerfilUser.xaml",
-              "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\PerfilUser.xaml",
-              "RelativeToolTip": "PerfilUser.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-10T05:54:43.751Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-10T05:54:43.751Z"
             }
           ]
         }

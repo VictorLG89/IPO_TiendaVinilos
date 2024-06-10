@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows;
@@ -17,6 +18,7 @@ namespace TiendaVinilos
         {
             InitializeComponent();
             CargarArtistas();
+            NacionalidadComboBox.ItemsSource = nacionalidad;
         }
 
         private void CargarArtistas()
@@ -167,14 +169,30 @@ namespace TiendaVinilos
             byte[] imagenBytes = File.ReadAllBytes(rutaImagen);
             return Convert.ToBase64String(imagenBytes);
         }
+        private List<string> nacionalidad = new List<string>
+        {
+            "España",
+            "Estados Unidos",
+            "Argentina",
+            "México",
 
-        //private void Cancelar_Click(object sender, RoutedEventArgs e)
-        //{
-        //    MainWindowAdmin mainWindow = Application.Current.MainWindow as MainWindowAdmin;
-        //    if (mainWindow != null)
-        //    {
-        //        mainWindow.VolverAlMenuPrincipal();
-        //    }
-        //}
+        };
+        private void CancelarProceso_Click(object sender, RoutedEventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        private void LimpiarCampos()
+        {
+            NombreArtisticoTextBox.Text = string.Empty;
+            NombreTextBox.Text = string.Empty;
+            ApellidosTextBox.Text = string.Empty;
+            NacionalidadComboBox.SelectedIndex = -1;
+            FechaNacimientoDatePicker.SelectedDate = null;
+            RedesSocialesTextBox.Text = string.Empty;
+            ImagenArtista.Source = null;
+            // Limpiar otros campos que necesites
+        }
+
     }
 }

@@ -136,20 +136,7 @@ namespace TiendaVinilos
         }
 
         // Manejar el evento de clic en el botón Cancelar (simplemente limpia los campos o cierra el formulario)
-        private void Cancelar_Click(object sender, RoutedEventArgs e)
-        {
-            LimpiarCampos();
-        }
-
-        private void LimpiarCampos()
-        {
-            NombrePromocionTextBox.Text = string.Empty;
-            ArtistaComboBox.SelectedItem = null;
-            DiscoComboBox.ItemsSource = null;
-            FechaInicioDatePicker.SelectedDate = null;
-            FechaFinDatePicker.SelectedDate = null;
-            DescuentoTextBox.Text = string.Empty;
-        }
+        
 
         // Métodos para vincular los controles XAML con el código C#
         private TextBox NombrePromocionTextBoxControl => this.FindName("NombrePromocionTextBox") as TextBox;
@@ -165,6 +152,22 @@ namespace TiendaVinilos
             GuardarPromocion_Click(sender, e);
           //  Cancelar_Click(sender, e);
         }
+
+        private void Cancelar_Click(object sender, RoutedEventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        private void LimpiarCampos()
+        {
+            NombrePromocionTextBox.Text = string.Empty;
+            ArtistaComboBox.SelectedItem = null;
+            DiscoComboBox.ItemsSource = null;
+            FechaInicioDatePicker.SelectedDate = null;
+            FechaFinDatePicker.SelectedDate = null;
+            DescuentoTextBox.Text = string.Empty;
+        }
+
     }
 }
 

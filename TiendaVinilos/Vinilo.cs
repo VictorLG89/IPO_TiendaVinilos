@@ -12,14 +12,14 @@ namespace TiendaVinilos
         public int IdVinilo { set; get; }
         public string Titulo { set; get; }
         public int Anio { set; get; }
-        public int Duracion { set; get; }
+        public double Duracion { set; get; }
         public Uri Portada { set; get; }
         public string Autor {set; get; }
         public double Precio { set; get; }
         public string CorazonImage { get; set; }
         public Promocion Promocion { get; set; }
 
-        public Vinilo(int viniloId, string titulo, int anio, int duracion, Uri portada, string autor, double precio)
+        public Vinilo(int viniloId, string titulo, int anio, double duracion, Uri portada, string autor, double precio)
         {
             IdVinilo = viniloId;
             Titulo = titulo;

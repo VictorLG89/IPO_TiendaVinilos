@@ -31,10 +31,10 @@ namespace TiendaVinilos
                     XDocument doc = XDocument.Load(rutaArchivo);
                     vinilos = doc.Descendants("Vinilo")
                         .Select(v => new Vinilo(
-                            viniloId: int.Parse(v.Attribute("IdVinilo")?.Value), // Ajusta si el IdVinilo está como atributo en el XML
-                            titulo: v.Element("Nombre")?.Value,
+                            viniloId: int.Parse(v.Element("IdVinilo")?.Value), // Ajusta si el IdVinilo está como atributo en el XML
+                            titulo: v.Element("Titulo")?.Value,
                             anio: DateTime.Parse(v.Element("FechaLanzamiento")?.Value).Year, // Obtener el año de la fecha de lanzamiento
-                            duracion: int.Parse(v.Element("Duracion")?.Value), // Ajusta según el formato de tu XML
+                            duracion: double.Parse(v.Element("Duracion")?.Value), // Ajusta según el formato de tu XML
                             portada: null, // Ajusta si tienes la ruta de la imagen en el XML
                             autor: v.Element("Autor")?.Value,
                             precio: double.Parse(v.Element("Precio")?.Value)
@@ -50,8 +50,11 @@ namespace TiendaVinilos
                 }
             }
             catch (Exception ex)
-            { }
+            {
+                MessageBox.Show($"Error al cargar los discos: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
+
 
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -233,10 +236,28 @@ namespace TiendaVinilos
             "Estados Unidos",
             "Argentina",
             "México",
-            // Agrega más países según sea necesario
+            
         };
+        private void LimpiarCampos()
+        {
+            // Establecer todos los campos a su valor inicial
+            NombreTextBox.Text = string.Empty;
+            SelloDiscograficoTextBox.Text = string.Empty;
+            AutorTextBox.Text = string.Empty;
+            PaisComboBox.SelectedIndex = -1; // Desseleccionar cualquier país seleccionado
+            FechaLanzamientoDatePicker.SelectedDate = DateTime.Now; // Establecer la fecha actual
+            RedesSocialesTextBox.Text = string.Empty;
+            DuracionTextBox.Text = string.Empty;
+            txtPrecio.Text = string.Empty;
+            imgPortada.Source = null; // Limpiar la imagen
+        }
 
-     
+        private void CancelarProceso_Click(object sender, RoutedEventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+
 
     }
 }
