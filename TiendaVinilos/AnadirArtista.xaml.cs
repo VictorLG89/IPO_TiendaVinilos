@@ -11,7 +11,6 @@ namespace TiendaVinilos
 {
     public partial class AnadirArtista : UserControl
     {
-        // Ruta para el archivo XML en la carpeta AppData
         private string rutaArchivo = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "artistas.xml");
 
         public AnadirArtista()
@@ -35,7 +34,7 @@ namespace TiendaVinilos
                                           Nombre = a.Element("Nombre")?.Value,
                                           Apellidos = a.Element("Apellidos")?.Value,
                                           Nacionalidad = a.Element("Nacionalidad")?.Value,
-                                          FechaNacimiento = DateTime.Parse(a.Element("FechaNacimiento")?.Value),
+                                          FechaNacimiento = DateTime.Parse(a.Element("FechaNacimiento")?.Value ?? DateTime.MinValue.ToString()),
                                           EnlacesRedesSociales = a.Element("EnlacesRedesSociales")?.Value
                                       })
                                       .ToList();
@@ -50,10 +49,8 @@ namespace TiendaVinilos
             }
         }
 
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            // Lógica para seleccionar una imagen del artista
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
 
@@ -61,13 +58,12 @@ namespace TiendaVinilos
             {
                 string rutaImagen = openFileDialog.FileName;
                 BitmapImage bitmap = new BitmapImage(new Uri(rutaImagen));
-                ImagenArtista.Source = bitmap; // Asignar la imagen seleccionada al control Image
+                ImagenArtista.Source = bitmap;
             }
         }
 
         private void GuardarArtista_Click(object sender, RoutedEventArgs e)
         {
-            // Obtener los datos del artista desde la interfaz de usuario
             string nombreArtistico = NombreArtisticoTextBox.Text;
             string nombre = NombreTextBox.Text;
             string apellidos = ApellidosTextBox.Text;
@@ -75,13 +71,10 @@ namespace TiendaVinilos
             DateTime fechaNacimiento = FechaNacimientoDatePicker.SelectedDate ?? DateTime.Now;
             string enlacesRedesSociales = RedesSocialesTextBox.Text;
 
-            // Guardar los datos del artista en un archivo XML
             GuardarArtistaEnXML(nombreArtistico, nombre, apellidos, nacionalidad, fechaNacimiento, enlacesRedesSociales);
 
-            // Mostrar mensaje de éxito
             MessageBox.Show("El artista ha sido guardado exitosamente.", "Guardado", MessageBoxButton.OK, MessageBoxImage.Information);
 
-            // Actualizar la lista de artistas en la interfaz
             CargarArtistas();
         }
 
@@ -89,7 +82,6 @@ namespace TiendaVinilos
         {
             try
             {
-                // Crear un nuevo elemento XML para el artista
                 XElement artista = new XElement("Artista",
                                         new XElement("NombreArtistico", nombreArtistico),
                                         new XElement("Nombre", nombre),
@@ -98,25 +90,20 @@ namespace TiendaVinilos
                                         new XElement("FechaNacimiento", fechaNacimiento.ToString("yyyy-MM-dd")),
                                         new XElement("EnlacesRedesSociales", enlacesRedesSociales));
 
-                // Verificar si el archivo existe, si no existe, crearlo y agregar el elemento raíz
                 if (!File.Exists(rutaArchivo))
                 {
                     XDocument doc = new XDocument(new XElement("Artistas"));
                     doc.Save(rutaArchivo);
                 }
 
-                // Cargar el documento XML de artistas
                 XDocument documentoArtistas = XDocument.Load(rutaArchivo);
 
-                // Agregar el nuevo artista al documento
                 documentoArtistas.Element("Artistas").Add(artista);
 
-                // Guardar los cambios en el archivo XML
                 documentoArtistas.Save(rutaArchivo);
             }
             catch (Exception ex)
             {
-                // Manejar cualquier excepción que ocurra durante el proceso de guardado
                 MessageBox.Show($"Error al guardar el artista: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -162,10 +149,8 @@ namespace TiendaVinilos
             }
         }
 
-
         private void AñadirFotoGaleria_Click(object sender, RoutedEventArgs e)
         {
-            // Lógica para seleccionar una imagen para la galería de fotos del artista
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
 
@@ -173,8 +158,7 @@ namespace TiendaVinilos
             {
                 string rutaImagen = openFileDialog.FileName;
 
-                // Aquí puedes manejar la lógica para añadir la imagen a la galería de fotos
-                // Por ejemplo, puedes agregar la imagen a una ListBox o a una lista de imágenes para mostrar en la interfaz de usuario
+                // Añadir la imagen a la galería de fotos
             }
         }
 
@@ -183,6 +167,7 @@ namespace TiendaVinilos
             byte[] imagenBytes = File.ReadAllBytes(rutaImagen);
             return Convert.ToBase64String(imagenBytes);
         }
+
         //private void Cancelar_Click(object sender, RoutedEventArgs e)
         //{
         //    MainWindowAdmin mainWindow = Application.Current.MainWindow as MainWindowAdmin;
@@ -190,7 +175,6 @@ namespace TiendaVinilos
         //    {
         //        mainWindow.VolverAlMenuPrincipal();
         //    }
-
         //}
     }
 }

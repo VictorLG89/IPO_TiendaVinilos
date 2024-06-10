@@ -17,10 +17,11 @@ namespace TiendaVinilos
         public string Autor {set; get; }
         public double Precio { set; get; }
         public string CorazonImage { get; set; }
-        public string Promocion { get; set; }
+        public Promocion Promocion { get; set; }
 
-        public Vinilo(int IdVinilo, string titulo, int anio, int duracion, Uri portada, string autor, double precio)
+        public Vinilo(int viniloId, string titulo, int anio, int duracion, Uri portada, string autor, double precio)
         {
+            IdVinilo = viniloId;
             Titulo = titulo;
             Anio = anio;
             Duracion = duracion;

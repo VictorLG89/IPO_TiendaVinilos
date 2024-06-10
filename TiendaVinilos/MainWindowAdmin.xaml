@@ -55,15 +55,15 @@
         </Grid.ColumnDefinitions>
         <Grid Background="#FFCBE3F3">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="10"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="108"/>
-                <ColumnDefinition Width="154"/>
-                <ColumnDefinition Width="154"/>
-                <ColumnDefinition Width="154"/>
-                <ColumnDefinition Width="80"/>
-                <ColumnDefinition Width="68"/>
-                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="108*"/>
+                <ColumnDefinition Width="154*"/>
+                <ColumnDefinition Width="154*"/>
+                <ColumnDefinition Width="154*"/>
+                <ColumnDefinition Width="80*"/>
+                <ColumnDefinition Width="68*"/>
+                <ColumnDefinition Width="10*"/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>

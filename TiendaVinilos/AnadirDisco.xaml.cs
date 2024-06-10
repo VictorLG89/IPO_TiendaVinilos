@@ -31,7 +31,7 @@ namespace TiendaVinilos
                     XDocument doc = XDocument.Load(rutaArchivo);
                     vinilos = doc.Descendants("Vinilo")
                         .Select(v => new Vinilo(
-                            IdVinilo: int.Parse(v.Attribute("IdVinilo")?.Value), // Ajusta si el IdVinilo está como atributo en el XML
+                            viniloId: int.Parse(v.Attribute("IdVinilo")?.Value), // Ajusta si el IdVinilo está como atributo en el XML
                             titulo: v.Element("Nombre")?.Value,
                             anio: DateTime.Parse(v.Element("FechaLanzamiento")?.Value).Year, // Obtener el año de la fecha de lanzamiento
                             duracion: int.Parse(v.Element("Duracion")?.Value), // Ajusta según el formato de tu XML
@@ -87,7 +87,7 @@ namespace TiendaVinilos
                 // Mostrar un mensaje de error al usuario o manejar la situación de otra manera
                 MessageBox.Show("El precio ingresado no es válido. Por favor, ingrese un número decimal.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            double duracion = int.Parse(DuracionTextBox.Text);
+            double duracion = double.Parse(DuracionTextBox.Text);
             if (double.TryParse(DuracionTextBox.Text, out duracion))
             {
                 // La conversión fue exitosa, 'duracion' contiene el valor convertido

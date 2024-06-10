@@ -43,7 +43,7 @@
             <Label x:Name="lblDuracion" Content="Duración"/>
             <TextBox x:Name="DuracionTextBox" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left"/>
             <Label Content="Eliminar disco" Margin="0,39,0,0"/>            
-            <ListBox x:Name="DiscosListBox" Height="25" SelectionChanged="DiscosListBox_SelectionChanged"/>
+            <ListBox x:Name="DiscosListBox" Height="49" SelectionChanged="DiscosListBox_SelectionChanged"/>
             <Button Content="Eliminar disco" Click="Eliminar_Click" Height="27" Width="90" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,7,0,0"/>
 
 
