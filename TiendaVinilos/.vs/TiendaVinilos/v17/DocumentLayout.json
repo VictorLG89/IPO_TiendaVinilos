@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:anadirdisco.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|c:\\users\\lopez\\source\\repos\\ipo_tiendavinilos\\tiendavinilos\\anadirdisco.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\anadirdisco.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{85E00544-8C79-41C4-8393-32DDD196B82D}|TiendaVinilos.csproj|solutionrelative:anadirdisco.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -70,8 +70,7 @@
               "ToolTip": "C:\\Users\\lopez\\source\\repos\\IPO_TiendaVinilos\\TiendaVinilos\\AnadirDisco.xaml",
               "RelativeToolTip": "AnadirDisco.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-10T08:05:26.064Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T08:05:26.064Z"
             },
             {
               "$type": "Document",
@@ -83,8 +82,7 @@
               "RelativeToolTip": "MainWindowAdmin.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T05:54:43.531Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T05:54:43.531Z"
             }
           ]
         }
