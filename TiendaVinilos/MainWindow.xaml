@@ -73,7 +73,7 @@
 
             </Grid.RowDefinitions>
 
-            <ComboBox x:Name="cbIdiomas" SelectionChanged="cb_elementoSeleccionado" Width="48" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="12" Grid.Row="1">
+            <ComboBox x:Name="cbIdiomas" Text="LAN"  SelectionChanged="cb_elementoSeleccionado" Width="48" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="12" Grid.Row="1">
                 <ComboBoxItem Content="ES" />
                 <ComboBoxItem Content="EN" />
             </ComboBox>
