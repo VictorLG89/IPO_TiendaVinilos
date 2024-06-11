@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\TiendaVinilos"
   ],
-  "SelectedNode": "\\TiendaVinilos.sln",
+  "SelectedNode": "\\TiendaVinilos\\AnadirDisco.xaml",
   "PreviewInSolutionExplorer": false
 }

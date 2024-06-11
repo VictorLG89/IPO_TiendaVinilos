@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TiendaVinilos"
         mc:Ignorable="d"
         MinHeight="800" MinWidth="800">
-    <Grid Background="White">
+    <Grid Background="White" HorizontalAlignment="Left" Margin="0,0,0,25">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30"/>
             <ColumnDefinition Width="120"/>
@@ -15,8 +15,6 @@
             <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="300"/>
             <ColumnDefinition Width="30"/>
-
-
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
@@ -26,26 +24,34 @@
             <RowDefinition Height="27"/>
             <RowDefinition Height="27"/>
         </Grid.RowDefinitions>
+
+
         <StackPanel Grid.Column="3" Height="NaN" Margin="0,0,0,10" Grid.RowSpan="3" Grid.Row="1" Width="NaN">
             <Label Content="Nombre de la promoción"/>
-            <TextBox TextWrapping="Wrap" Text="TextBox" Width="120" HorizontalAlignment="Left"/>
+            <TextBox Name="NombrePromocionTextBox" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left"/>
+
             <Label Content="Artista"/>
-            <ComboBox Width="120" HorizontalAlignment="Left"/>
+            <ComboBox Name="ArtistaComboBox" Width="120" HorizontalAlignment="Left"/>
+
             <Label Content="Disco" d:LayoutOverrides="Width, Height"/>
-            <ComboBox Width="120" HorizontalAlignment="Left"/>
+            <ComboBox Name="DiscoComboBox" Width="120" HorizontalAlignment="Left"/>
+
             <Label Content="Fecha de inicio" d:LayoutOverrides="Width, Height"/>
-            <DatePicker d:LayoutOverrides="Width, Height"/>
-            <Label Content="Fecga de finalización" d:LayoutOverrides="Width, Height"/>
-            <DatePicker d:LayoutOverrides="Width, Height"/>
+            <DatePicker Name="FechaInicioDatePicker" d:LayoutOverrides="Width, Height"/>
+
+            <Label Content="Fecha de finalización" d:LayoutOverrides="Width, Height"/>
+            <DatePicker Name="FechaFinDatePicker" d:LayoutOverrides="Width, Height"/>
+
             <Label Content="Descuento en porcentaje (%)" d:LayoutOverrides="Width, Height"/>
-            <TextBox TextWrapping="Wrap" Text="TextBox" Width="120" HorizontalAlignment="Left"/>
+            <TextBox Name="DescuentoTextBox" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left"/>
+
             <CheckBox Content="Enviar notificación a clientes" d:LayoutOverrides="Width, Height"/>
             <CheckBox Content="Programar notificación" d:LayoutOverrides="Width, Height"/>
             <DatePicker d:LayoutOverrides="Width, Height"/>
         </StackPanel>
-        
-        <Button Grid.Column="5" Content="Guardar promoción" HorizontalAlignment="Left" Margin="183,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="27" Width="117" RenderTransformOrigin="0.82,0.486" Click="Button_Click"/>
-        <Button Grid.Column="5" Content="Cancelar" HorizontalAlignment="Left" Margin="61,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="27" Width="117"/>
 
+
+        <Button Grid.Column="3" Content="Guardar promoción" HorizontalAlignment="Right" Grid.Row="3" VerticalAlignment="Top" Height="28" Width="116" RenderTransformOrigin="0.499,0.675" Margin="0,196,2,0" />
+        <Button Grid.Column="3" Content="Cancelar proceso" HorizontalAlignment="Left" Margin="0,197,0,0" Grid.Row="3" VerticalAlignment="Top" Height="27" Width="117" Click="Cancelar_Click"/>
     </Grid>
 </UserControl>
